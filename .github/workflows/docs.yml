@@ -70,6 +70,23 @@ jobs:
             perl -0pi -e 's/(href="[^"]*)\.typ((?:#[^"]*)?")/$1.html$2/g' "$file"
           done
 
+      - name: Validate generated artifact content
+        run: |
+          set -euo pipefail
+
+          test -f _site/nav/Home.html
+          test -f _site/buildings/Building-Granary.html
+
+          # Granary page must contain the generated data section.
+          grep -q "Granary Levels Data" _site/buildings/Building-Granary.html
+
+          # Expect multiple table blocks (starting levels + segmented level tables).
+          table_count=$(grep -c "<table" _site/buildings/Building-Granary.html)
+          if [ "$table_count" -lt 6 ]; then
+            echo "Expected at least 6 tables in Building-Granary.html, found $table_count"
+            exit 1
+          fi
+
       # ── Root redirect ──────────────────────────────────────────────────────
       - name: Create root redirect
         run: |
