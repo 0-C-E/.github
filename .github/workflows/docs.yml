@@ -101,7 +101,8 @@ jobs:
           fi
 
           # Expect at least two tables (starting levels + at least one level table).
-          table_count=$(grep -c "<table" _site/buildings/Building-Granary.html)
+          table_count=$( (grep -o "<table" _site/buildings/Building-Granary.html || true) | wc -l | tr -d '[:space:]' )
+          echo "Detected table_count=$table_count in _site/buildings/Building-Granary.html"
           if [ "$table_count" -lt 2 ]; then
             echo "Expected at least 2 tables in Building-Granary.html, found $table_count"
             sed -n '1,220p' _site/buildings/Building-Granary.html
