@@ -76,7 +76,8 @@ jobs:
 
           echo "--- _site artifact preview ---"
           if [ -d _site ]; then
-            find _site -maxdepth 3 -type f | sort | head -n 200
+            # Use sed instead of head to avoid SIGPIPE failures under pipefail.
+            find _site -maxdepth 3 -type f | sort | sed -n '1,200p'
           else
             echo "_site directory is missing"
             exit 1
