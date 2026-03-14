@@ -1,0 +1,95 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# 0 C.E. — Documentation build & GitHub Pages deploy
+#
+# SETUP (do once in the main game repo):
+#   1. Copy this file to  .github/workflows/docs.yml  in the main repo.
+#   2. Keep all Typst docs under  docs/  using subfolders (chapters, buildings, nav).
+#   3. Keep shared files in  docs/templates  and helper scripts in  docs/scripts .
+#   4. In GitHub → Settings → Pages → Source, choose "GitHub Actions".
+#   5. Push — the site builds automatically on every push that touches docs/.
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: Build and Deploy Documentation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - ".github/workflows/docs.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ── Toolchain ──────────────────────────────────────────────────────────
+      - name: Set up Typst
+        uses: typst-community/setup-typst@v4
+        with:
+          typst-version: latest
+
+      # ── Typst → HTML ───────────────────────────────────────────────────────
+      - name: Compile Typst to HTML
+        run: |
+          mkdir -p _site
+
+          find docs -type f -name "*.typ" \
+            ! -path "docs/templates/*" | while IFS= read -r src; do
+            rel="${src#docs/}"                         # e.g. chapters/03-Economy.typ
+            dest="_site/${rel%.typ}.html"              # e.g. _site/chapters/03-Economy.html
+            mkdir -p "$(dirname "$dest")"
+
+            typst compile "$src" "$dest" \
+              --format html \
+              --root "$GITHUB_WORKSPACE" \
+              || echo "::warning::HTML compile failed for $src — skipping"
+          done
+
+      # ── Root redirect ──────────────────────────────────────────────────────
+      - name: Create root redirect
+        run: |
+          cat > _site/index.html <<'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8">
+            <title>0 C.E. — GDD</title>
+            <meta http-equiv="refresh" content="0; url=nav/Home.html">
+          </head>
+          <body><a href="nav/Home.html">Go to documentation</a></body>
+          </html>
+          EOF
+
+      # ── Deploy ─────────────────────────────────────────────────────────────
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

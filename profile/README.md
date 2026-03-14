@@ -29,7 +29,8 @@ Future improvements will bring additional gameplay features and optimizations as
 
 ## Getting Started
 
-> **Note**: A more streamlined setup process is in the works. For now, please refer to individual repositories within the organization for detailed setup instructions.
+> [!NOTE]
+> A more streamlined setup process is in the works. For now, please refer to individual repositories within the organization for detailed setup instructions.
 
 To set up a development environment for **0 C.E.**, you’ll need to:
 
