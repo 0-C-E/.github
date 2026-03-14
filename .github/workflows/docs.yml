@@ -44,7 +44,12 @@ jobs:
         uses: Swatinem/rust-cache@v2
 
       - name: Install Typst with HTML support
-        run: cargo install typst-cli --locked --features html
+        run: |
+          cargo install \
+            --git https://github.com/typst/typst \
+            --locked \
+            --features html \
+            typst-cli
 
       - name: Verify Typst installation
         run: typst --version
