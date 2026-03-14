@@ -1,7 +1,7 @@
 = 0 C.E. - Data Models
 <0-ce---data-models>
-#link("../nav/Home.typ") | #link("Technical-Architecture.typ")[Previous] |
-#link("Event-System.typ")[Next]
+#link("../nav/Home.pdf") | #link("Technical-Architecture.pdf")[Previous] |
+#link("Event-System.pdf")[Next]
 
 == 21. Data Models & Schemas
 <21-data-models--schemas>

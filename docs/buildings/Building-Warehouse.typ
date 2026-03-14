@@ -1,6 +1,6 @@
 = 0 C.E. --- Warehouse
 <0-ce--warehouse>
-#link("../chapters/Buildings-and-Wonders.typ")[← Buildings & Wonders]
+#link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 #figure(
   align(center)[#table(
@@ -64,6 +64,6 @@ final_time = upgrade_time_seconds / senate_speed_multiplier / world_speed_multip
 == Notes
 <notes>
 - Food has its own storage building: the
-  #link("Building-Granary.typ")[Granary];.
+  #link("Building-Granary.pdf")[Granary];.
 - A city can have both a Granary and a Warehouse; they apply to separate
   resource pools.

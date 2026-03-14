@@ -1,7 +1,7 @@
 = 0 C.E. - Villages
 <0-ce---villages>
-#link("../nav/Home.typ") | #link("Victory-and-Prestige.typ")[Previous] |
-#link("Social.typ")[Next]
+#link("../nav/Home.pdf") | #link("Victory-and-Prestige.pdf")[Previous] |
+#link("Social.pdf")[Next]
 
 == 15. Villages & Neutral Sites
 <15-villages--neutral-sites>

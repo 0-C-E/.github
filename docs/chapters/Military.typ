@@ -1,7 +1,7 @@
 = 0 C.E. - Military
 <0-ce---military>
-#link("../nav/Home.typ") | #link("Cultural-Events.typ")[Previous] |
-#link("Espionage.typ")[Next]
+#link("../nav/Home.pdf") | #link("Cultural-Events.pdf")[Previous] |
+#link("Espionage.pdf")[Next]
 
 == 10. Military & Combat
 <10-military--combat>

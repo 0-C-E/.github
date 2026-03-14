@@ -1,7 +1,7 @@
 = 0 C.E. - Economy
 <0-ce---economy>
-#link("../nav/Home.typ") | #link("World-and-Civilizations.typ")[Previous] |
-#link("Buildings-and-Wonders.typ")[Next]
+#link("../nav/Home.pdf") | #link("World-and-Civilizations.pdf")[Previous] |
+#link("Buildings-and-Wonders.pdf")[Next]
 
 == 6. Resource Economy
 <6-resource-economy>

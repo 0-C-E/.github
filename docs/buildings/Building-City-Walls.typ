@@ -1,6 +1,6 @@
 = 0 C.E. --- City Walls
 <0-ce--city-walls>
-#link("../chapters/Buildings-and-Wonders.typ")[← Buildings & Wonders]
+#link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 #figure(
   align(center)[#table(
@@ -61,8 +61,8 @@ final_time = upgrade_time_seconds / senate_speed_multiplier / world_speed_multip
 
 == Notes
 <notes>
-- The #link("Building-Watchtower.typ")[Watchtower] special building further
+- The #link("Building-Watchtower.pdf")[Watchtower] special building further
   multiplies `defense_mult`.
 - Wall HP is a passive layer; walls must be breached before the city
   itself can be attacked at full strength.
-- See #link("../chapters/Military.typ")[Military] for siege and assault mechanics.
+- See #link("../chapters/Military.pdf")[Military] for siege and assault mechanics.

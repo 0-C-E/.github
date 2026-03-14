@@ -1,6 +1,6 @@
 = 0 C.E. --- Divine Statue #emph[(Special)]
 <0-ce--divine-statue-special>
-#link("../chapters/Buildings-and-Wonders.typ")[← Buildings & Wonders]
+#link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 #figure(
   align(center)[#table(
@@ -23,7 +23,7 @@ favor_per_hour_final = favor_per_hour × (1 + statue_favor_bonus)
 ```
 
 `favor_per_hour` is the base output of the
-#link("Building-Shrine-Temple.typ")[Shrine / Temple] at its current level.
+#link("Building-Shrine-Temple.pdf")[Shrine / Temple] at its current level.
 The Divine Statue applies a flat multiplier on top.
 
 The value of `statue_favor_bonus` is defined in
@@ -52,6 +52,6 @@ buildings have a flat one-time construction cost (no level scaling).
 == Notes
 <notes>
 - Built once at level 1; can never be upgraded further.
-- Has no effect if the #link("Building-Shrine-Temple.typ")[Shrine / Temple]
+- Has no effect if the #link("Building-Shrine-Temple.pdf")[Shrine / Temple]
   is not built.
-- See #link("../chapters/Divine-System.typ")[Divine System] for how Favor is used.
+- See #link("../chapters/Divine-System.pdf")[Divine System] for how Favor is used.

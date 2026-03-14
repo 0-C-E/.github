@@ -1,6 +1,6 @@
 = 0 C.E. --- Farm
 <0-ce--farm>
-#link("../chapters/Buildings-and-Wonders.typ")[← Buildings & Wonders]
+#link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 #figure(
   align(center)[#table(

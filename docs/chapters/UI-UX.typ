@@ -1,7 +1,7 @@
 = 0 C.E. - UI and UX
 <0-ce---ui-and-ux>
-#link("../nav/Home.typ") | #link("Scripting-Engine.typ")[Previous] |
-#link("Technical-Architecture.typ")[Next]
+#link("../nav/Home.pdf") | #link("Scripting-Engine.pdf")[Previous] |
+#link("Technical-Architecture.pdf")[Next]
 
 == 19. UI/UX Design Principles
 <19-uiux-design-principles>

@@ -1,7 +1,7 @@
 = 0 C.E. - Research
 <0-ce---research>
-#link("../nav/Home.typ") | #link("Espionage.typ")[Previous] |
-#link("Diplomacy-and-Trade.typ")[Next]
+#link("../nav/Home.pdf") | #link("Espionage.pdf")[Previous] |
+#link("Diplomacy-and-Trade.pdf")[Next]
 
 == 12. Research & Technology
 <12-research--technology>

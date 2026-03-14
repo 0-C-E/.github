@@ -1,6 +1,6 @@
 = 0 C.E. - Vision and Modes
 <0-ce---vision-and-modes>
-#link("../nav/Home.typ") | Previous | #link("World-and-Civilizations.typ")[Next]
+#link("../nav/Home.pdf") | Previous | #link("World-and-Civilizations.pdf")[Next]
 
 == 1. Vision & Pillars
 <1-vision--pillars>

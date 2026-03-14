@@ -1,6 +1,6 @@
 = 0 C.E. --- Market
 <0-ce--market>
-#link("../chapters/Buildings-and-Wonders.typ")[← Buildings & Wonders]
+#link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 #figure(
   align(center)[#table(
@@ -62,5 +62,5 @@ final_time = upgrade_time_seconds / senate_speed_multiplier / world_speed_multip
 <notes>
 - Trade is the primary post-founding source of Gold (see
   #link("../chapters/Economy.typ#62-tile-scan-resource-production")[Economy §6.2];).
-- See #link("../chapters/Diplomacy-and-Trade.typ")[Diplomacy and Trade] for trade
+- See #link("../chapters/Diplomacy-and-Trade.pdf")[Diplomacy and Trade] for trade
   route rules.

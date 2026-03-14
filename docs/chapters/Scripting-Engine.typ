@@ -1,6 +1,6 @@
 = 0 C.E. - Scripting Engine
 <0-ce---scripting-engine>
-#link("../nav/Home.typ") | #link("Social.typ")[Previous] | #link("UI-UX.typ")[Next]
+#link("../nav/Home.pdf") | #link("Social.pdf")[Previous] | #link("UI-UX.pdf")[Next]
 
 == 18. Scripting Engine
 <18-scripting-engine>

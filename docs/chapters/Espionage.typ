@@ -1,7 +1,7 @@
 = 0 C.E. - Espionage
 <0-ce---espionage>
-#link("../nav/Home.typ") | #link("Military.typ")[Previous] |
-#link("Research.typ")[Next]
+#link("../nav/Home.pdf") | #link("Military.pdf")[Previous] |
+#link("Research.pdf")[Next]
 
 == 11. Espionage
 <11-espionage>

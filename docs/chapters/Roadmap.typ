@@ -1,6 +1,6 @@
 = 0 C.E. - Roadmap
 <0-ce---roadmap>
-#link("../nav/Home.typ") | #link("Modding.typ")[Previous] | #link("Heroes.typ")[Next]
+#link("../nav/Home.pdf") | #link("Modding.pdf")[Previous] | #link("Heroes.pdf")[Next]
 
 == 25. Roadmap & MVP Scope
 <25-roadmap--mvp-scope>
@@ -64,7 +64,7 @@
 === 25.3 Wave 2 Features (Heroes)
 <253-wave-2-features-heroes>
 Heroes are fully designed in #strong[§22 --- Heroes System] (see
-#link("Heroes.typ")[Heroes];). Summary: named historical figures, fixed
+#link("Heroes.pdf")[Heroes];). Summary: named historical figures, fixed
 as military or governor type at selection, 1 per city (scaling with
 expansion), XP-driven linear ability progression, wounded on defeat
 (recovery period, not permanent death). Wave 2 because they require

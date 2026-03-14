@@ -1,6 +1,6 @@
 = 0 C.E. --- Watchtower #emph[(Special)]
 <0-ce--watchtower-special>
-#link("../chapters/Buildings-and-Wonders.typ")[← Buildings & Wonders]
+#link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 #figure(
   align(center)[#table(
@@ -37,7 +37,7 @@ intel_radius           = 20
   )
 
 `defense_mult` is the value produced by
-#link("Building-City-Walls.typ")[City Walls] at its current level. The
+#link("Building-City-Walls.pdf")[City Walls] at its current level. The
 Watchtower multiplies this on top, so it is most valuable in cities with
 high-level walls.
 
@@ -72,7 +72,7 @@ scaling).
 == Notes
 <notes>
 - Built once at level 1; can never be upgraded further.
-- Has no effect if #link("Building-City-Walls.typ")[City Walls] are not
+- Has no effect if #link("Building-City-Walls.pdf")[City Walls] are not
   built.
-- See #link("../chapters/Espionage.typ")[Espionage] for how `intel_radius` interacts
+- See #link("../chapters/Espionage.pdf")[Espionage] for how `intel_radius` interacts
   with scouting.

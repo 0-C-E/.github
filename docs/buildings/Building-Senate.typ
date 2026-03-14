@@ -1,6 +1,6 @@
 = 0 C.E. --- Senate
 <0-ce--senate>
-#link("../chapters/Buildings-and-Wonders.typ")[← Buildings & Wonders]
+#link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 #figure(
   align(center)[#table(

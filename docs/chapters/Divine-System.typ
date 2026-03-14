@@ -1,7 +1,7 @@
 = 0 C.E. - Divine System
 <0-ce---divine-system>
-#link("../nav/Home.typ") | #link("Buildings-and-Wonders.typ")[Previous] |
-#link("Cultural-Events.typ")[Next]
+#link("../nav/Home.pdf") | #link("Buildings-and-Wonders.pdf")[Previous] |
+#link("Cultural-Events.pdf")[Next]
 
 == 5. Divine System & Favor
 <5-divine-system--favor>
@@ -145,7 +145,7 @@ final_favor_cost = max(0, X - sacrifice)
 <56-cultural-events--city-progression>
 Cultural Events and Cultural Levels are the progression system that
 gates city founding and tier upgrades. They are documented separately
---- see #strong[#link("Cultural-Events.typ")[Cultural Events];];.
+--- see #strong[#link("Cultural-Events.pdf")[Cultural Events];];.
 
 === 5.7 Greek Pantheon --- The Twelve Olympians
 <57-greek-pantheon--the-twelve-olympians>

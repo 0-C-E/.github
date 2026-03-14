@@ -1,7 +1,7 @@
 = 0 C.E. - Event System
 <0-ce---event-system>
-#link("../nav/Home.typ") | #link("Data-Models.typ")[Previous] |
-#link("Balancing.typ")[Next]
+#link("../nav/Home.pdf") | #link("Data-Models.pdf")[Previous] |
+#link("Balancing.pdf")[Next]
 
 == 22. Event System
 <22-event-system>

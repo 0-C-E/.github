@@ -1,6 +1,6 @@
 = 0 C.E. --- Siege Workshop #emph[(Special)]
 <0-ce--siege-workshop-special>
-#link("../chapters/Buildings-and-Wonders.typ")[← Buildings & Wonders]
+#link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 #figure(
   align(center)[#table(
@@ -23,7 +23,7 @@ siege_unlocked = true
 ```
 
 Without the Siege Workshop, siege weapons cannot be trained regardless
-of #link("Building-Barracks.typ")[Barracks] level.
+of #link("Building-Barracks.pdf")[Barracks] level.
 
 == Cost
 <cost>
@@ -56,5 +56,5 @@ buildings have a flat one-time construction cost (no level scaling).
 == Notes
 <notes>
 - Built once at level 1; can never be upgraded further.
-- See #link("../chapters/Military.typ")[Military] for siege weapon types and
+- See #link("../chapters/Military.pdf")[Military] for siege weapon types and
   mechanics.

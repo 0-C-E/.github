@@ -1,14 +1,14 @@
 = 0 C.E. - Cultural Events
 <0-ce---cultural-events>
-#link("../nav/Home.typ") | #link("Divine-System.typ")[Previous] |
-#link("Military.typ")[Next]
+#link("../nav/Home.pdf") | #link("Divine-System.pdf")[Previous] |
+#link("Military.pdf")[Next]
 
 == 9. Divine System & Favor
 <9-divine-system--favor>
 #quote(block: true)[
 This section is part of the Divine System. For the core rules, Favor
 mechanics, pantheons, and divine powers, see
-#strong[#link("Divine-System.typ")[Divine System];];.
+#strong[#link("Divine-System.pdf")[Divine System];];.
 ]
 
 === 9.6 Cultural Events & City Progression

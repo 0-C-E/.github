@@ -1,7 +1,7 @@
 = 0 C.E. - Victory and Prestige
 <0-ce---victory-and-prestige>
-#link("../nav/Home.typ") | #link("Diplomacy-and-Trade.typ")[Previous] |
-#link("Villages.typ")[Next]
+#link("../nav/Home.pdf") | #link("Diplomacy-and-Trade.pdf")[Previous] |
+#link("Villages.pdf")[Next]
 
 == 14. Victory Conditions
 <14-victory-conditions>

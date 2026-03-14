@@ -1,6 +1,6 @@
 = 0 C.E. --- Foundry
 <0-ce--foundry>
-#link("../chapters/Buildings-and-Wonders.typ")[← Buildings & Wonders]
+#link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 #figure(
   align(center)[#table(

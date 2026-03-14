@@ -1,7 +1,7 @@
 = 0 C.E. - Diplomacy and Trade
 <0-ce---diplomacy-and-trade>
-#link("../nav/Home.typ") | #link("Research.typ")[Previous] |
-#link("Victory-and-Prestige.typ")[Next]
+#link("../nav/Home.pdf") | #link("Research.pdf")[Previous] |
+#link("Victory-and-Prestige.pdf")[Next]
 
 == 13. Diplomacy, Trade & Alliances
 <13-diplomacy-trade--alliances>

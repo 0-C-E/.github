@@ -1,7 +1,7 @@
 = 0 C.E. - Buildings and Wonders
 <0-ce---buildings-and-wonders>
-#link("../nav/Home.typ") | #link("Economy.typ")[Previous] |
-#link("Divine-System.typ")[Next]
+#link("../nav/Home.pdf") | #link("Economy.pdf")[Previous] |
+#link("Divine-System.pdf")[Next]
 
 == 8. Buildings & Construction
 <8-buildings--construction>
@@ -161,42 +161,42 @@ same named slot.
     table.header([Building], [Slot], [Cap (typical)], [Passive
       Effects], [Effect Formula Template],),
     table.hline(),
-    [#link("../buildings/Building-Farm.typ")[#strong[Farm];];], [Farm], [45], [Food
+    [#link("../buildings/Building-Farm.pdf")[#strong[Farm];];], [Farm], [45], [Food
     production, Militia
     cap], [`food_h = base_food_h * (1 + a_farm * L^p_farm)`;
     `militia_cap = base_militia + b_farm * L`],
-    [#link("../buildings/Building-Lumber-Camp.typ")[#strong[Lumber Camp];];], [Lumber], [40], [Wood
+    [#link("../buildings/Building-Lumber-Camp.pdf")[#strong[Lumber Camp];];], [Lumber], [40], [Wood
     production], [`wood_h = base_wood_h * (1 + a_lumber * L^p_lumber)`],
-    [#link("../buildings/Building-Quarry.typ")[#strong[Quarry];];], [Quarry], [40], [Stone
+    [#link("../buildings/Building-Quarry.pdf")[#strong[Quarry];];], [Quarry], [40], [Stone
     production], [`stone_h = base_stone_h * (1 + a_quarry * L^p_quarry)`],
-    [#link("../buildings/Building-Foundry.typ")[#strong[Foundry];];], [Foundry], [40], [Metal
+    [#link("../buildings/Building-Foundry.pdf")[#strong[Foundry];];], [Foundry], [40], [Metal
     production], [`metal_h = base_metal_h * (1 + a_foundry * L^p_foundry)`],
-    [#link("../buildings/Building-Granary.typ")[#strong[Granary];];], [Granary], [35], [Food
+    [#link("../buildings/Building-Granary.pdf")[#strong[Granary];];], [Granary], [35], [Food
     storage, Population cap], [`food_storage(L) = 250 + 80 × L^1.5`;
     `pop_cap(L) = 50 + 11 × L^1.5`],
-    [#link("../buildings/Building-Warehouse.typ")[#strong[Warehouse];];], [Warehouse], [35], [Non-food
+    [#link("../buildings/Building-Warehouse.pdf")[#strong[Warehouse];];], [Warehouse], [35], [Non-food
     storage
     (wood/stone/metal)], [`warehouse_storage(L) = 300 + 100 × L^1.5`],
-    [#link("../buildings/Building-Shrine-Temple.typ")[#strong[Shrine / Temple];];], [Temple], [35], [Favor
+    [#link("../buildings/Building-Shrine-Temple.pdf")[#strong[Shrine / Temple];];], [Temple], [35], [Favor
     production], [`favor_h = base_favor_h * (1 + a_temple * L^p_temple)`],
-    [#link("../buildings/Building-Senate.typ")[#strong[Senate];];], [Senate], [30], [Building
+    [#link("../buildings/Building-Senate.pdf")[#strong[Senate];];], [Senate], [30], [Building
     speed modifier], [`build_speed_mult = 1 + a_senate * ln(1 + L)`],
-    [#link("../buildings/Building-Market.typ")[#strong[Market];];], [Market], [30], [Trade
+    [#link("../buildings/Building-Market.pdf")[#strong[Market];];], [Market], [30], [Trade
     capacity and trade
     throughput], [`trade_capacity = base_trade + b_market * L`;
     `trade_cooldown_mult = 1 / (1 + c_market * sqrt(L))`],
-    [#link("../buildings/Building-Barracks.typ")[#strong[Barracks];];], [Barracks], [35], [Land
+    [#link("../buildings/Building-Barracks.pdf")[#strong[Barracks];];], [Barracks], [35], [Land
     troop training speed (land garrison
     only)], [`land_train_time_mult = 1 / (1 + a_barracks * ln(1 + L))`],
-    [#link("../buildings/Building-City-Walls.typ")[#strong[City Walls];];], [Walls], [35], [Passive
+    [#link("../buildings/Building-City-Walls.pdf")[#strong[City Walls];];], [Walls], [35], [Passive
     defender bonus when city is
     attacked], [`defense_mult = 1 + a_walls * L^p_walls`;
     `wall_hp = base_wall_hp * (1 + b_walls * L^q_walls)`],
-    [#link("../buildings/Building-Academy.typ")[#strong[Academy];];], [Academy], [35], [Research
+    [#link("../buildings/Building-Academy.pdf")[#strong[Academy];];], [Academy], [35], [Research
     points; research duration
     reduction], [`research_points_h = base_rp_h * (1 + a_academy * L^p_academy)`;
     `research_time_mult = 1 / (1 + b_academy * ln(1 + L))`],
-    [#link("../buildings/Building-Harbor.typ")[#strong[Harbor];];], [Harbor], [35], [Ship
+    [#link("../buildings/Building-Harbor.pdf")[#strong[Harbor];];], [Harbor], [35], [Ship
     training speed (naval garrison
     only)], [`ship_train_time_mult = 1 / (1 + a_harbor * ln(1 + L))`],
   )]
@@ -215,14 +215,14 @@ are built once at level 1 and never upgraded.
     table.header([Building], [Slot], [Cap], [Purpose], [Effect Formula
       Template],),
     table.hline(),
-    [#link("../buildings/Building-Siege-Workshop.typ")[#strong[Siege Workshop];];], [Siege
+    [#link("../buildings/Building-Siege-Workshop.pdf")[#strong[Siege Workshop];];], [Siege
     Workshop], [1 (special)], [Enables siege weapon
     training], [`siege_unlocked = true`],
-    [#link("../buildings/Building-Watchtower.typ")[#strong[Watchtower];];], [Watchtower], [1
+    [#link("../buildings/Building-Watchtower.pdf")[#strong[Watchtower];];], [Watchtower], [1
     (special)], [Improves City Walls bonus; intel
     radius/quality], [`effective_defense_mult = defense_mult * (1 + watchtower_bonus)`;
     `intel_radius = 20`],
-    [#link("../buildings/Building-Divine-Statue.typ")[#strong[Divine Statue];];], [Divine
+    [#link("../buildings/Building-Divine-Statue.pdf")[#strong[Divine Statue];];], [Divine
     Statue], [1 (special)], [Additional Favor production
     multiplier], [`favor_h_final = favor_h * (1 + statue_favor_bonus)`],
   )]

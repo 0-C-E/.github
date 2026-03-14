@@ -1,6 +1,6 @@
 = 0 C.E. --- Shrine / Temple
 <0-ce--shrine--temple>
-#link("../chapters/Buildings-and-Wonders.typ")[← Buildings & Wonders]
+#link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 #figure(
   align(center)[#table(
@@ -57,6 +57,6 @@ final_time = upgrade_time_seconds / senate_speed_multiplier / world_speed_multip
 == Notes
 <notes>
 - Favor is consumed by the Divine System (see
-  #link("../chapters/Divine-System.typ")[Divine System];).
-- The #link("Building-Divine-Statue.typ")[Divine Statue] special building
+  #link("../chapters/Divine-System.pdf")[Divine System];).
+- The #link("Building-Divine-Statue.pdf")[Divine Statue] special building
   multiplies the output of this building.

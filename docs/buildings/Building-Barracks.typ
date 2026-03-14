@@ -1,6 +1,6 @@
 = 0 C.E. --- Barracks
 <0-ce--barracks>
-#link("../chapters/Buildings-and-Wonders.typ")[← Buildings & Wonders]
+#link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 #figure(
   align(center)[#table(
@@ -62,8 +62,8 @@ final_time = upgrade_time_seconds / senate_speed_multiplier / world_speed_multip
 - All land units are trained, stored, and managed in the Barracks
   garrison context.
 - Naval units are managed separately in the
-  #link("Building-Harbor.typ")[Harbor] garrison.
+  #link("Building-Harbor.pdf")[Harbor] garrison.
 - Siege weapons require the
-  #link("Building-Siege-Workshop.typ")[Siege Workshop] special building to
+  #link("Building-Siege-Workshop.pdf")[Siege Workshop] special building to
   unlock.
-- See #link("../chapters/Military.typ")[Military] for unit types and combat rules.
+- See #link("../chapters/Military.pdf")[Military] for unit types and combat rules.

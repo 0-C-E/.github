@@ -1,7 +1,7 @@
 = 0 C.E. - World and Civilizations
 <0-ce---world-and-civilizations>
-#link("../nav/Home.typ") | #link("Vision-and-Modes.typ")[Previous] |
-#link("Economy.typ")[Next]
+#link("../nav/Home.pdf") | #link("Vision-and-Modes.pdf")[Previous] |
+#link("Economy.pdf")[Next]
 
 == 4. World Map & Territory
 <4-world-map--territory>

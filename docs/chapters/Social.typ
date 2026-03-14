@@ -1,7 +1,7 @@
 = 0 C.E. - Social
 <0-ce---social>
-#link("../nav/Home.typ") | #link("Villages.typ")[Previous] |
-#link("Scripting-Engine.typ")[Next]
+#link("../nav/Home.pdf") | #link("Villages.pdf")[Previous] |
+#link("Scripting-Engine.pdf")[Next]
 
 == 16. Social Systems
 <16-social-systems>

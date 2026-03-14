@@ -1,6 +1,6 @@
 = 0 C.E. --- Harbor
 <0-ce--harbor>
-#link("../chapters/Buildings-and-Wonders.typ")[← Buildings & Wonders]
+#link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 #figure(
   align(center)[#table(
@@ -61,6 +61,6 @@ final_time = upgrade_time_seconds / senate_speed_multiplier / world_speed_multip
 - All naval units are trained, stored, and managed in the Harbor
   garrison context.
 - Land units are managed separately in the
-  #link("Building-Barracks.typ")[Barracks] garrison.
-- See #link("../chapters/Military.typ")[Military] for naval unit types and combat
+  #link("Building-Barracks.pdf")[Barracks] garrison.
+- See #link("../chapters/Military.pdf")[Military] for naval unit types and combat
   rules.

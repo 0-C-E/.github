@@ -1,7 +1,7 @@
 = 0 C.E. - Modding
 <0-ce---modding>
-#link("../nav/Home.typ") | #link("Balancing.typ")[Previous] |
-#link("Roadmap.typ")[Next]
+#link("../nav/Home.pdf") | #link("Balancing.pdf")[Previous] |
+#link("Roadmap.pdf")[Next]
 
 == 24. Modding & Extensibility
 <24-modding--extensibility>

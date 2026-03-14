@@ -1,6 +1,6 @@
 = 0 C.E. --- Academy
 <0-ce--academy>
-#link("../chapters/Buildings-and-Wonders.typ")[← Buildings & Wonders]
+#link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 #figure(
   align(center)[#table(
@@ -95,5 +95,5 @@ final_time = upgrade_time_seconds / senate_speed_multiplier / world_speed_multip
 <notes>
 - The Academy has a #strong[hard cap of 35] --- city tier bonuses do not
   raise this cap further.
-- See #link("../chapters/Research.typ")[Research] for the full technology tree and
+- See #link("../chapters/Research.pdf")[Research] for the full technology tree and
   research mechanics.

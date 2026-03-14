@@ -1,7 +1,7 @@
 = 0 C.E. - Balancing
 <0-ce---balancing>
-#link("../nav/Home.typ") | #link("Event-System.typ")[Previous] |
-#link("Modding.typ")[Next]
+#link("../nav/Home.pdf") | #link("Event-System.pdf")[Previous] |
+#link("Modding.pdf")[Next]
 
 == 23. Balancing Philosophy
 <23-balancing-philosophy>

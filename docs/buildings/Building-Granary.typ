@@ -1,11 +1,11 @@
 = 0 C.E. --- Granary
 <0-ce--granary>
-#link("../chapters/Buildings-and-Wonders.typ")[← Buildings & Wonders]
+#link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 == Notes
 <notes>
 - Food uses the Granary storage line; all other resources use the
-  #link("Building-Warehouse.typ")[Warehouse];.
+  #link("Building-Warehouse.pdf")[Warehouse];.
 - A city can have both a Granary and a Warehouse; they apply to separate
   resource pools.
 

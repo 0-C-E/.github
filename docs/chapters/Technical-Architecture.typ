@@ -1,7 +1,7 @@
 = 0 C.E. - Technical Architecture
 <0-ce---technical-architecture>
-#link("../nav/Home.typ") | #link("UI-UX.typ")[Previous] |
-#link("Data-Models.typ")[Next]
+#link("../nav/Home.pdf") | #link("UI-UX.pdf")[Previous] |
+#link("Data-Models.pdf")[Next]
 
 == 20. Technical Architecture Reference
 <20-technical-architecture-reference>
