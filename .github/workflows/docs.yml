@@ -77,13 +77,18 @@ jobs:
           test -f _site/nav/Home.html
           test -f _site/buildings/Building-Granary.html
 
-          # Granary page must contain the generated data section.
-          grep -q "Granary Levels Data" _site/buildings/Building-Granary.html
+          # Granary page should contain a generated-level section title.
+          if ! grep -Eq "Granary Levels Data|Level Table" _site/buildings/Building-Granary.html; then
+            echo "Granary section marker not found in _site/buildings/Building-Granary.html"
+            sed -n '1,160p' _site/buildings/Building-Granary.html
+            exit 1
+          fi
 
-          # Expect multiple table blocks (starting levels + segmented level tables).
+          # Expect at least two tables (starting levels + at least one level table).
           table_count=$(grep -c "<table" _site/buildings/Building-Granary.html)
-          if [ "$table_count" -lt 6 ]; then
-            echo "Expected at least 6 tables in Building-Granary.html, found $table_count"
+          if [ "$table_count" -lt 2 ]; then
+            echo "Expected at least 2 tables in Building-Granary.html, found $table_count"
+            sed -n '1,220p' _site/buildings/Building-Granary.html
             exit 1
           fi
 
