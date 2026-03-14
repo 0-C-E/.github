@@ -37,14 +37,22 @@ jobs:
         uses: actions/checkout@v4
 
       # ── Toolchain ──────────────────────────────────────────────────────────
-      - name: Set up Typst
-        uses: typst-community/setup-typst@v4
-        with:
-          typst-version: latest
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache Rust build artifacts
+        uses: Swatinem/rust-cache@v2
+
+      - name: Install Typst with HTML support
+        run: cargo install typst-cli --locked --features html
+
+      - name: Verify Typst installation
+        run: typst --version
 
       # ── Typst → HTML ───────────────────────────────────────────────────────
       - name: Compile Typst to HTML
         run: |
+          set -euo pipefail
           mkdir -p _site
 
           find docs -type f -name "*.typ" \
@@ -55,8 +63,7 @@ jobs:
 
             typst compile "$src" "$dest" \
               --format html \
-              --root "$GITHUB_WORKSPACE" \
-              || echo "::warning::HTML compile failed for $src — skipping"
+              --root "$GITHUB_WORKSPACE"
           done
 
       # ── Root redirect ──────────────────────────────────────────────────────
@@ -73,6 +80,8 @@ jobs:
           <body><a href="nav/Home.html">Go to documentation</a></body>
           </html>
           EOF
+
+          touch _site/.nojekyll
 
       # ── Deploy ─────────────────────────────────────────────────────────────
       - name: Configure Pages
