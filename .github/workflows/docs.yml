@@ -74,8 +74,23 @@ jobs:
         run: |
           set -euo pipefail
 
-          test -f _site/nav/Home.html
-          test -f _site/buildings/Building-Granary.html
+          echo "--- _site artifact preview ---"
+          if [ -d _site ]; then
+            find _site -maxdepth 3 -type f | sort | head -n 200
+          else
+            echo "_site directory is missing"
+            exit 1
+          fi
+
+          if [ ! -f _site/nav/Home.html ]; then
+            echo "Missing expected file: _site/nav/Home.html"
+            exit 1
+          fi
+
+          if [ ! -f _site/buildings/Building-Granary.html ]; then
+            echo "Missing expected file: _site/buildings/Building-Granary.html"
+            exit 1
+          fi
 
           # Granary page should contain a generated-level section title.
           if ! grep -Eq "Granary Levels Data|Level Table" _site/buildings/Building-Granary.html; then
