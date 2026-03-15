@@ -1,32 +1,28 @@
-= 0 C.E. --- Warehouse
-<0-ce--warehouse>
+= 0 C.E. --- Warehouse <0-ce--warehouse>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
-== Notes
-<notes>
+== Notes <notes>
 - Food has its own storage building: the
   #link("Building-Granary.pdf")[Granary];.
 - A city can have both a Granary and a Warehouse; they apply to separate
   resource pools.
 
-== Starting Levels
-<starting-levels>
+== Starting Levels <starting-levels>
 #figure(
   align(center)[#table(
     columns: 2,
     align: (auto, auto),
     table.header([Mode], [Starting Level]),
-    table.hline(),
-    [Full World], [1],
-    [Campaign], [3],
-    [Skirmish], [5],
-    [Game Night], [10],
+    table.hline(), [Full World],
+    [1],           [Campaign],
+    [3],           [Skirmish],
+    [5],           [Game Night],
+    [10],
   )],
   kind: table,
 )
 
-== Warehouse Levels Data
-<warehouse-level-data>
+== Warehouse Levels Data <warehouse-level-data>
 #let max_level = 35
 
 // ── Base values & Functions ──
@@ -89,6 +85,7 @@
 )
 
 // ── Tables ──
+
 === Early game
 #building_table(1, 16)
 

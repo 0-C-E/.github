@@ -1,32 +1,28 @@
-= 0 C.E. --- Market
-<0-ce--market>
+= 0 C.E. --- Market <0-ce--market>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
-== Notes
-<notes>
+== Notes <notes>
 - Trade is the primary post-founding source of Gold (see
   #link("../chapters/Economy.typ#62-tile-scan-resource-production")[Economy §6.2];).
 - See #link("../chapters/Diplomacy-and-Trade.pdf")[Diplomacy and Trade] for trade
   route rules.
 
-== Starting Levels
-<starting-levels>
+== Starting Levels <starting-levels>
 #figure(
   align(center)[#table(
     columns: 2,
     align: (auto, auto),
     table.header([Mode], [Starting Level]),
-    table.hline(),
-    [Full World], [0],
-    [Campaign], [0],
-    [Skirmish], [1],
-    [Game Night], [2],
+    table.hline(), [Full World],
+    [0],           [Campaign],
+    [0],           [Skirmish],
+    [1],           [Game Night],
+    [2],
   )],
   kind: table,
 )
 
-== Market Place Levels Data
-<market-place-level-data>
+== Market Place Levels Data <market-place-level-data>
 #let max_level = 30
 
 // ── Base values & Functions ──
@@ -86,6 +82,7 @@
 )
 
 // ── Tables ──
+
 === Early game
 #building_table(1, 11)
 

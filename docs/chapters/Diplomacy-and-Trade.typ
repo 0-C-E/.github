@@ -1,12 +1,10 @@
-= 0 C.E. - Diplomacy and Trade
-<0-ce---diplomacy-and-trade>
+= 0 C.E. - Diplomacy and Trade <0-ce---diplomacy-and-trade>
 #link("../nav/Home.pdf") | #link("Research.pdf")[Previous] |
 #link("Victory-and-Prestige.pdf")[Next]
 
-== 13. Diplomacy, Trade & Alliances
-<13-diplomacy-trade--alliances>
-=== 13.1 Diplomatic Model (Grepolis Baseline)
-<131-diplomatic-model-grepolis-baseline>
+== 13. Diplomacy, Trade & Alliances <13-diplomacy-trade--alliances>
+
+=== 13.1 Diplomatic Model (Grepolis Baseline) <131-diplomatic-model-grepolis-baseline>
 Diplomacy mirrors Grepolis\' first-release model as the canonical
 foundation:
 
@@ -19,37 +17,45 @@ foundation:
   penalty. The social consequence (reputation, retaliation) is the
   deterrent.
 
-=== 13.2 Diplomatic Actions
-<132-diplomatic-actions>
-#figure(
-  align(center)[#table(
-    columns: 3,
-    align: (auto,auto,auto,),
-    table.header([Action], [Requirement], [Effect],),
-    table.hline(),
-    [#strong[Declare War];], [None], [Enables combat; removes protection
-    treaties],
-    [#strong[Propose Peace];], [During war], [Ends war; optional
-    reparations terms],
-    [#strong[Non-Aggression Pact];], [Neutral+], [Cannot initiate combat
-    for duration; breakable with 12h notice],
-    [#strong[Alliance];], [Friendly+], [Shared war/peace status; access
-    to alliance systems],
-    [#strong[Trade];], [Both have Market], [Send resources to target
-    player; travel time based on distance],
-    [#strong[Embargo];], [Hostile], [Blocks trade dispatches between
-    both parties],
-    [#strong[Send Gift];], [Any], [Resource transfer; +relation score],
-    [#strong[Military Access];], [Alliance or treaty], [Armies may pass
-    through territory],
-    [#strong[Tribute Demand];], [During/after war], [Request ongoing
-    resource payment; target can refuse],
-  )]
-  , kind: table
-  )
+=== 13.2 Diplomatic Actions <132-diplomatic-actions>
+#figure(align(center)[#table(
+  columns: 3,
+  align: (
+    auto,
+    auto,
+    auto,
+  ),
+  table.header(
+    [Action],
+    [Requirement],
+    [Effect],
+  ),
+  table.hline(),                        [#strong[Declare War];],         [None],
+  [Enables combat; removes protection
+  treaties],                                     [#strong[Propose Peace];],       [During
+  war],
+  [Ends war; optional
+  reparations terms],                                     [#strong[Non-Aggression
+  Pact];], [Neutral+],
+  [Cannot initiate combat
+  for duration; breakable with 12h notice],                                     [#strong[Alliance];],            [Friendly+],
+  [Shared war/peace status; access
+  to alliance systems],                                     [#strong[Trade];],               [Both
+  have Market],
+  [Send resources to target
+  player; travel time based on distance],                                     [#strong[Embargo];],             [Hostile],
+  [Blocks trade dispatches between
+  both parties],                                     [#strong[Send Gift];],           [Any],
+  [Resource transfer; +relation score], [#strong[Military Access];],     [Alliance
+  or treaty],
+  [Armies may pass
+  through territory],                                     [#strong[Tribute Demand];],      [During/after
+  war],
+  [Request ongoing
+  resource payment; target can refuse],
+)], kind: table)
 
-=== 13.3 Alliance System
-<133-alliance-system>
+=== 13.3 Alliance System <133-alliance-system>
 Alliances are formal multi-player groups (Grepolis-style):
 
 - #strong[Size];: 2--20 members (host-configurable)
@@ -63,8 +69,7 @@ Alliances are formal multi-player groups (Grepolis-style):
 - #strong[Diplomacy between Alliances];: Alliances can sign
   inter-alliance Non-Aggression Pacts
 
-=== 13.4 Trade System
-<134-trade-system>
+=== 13.4 Trade System <134-trade-system>
 Trade works exactly like Grepolis: it is an #strong[active,
 player-initiated transaction];, not a passive background income stream.
 There are no persistent trade routes. Every trade is a discrete action.
@@ -103,8 +108,7 @@ small gold bonus on successful trade completion, scaling with the total
 resource value transferred. This rewards active trading without making
 it passive.
 
-=== 13.5 Communication
-<135-communication>
+=== 13.5 Communication <135-communication>
 In-game communication is a first-class feature:
 
 - #strong[Direct Messages];: Player-to-player private messaging

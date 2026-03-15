@@ -1,24 +1,22 @@
-= 0 C.E. - Economy
-<0-ce---economy>
+= 0 C.E. - Economy <0-ce---economy>
 #link("../nav/Home.pdf") | #link("World-and-Civilizations.pdf")[Previous] |
 #link("Buildings-and-Wonders.pdf")[Next]
 
-== 6. Resource Economy
-<6-resource-economy>
-=== 6.1 Core Resources
-<61-core-resources>
+== 6. Resource Economy <6-resource-economy>
+
+=== 6.1 Core Resources <61-core-resources>
 #figure(
   align(center)[#table(
     columns: 4,
     align: (auto, auto, auto, auto),
     table.header([Resource], [Symbol], [Source], [Scarcity]),
-    table.hline(),
-    [Food], [🌾], [Tile-scan passive], [Abundant],
-    [Wood], [🪵], [Tile-scan passive], [Abundant],
-    [Stone], [🪨], [Tile-scan passive], [Common],
-    [Metal], [⛏️], [Tile-scan passive], [Scarce],
-    [Gold], [💰], [One-time founding gift + trade], [Node-based],
-    [Favor], [✨], [Temple buildings], [Generated],
+    table.hline(), [Food],  [🌾],  [Tile-scan passive],
+    [Abundant],    [Wood],  [🪵],  [Tile-scan passive],
+    [Abundant],    [Stone], [🪨],  [Tile-scan passive],
+    [Common],      [Metal], [⛏️], [Tile-scan passive],
+    [Scarce],      [Gold],  [💰],  [One-time founding gift + trade],
+    [Node-based],  [Favor], [✨],  [Temple buildings],
+    [Generated],
   )],
   kind: table,
 )
@@ -26,14 +24,13 @@
 No production chains. Resources are spent directly on buildings and
 units with no intermediate processing step.
 
-=== 6.2 Tile-Scan Resource Production
-<62-tile-scan-resource-production>
+=== 6.2 Tile-Scan Resource Production <62-tile-scan-resource-production>
 Each city\'s passive production profile is #strong[computed once at
-  world generation time] by scanning a circular radius of 6 tiles around
+world generation time] by scanning a circular radius of 6 tiles around
 the city slot (radius constant: `CITY_SCAN_RADIUS = 6`, producing
 approximately 113 scanned tiles). The result --- stored as
 `CityResources` in the world file --- is the #strong[permanent
-  production profile] for that city. It never changes.
+production profile] for that city. It never changes.
 
 #strong[This is a design constraint, not a limitation.] Fixed profiles
 make city placement a permanent strategic decision: you cannot farm a
@@ -64,8 +61,7 @@ advantage --- enough to jump-start their first buildings --- but the
 advantage does not compound forever. This keeps the gold economy
 trading-dependent at all stages of the game.
 
-=== 6.3 Production Formula
-<63-production-formula>
+=== 6.3 Production Formula <63-production-formula>
 ```
 resource_per_hour = base_rate
                   × (1 + tile_scan_modifier / 100)
@@ -81,8 +77,7 @@ of `+30` means 30% production bonus from terrain, `-15` means 15%
 penalty. The formula is multiplicative: civilization passives and era
 bonuses compound on top of terrain advantages.
 
-=== 6.4 Resource Storage Caps
-<64-resource-storage-caps>
+=== 6.4 Resource Storage Caps <64-resource-storage-caps>
 Storage caps apply per-resource. Resources above cap are lost
 (overflow). This prevents passive hoarding and keeps active players
 advantaged over idle ones.
@@ -103,8 +98,8 @@ Wonder bonus remains additive:
     columns: 2,
     align: (auto, auto),
     table.header([Condition], [Bonus]),
-    table.hline(),
-    [Wonder bonus], [+25,000 on Wonder island],
+    table.hline(),              [Wonder bonus],
+    [+25,000 on Wonder island],
   )],
   kind: table,
 )
@@ -113,8 +108,7 @@ Food has its own storage building line (Granary). All other resources
 share the Warehouse line. A city can have both a Granary and a Warehouse
 --- they stack independently.
 
-=== 6.5 Multiple Cities & Founding Cost Scaling
-<65-multiple-cities--founding-cost-scaling>
+=== 6.5 Multiple Cities & Founding Cost Scaling <65-multiple-cities--founding-cost-scaling>
 Each city beyond the first carries escalating founding costs and
 maintenance. Cultural Level slots gate access (§9.6), so the economic
 scaling is the second constraint on expansion.
@@ -127,14 +121,14 @@ scaling is the second constraint on expansion.
       [City number],
       [Founding cost multiplier],
       [Per-city
-        maintenance multiplier],
+      maintenance multiplier],
     ),
-    table.hline(),
-    [1st], [--- (starting city)], [1.0×],
-    [2nd], [1.5× base], [1.3×],
-    [3rd], [2.5× base], [1.7×],
-    [4th], [4.0× base], [2.5×],
-    [5th+], [+2.0× per city], [+1.0× per city],
+    table.hline(),    [1st],  [--- (starting city)],
+    [1.0×],           [2nd],  [1.5× base],
+    [1.3×],           [3rd],  [2.5× base],
+    [1.7×],           [4th],  [4.0× base],
+    [2.5×],           [5th+], [+2.0× per city],
+    [+1.0× per city],
   )],
   kind: table,
 )
@@ -142,10 +136,9 @@ scaling is the second constraint on expansion.
 Rome\'s Provincial Administration passive reduces maintenance
 multipliers (see §5.6). All other civs use these defaults.
 
-== 7. Population & Builder System
-<7-population--builder-system>
-=== 7.1 Population as a Hard Cap
-<71-population-as-a-hard-cap>
+== 7. Population & Builder System <7-population--builder-system>
+
+=== 7.1 Population as a Hard Cap <71-population-as-a-hard-cap>
 Population is a #strong[ceiling];, not a consumable resource. It limits
 what can simultaneously exist in a city. Population itself is not spent
 on anything --- it determines the maximum count of builders, military
@@ -156,8 +149,7 @@ roughly 100--200 population and a well-developed city can reach much
 higher caps. Exact peaks depend on Granary investment, divinity
 passives, and special buildings.
 
-=== 7.2 Population Cap Formula
-<72-population-cap-formula>
+=== 7.2 Population Cap Formula <72-population-cap-formula>
 Population cap scales with Granary level.
 
 ```
@@ -186,11 +178,11 @@ Where:
     columns: 2,
     align: (auto, auto),
     table.header([Granary level], [pop\_cap]),
-    table.hline(),
-    [0], [50],
-    [1], [61],
-    [2], [81],
-    [3], [107],
+    table.hline(), [0],
+    [50],          [1],
+    [61],          [2],
+    [81],          [3],
+    [107],
   )],
   kind: table,
 )
@@ -205,8 +197,7 @@ level gives more cap than the previous one.
 The constants (`50` and `11`) should be exposed in `world.toml` for
 balancing.
 
-=== 7.3 Population Growth
-<73-population-growth>
+=== 7.3 Population Growth <73-population-growth>
 Current population grows toward the cap organically. There is no
 happiness stat --- growth is driven purely by food surplus and cultural
 investment.
@@ -222,13 +213,13 @@ growth_per_hour = base_growth_rate
     columns: 2,
     align: (auto, auto),
     table.header([Condition], [Modifier]),
-    table.hline(),
-    [Food surplus \> 20% of consumption], [+15% growth],
-    [Food surplus 0--20%], [×1.0 (normal)],
-    [Food deficit (any)], [−25% growth],
-    [Sustained food deficit (\>12h)], [Population begins declining],
-    [Active war: enemy army in city territory], [−10% growth],
-    [Cultural Level milestone achieved (last 24h)], [+10% growth],
+    table.hline(),                 [Food surplus \> 20% of consumption],
+    [+15% growth],                 [Food surplus 0--20%],
+    [×1.0 (normal)],               [Food deficit (any)],
+    [−25% growth],                 [Sustained food deficit (\>12h)],
+    [Population begins declining], [Active war: enemy army in city territory],
+    [−10% growth],                 [Cultural Level milestone achieved (last 24h)],
+    [+10% growth],
   )],
   kind: table,
 )
@@ -236,8 +227,7 @@ growth_per_hour = base_growth_rate
 There is no rebellion mechanic. A starving city stops growing then
 shrinks. Recovery begins immediately when food surplus is restored.
 
-=== 7.4 Free Population & Builders
-<74-free-population--builders>
+=== 7.4 Free Population & Builders <74-free-population--builders>
 Population not committed to military units is #strong[free population];.
 A fixed ratio of free population becomes #strong[Builders] automatically
 --- no player action required.

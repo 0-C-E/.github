@@ -1,25 +1,22 @@
-= 0 C.E. --- Senate
-<0-ce--senate>
+= 0 C.E. --- Senate <0-ce--senate>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
-== Starting Levels
-<starting-levels>
+== Starting Levels <starting-levels>
 #figure(
   align(center)[#table(
     columns: 2,
     align: (auto, auto),
     table.header([Mode], [Starting Level]),
-    table.hline(),
-    [Full World], [1],
-    [Campaign], [2],
-    [Skirmish], [5],
-    [Game Night], [10],
+    table.hline(), [Full World],
+    [1],           [Campaign],
+    [2],           [Skirmish],
+    [5],           [Game Night],
+    [10],
   )],
   kind: table,
 )
 
-== Senate Levels Data
-<senate-level-data>
+== Senate Levels Data <senate-level-data>
 #let max_level = 25
 
 // ── Base values & Functions ──
@@ -79,6 +76,7 @@
 )
 
 // ── Tables ──
+
 === Early game
 #building_table(1, 9)
 

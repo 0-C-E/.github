@@ -1,12 +1,10 @@
-= 0 C.E. - Technical Architecture
-<0-ce---technical-architecture>
+= 0 C.E. - Technical Architecture <0-ce---technical-architecture>
 #link("../nav/Home.pdf") | #link("UI-UX.pdf")[Previous] |
 #link("Data-Models.pdf")[Next]
 
-== 20. Technical Architecture Reference
-<20-technical-architecture-reference>
-=== 20.1 System Diagram
-<201-system-diagram>
+== 20. Technical Architecture Reference <20-technical-architecture-reference>
+
+=== 20.1 System Diagram <201-system-diagram>
 ```
 Browser (Leaflet.js + HTML5 Canvas)
     ↕ REST API (Actix-web)
@@ -33,8 +31,7 @@ Browser (Leaflet.js + HTML5 Canvas)
     └── Victory Check (scan conditions on state-change events)
 ```
 
-=== 20.2 Crate Structure
-<202-crate-structure>
+=== 20.2 Crate Structure <202-crate-structure>
 ```
 0ce/
 ├── crates/
@@ -71,23 +68,27 @@ Browser (Leaflet.js + HTML5 Canvas)
 └── Cargo.toml
 ```
 
-=== 20.3 SBC Performance Targets
-<203-sbc-performance-targets>
-#figure(
-  align(center)[#table(
-    columns: 3,
-    align: (auto,auto,auto,),
-    table.header([Metric], [Target], [Strategy],),
-    table.hline(),
-    [RAM at 100 players], [\< 512MB], [Connection pooling, stateless
-    handlers],
-    [Production processing], [\< 1s per cycle], [Batched SQL, indexed
-    city queries],
-    [DB connections], [\< 20 pooled], [SQLx PgPool],
-    [WebSocket connections], [100 concurrent], [Tokio async, actor
-    model],
-    [Map tile serving], [\< 50ms cached], [Pre-generated tiles + HTTP
-    cache headers],
-  )]
-  , kind: table
-  )
+=== 20.3 SBC Performance Targets <203-sbc-performance-targets>
+#figure(align(center)[#table(
+  columns: 3,
+  align: (
+    auto,
+    auto,
+    auto,
+  ),
+  table.header(
+    [Metric],
+    [Target],
+    [Strategy],
+  ),
+  table.hline(), [RAM at 100 players],    [\< 512MB],
+  [Connection pooling, stateless
+  handlers],              [Production processing], [\< 1s per cycle],
+  [Batched SQL, indexed
+  city queries],              [DB connections],        [\< 20 pooled],
+  [SQLx PgPool], [WebSocket connections], [100 concurrent],
+  [Tokio async, actor
+  model],              [Map tile serving],      [\< 50ms cached],
+  [Pre-generated tiles + HTTP
+  cache headers],
+)], kind: table)

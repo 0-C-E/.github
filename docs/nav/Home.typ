@@ -1,9 +1,7 @@
-= 0 C.E. Wiki
-<0-ce-wiki>
+= 0 C.E. Wiki <0-ce-wiki>
 Canonical Game Design Document for 0 C.E.
 
-== Read Order
-<read-order>
+== Read Order <read-order>
 + #link("../chapters/Vision-and-Modes.pdf")[Vision and Modes]
 + #link("../chapters/World-and-Civilizations.pdf")[World and Civilizations]
 + #link("../chapters/Economy.pdf")[Economy]

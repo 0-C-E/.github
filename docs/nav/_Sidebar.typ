@@ -1,5 +1,4 @@
-== 0 C.E. Wiki
-<0-ce-wiki>
+== 0 C.E. Wiki <0-ce-wiki>
 - #link("Home.pdf")
 - #link("../chapters/Vision-and-Modes.pdf")[Vision and Modes]
 - #link("../chapters/World-and-Civilizations.pdf")[World and Civilizations]

@@ -1,12 +1,10 @@
-= 0 C.E. - Data Models
-<0-ce---data-models>
+= 0 C.E. - Data Models <0-ce---data-models>
 #link("../nav/Home.pdf") | #link("Technical-Architecture.pdf")[Previous] |
 #link("Event-System.pdf")[Next]
 
-== 21. Data Models & Schemas
-<21-data-models--schemas>
-=== 21.1 Core Tables
-<211-core-tables>
+== 21. Data Models & Schemas <21-data-models--schemas>
+
+=== 21.1 Core Tables <211-core-tables>
 ```sql
 -- Players (global, cross-world)
 CREATE TABLE players (

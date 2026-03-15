@@ -1,25 +1,22 @@
-= 0 C.E. --- Foundry
-<0-ce--foundry>
+= 0 C.E. --- Foundry <0-ce--foundry>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
-== Starting Levels
-<starting-levels>
+== Starting Levels <starting-levels>
 #figure(
   align(center)[#table(
     columns: 2,
     align: (auto, auto),
     table.header([Mode], [Starting Level]),
-    table.hline(),
-    [Full World], [0],
-    [Campaign], [1],
-    [Skirmish], [5],
-    [Game Night], [15],
+    table.hline(), [Full World],
+    [0],           [Campaign],
+    [1],           [Skirmish],
+    [5],           [Game Night],
+    [15],
   )],
   kind: table,
 )
 
-== Foundry Levels Data
-<foundry-level-data>
+== Foundry Levels Data <foundry-level-data>
 #let max_level = 40
 
 // ── Base values & Functions ──

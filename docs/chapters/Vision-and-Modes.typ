@@ -1,11 +1,9 @@
-= 0 C.E. - Vision and Modes
-<0-ce---vision-and-modes>
+= 0 C.E. - Vision and Modes <0-ce---vision-and-modes>
 #link("../nav/Home.pdf") | Previous | #link("World-and-Civilizations.pdf")[Next]
 
-== 1. Vision & Pillars
-<1-vision--pillars>
-=== 1.1 Elevator Pitch
-<11-elevator-pitch>
+== 1. Vision & Pillars <1-vision--pillars>
+
+=== 1.1 Elevator Pitch <11-elevator-pitch>
 #emph[0 C.E.] is a browser-based, open-source Massively Multiplayer
 Online Real-Time Strategy game set in a fully fictional ancient world,
 loosely inspired by antiquity. Players found cities in procedurally
@@ -20,40 +18,42 @@ intense #strong[Game Night] playable in a single sitting. The same
 city-building, economy, and combat systems power all four --- only their
 pace, feature set, and stakes differ.
 
-=== 1.2 Core Design Pillars
-<12-core-design-pillars>
-#figure(
-  align(center)[#table(
-    columns: 2,
-    align: (auto,auto,),
-    table.header([Pillar], [Description],),
-    table.hline(),
-    [#strong[Grepolis Soul, 0 A.D. Depth];], [Browser accessibility and
-    MMORTS social dynamics from Grepolis; historical authenticity, unit
-    fidelity, and strategic depth from 0 A.D.],
-    [#strong[Four Time Contracts];], [One engine, four modes. From a
-    years-long persistent world to a 1-hour game night --- the same
-    systems, compressed or expanded by mode configuration.],
-    [#strong[Deep but Accessible];], [Spreadsheet optimizers and casual
-    city-builders coexist. Every system has a simple surface and a deep
-    optimization layer underneath.],
-    [#strong[Open by Default];], [Free to play, free to host, free to
-    mod. No pay-to-win. The scripting engine is a power-user convenience
-    tool, never a competitive gate.],
-    [#strong[Emergent Stories];], [The game does not script drama --- it
-    creates conditions for it. Betrayed alliances, last-minute wonder
-    races, desperate defenses, and improbable comebacks emerge from
-    player decisions.],
-    [#strong[Playstyle Agnostic Civs];], [Each civilization has a pushed
-    archetype (aggressive raider, patient builder, divine diplomat) but
-    never locks players into a single strategy. A city-builder can play
-    Rome; a warmonger can play Maya.],
-  )]
-  , kind: table
-  )
+=== 1.2 Core Design Pillars <12-core-design-pillars>
+#figure(align(center)[#table(
+  columns: 2,
+  align: (
+    auto,
+    auto,
+  ),
+  table.header(
+    [Pillar],
+    [Description],
+  ),
+  table.hline(), [#strong[Grepolis Soul, 0 A.D. Depth];],
+  [Browser accessibility and
+  MMORTS social dynamics from Grepolis; historical authenticity, unit
+  fidelity, and strategic depth from 0 A.D.],              [#strong[Four Time Contracts];],
+  [One engine, four modes. From a
+  years-long persistent world to a 1-hour game night --- the same
+  systems, compressed or expanded by mode configuration.],              [#strong[Deep
+  but Accessible];],
+  [Spreadsheet optimizers and casual
+  city-builders coexist. Every system has a simple surface and a deep
+  optimization layer underneath.],              [#strong[Open by Default];],
+  [Free to play, free to host, free to
+  mod. No pay-to-win. The scripting engine is a power-user convenience
+  tool, never a competitive gate.],              [#strong[Emergent Stories];],
+  [The game does not script drama --- it
+  creates conditions for it. Betrayed alliances, last-minute wonder
+  races, desperate defenses, and improbable comebacks emerge from
+  player decisions.],              [#strong[Playstyle Agnostic Civs];],
+  [Each civilization has a pushed
+  archetype (aggressive raider, patient builder, divine diplomat) but
+  never locks players into a single strategy. A city-builder can play
+  Rome; a warmonger can play Maya.],
+)], kind: table)
 
-=== 1.3 Target Audience
-<13-target-audience>
+=== 1.3 Target Audience <13-target-audience>
 - #strong[Primary];: Veterans of Grepolis, Travian, OGame, and
   browser-based MMORTS games seeking a deeper, open-source alternative
 - #strong[Secondary];: Strategy game enthusiasts (Civilization, Age of
@@ -61,8 +61,7 @@ pace, feature set, and stakes differ.
 - #strong[Tertiary];: Casual players drawn in by friends; developers and
   modders drawn by open architecture and scripting engine
 
-=== 1.4 Tone & Aesthetic
-<14-tone--aesthetic>
+=== 1.4 Tone & Aesthetic <14-tone--aesthetic>
 #strong[Clean and bold.] The UI prioritizes readability over decoration.
 Information density matters --- a player should be able to parse their
 city\'s status at a glance on mobile. The map is the centerpiece: rich,
@@ -78,67 +77,83 @@ planned but not yet implemented. Pantheons remain mostly faithful to
 their mythological roots, while divine abilities are adapted for
 gameplay first.
 
-== 2. Game Modes
-<2-game-modes>
+== 2. Game Modes <2-game-modes>
 This is the central architectural decision of 0 C.E. All four modes run
 on the same engine. Mode configuration compresses or expands time,
 restricts feature sets, and adjusts entry/exit mechanics.
 
-=== 2.1 Mode Overview
-<21-mode-overview>
-#figure(
-  align(center)[#table(
-    columns: 5,
-    align: (auto,auto,auto,auto,auto,),
-    table.header([Attribute], [Full
-      World], [Campaign], [Skirmish], [Game Night],),
-    table.hline(),
-    [#strong[Duration];], [2 months -- 10 years], [2 weeks -- 2
-    months], [Days], [1 -- 4 hours],
-    [#strong[Entry];], [Staggered (join anytime)], [Scheduled
-    start], [Scheduled start], [Cold start (simultaneous)],
-    [#strong[Production];], [Continuous real-time], [Continuous
-    real-time], [Continuous real-time], [Continuous real-time
-    (accelerated)],
-    [#strong[Players];], [Configurable (no canonical
-    size)], [Configurable], [Configurable], [Configurable],
-    [#strong[Win Condition];], [World Domination], [Wonder
-    hold], [Score], [Elimination / Score],
-  )]
-  , kind: table
-  )
+=== 2.1 Mode Overview <21-mode-overview>
+#figure(align(center)[#table(
+  columns: 5,
+  align: (
+    auto,
+    auto,
+    auto,
+    auto,
+    auto,
+  ),
+  table.header(
+    [Attribute],
+    [Full
+    World],
+    [Campaign],
+    [Skirmish],
+    [Game Night],
+  ),
+  table.hline(),               [#strong[Duration];],      [2 months -- 10 years],     [2
+  weeks -- 2
+  months],               [Days],
+  [1 -- 4 hours],              [#strong[Entry];],         [Staggered (join anytime)], [Scheduled
+  start],               [Scheduled start],
+  [Cold start (simultaneous)], [#strong[Production];],    [Continuous real-time],     [Continuous
+  real-time],               [Continuous real-time],
+  [Continuous real-time
+  (accelerated)],                            [#strong[Players];],       [Configurable
+  (no canonical
+  size)],                           [Configurable], [Configurable],
+  [Configurable],              [#strong[Win Condition];], [World Domination],         [Wonder
+  hold],               [Score],
+  [Elimination / Score],
+)], kind: table)
 
-=== 2.2 System Availability Matrix
-<22-system-availability-matrix>
-#figure(
-  align(center)[#table(
-    columns: 5,
-    align: (auto,auto,auto,auto,auto,),
-    table.header([System], [Full World], [Campaign], [Skirmish], [Game
-      Night],),
-    table.hline(),
-    [City Building], [✅], [✅], [✅], [✅],
-    [Resource Economy], [✅], [✅], [✅], [✅],
-    [Ascension / Eras], [✅], [✅], [✅], [❌],
-    [Combat & Military], [✅], [✅], [✅], [✅],
-    [Research / Tech Tree], [✅], [✅], [✅], [❌],
-    [Alliances], [✅], [✅], [❌], [❌],
-    [Diplomacy / Treaties], [✅], [✅], [❌], [❌],
-    [Trade], [✅], [✅], [✅], [❌],
-    [Espionage], [✅], [✅], [✅], [❌],
-    [Divine Abilities], [✅], [✅], [✅], [❌],
-    [Wonders], [✅], [✅], [❌], [❌],
-    [Villages], [✅], [✅], [✅], [❌],
-    [Social (chat, forum)], [✅], [✅], [✅], [✅],
-    [Prestige / Leaderboard], [✅], [✅], [✅], [✅],
-    [Scripting Engine (Wave 2)], [✅], [✅], [✅], [❌],
-    [Heroes (Wave 2)], [✅], [✅], [❌], [❌],
-  )]
-  , kind: table
-  )
+=== 2.2 System Availability Matrix <22-system-availability-matrix>
+#figure(align(center)[#table(
+  columns: 5,
+  align: (
+    auto,
+    auto,
+    auto,
+    auto,
+    auto,
+  ),
+  table.header(
+    [System],
+    [Full World],
+    [Campaign],
+    [Skirmish],
+    [Game
+    Night],
+  ),
+  table.hline(), [City Building],             [✅], [✅], [✅],
+  [✅],           [Resource Economy],          [✅], [✅], [✅],
+  [✅],           [Ascension / Eras],          [✅], [✅], [✅],
+  [❌],           [Combat & Military],         [✅], [✅], [✅],
+  [✅],           [Research / Tech Tree],      [✅], [✅], [✅],
+  [❌],           [Alliances],                 [✅], [✅], [❌],
+  [❌],           [Diplomacy / Treaties],      [✅], [✅], [❌],
+  [❌],           [Trade],                     [✅], [✅], [✅],
+  [❌],           [Espionage],                 [✅], [✅], [✅],
+  [❌],           [Divine Abilities],          [✅], [✅], [✅],
+  [❌],           [Wonders],                   [✅], [✅], [❌],
+  [❌],           [Villages],                  [✅], [✅], [✅],
+  [❌],           [Social (chat, forum)],      [✅], [✅], [✅],
+  [✅],           [Prestige / Leaderboard],    [✅], [✅], [✅],
+  [✅],           [Scripting Engine (Wave 2)], [✅], [✅], [✅],
+  [❌],           [Heroes (Wave 2)],           [✅], [✅], [❌],
+  [❌],
+)], kind: table)
 
-=== 2.3 Full World
-<23-full-world>
+=== 2.3 Full World <23-full-world>
 The canonical, persistent experience. No end date is set at creation ---
 worlds run until the host retires them or a community milestone is
 reached. New players can join at any time.
@@ -153,8 +168,7 @@ reached. New players can join at any time.
 - #strong[Elimination];: Losing all cities does not end your account.
   You may found a new city or migrate to a different world.
 
-=== 2.4 Campaign
-<24-campaign>
+=== 2.4 Campaign <24-campaign>
 A structured competitive world with a defined arc and a winner. Designed
 for organized play --- guilds, communities, tournaments.
 
@@ -170,8 +184,7 @@ for organized play --- guilds, communities, tournaments.
 - #strong[Late Join];: Enabled during early game only. Late join is
   permanently disabled once any World Wonder starts construction.
 
-=== 2.5 Skirmish
-<25-skirmish>
+=== 2.5 Skirmish <25-skirmish>
 A fast, focused competitive world. All the strategic depth of a Campaign
 compressed into days.
 
@@ -185,8 +198,7 @@ compressed into days.
 - #strong[Elimination];: Losing all cities ends participation. Spectate
   only.
 
-=== 2.6 Game Night
-<26-game-night>
+=== 2.6 Game Night <26-game-night>
 The most radical mode. Designed to be playable start-to-finish in a
 single sitting with friends. Targets 1-hour minimum playable session.
 
@@ -207,8 +219,7 @@ single sitting with friends. Targets 1-hour minimum playable session.
 - #strong[Session Design];: The host sets a hard time limit. If no
   elimination victory occurs, the highest Prestige score wins.
 
-=== 2.7 Production Speed Model
-<27-production-speed-model>
+=== 2.7 Production Speed Model <27-production-speed-model>
 All modes use #strong[continuous real-time production] --- there are no
 discrete economy ticks visible to the player. Resources accumulate
 smoothly, construction progresses in real time, armies march in real
@@ -233,8 +244,7 @@ Construction, research, army training, march times, and resource
 production all scale uniformly with the mode multiplier unless
 explicitly overridden by mode-specific acquisition rules (see §10.8).
 
-=== 2.8 Game Night Fairness Rules
-<28-game-night-fairness-rules>
+=== 2.8 Game Night Fairness Rules <28-game-night-fairness-rules>
 Game Night uses the same combat engine as other modes, but city
 acquisition and counterplay windows are tuned for a 1-4 hour session.
 
@@ -267,31 +277,38 @@ rapid_siege_window_minutes = max(10, floor(20 / sqrt(world_speed_multiplier)))
 If scaling is disabled, use a fixed window (recommended default: 12
 minutes).
 
-== 3. World Structure & Configuration
-<3-world-structure--configuration>
-=== 3.1 World Types & Hosting
-<31-world-types--hosting>
-#figure(
-  align(center)[#table(
-    columns: 4,
-    align: (auto,auto,auto,auto,),
-    table.header([Type], [Host], [Access], [Reset],),
-    table.hline(),
-    [#strong[Official Public];], [Maintainer server], [Free,
-    public], [Never (or major patch)],
-    [#strong[Official Seasonal];], [Maintainer], [Free, public], [After
-    season end],
-    [#strong[Community Private];], [Self-hosted (SBC, VPS, home
-    server)], [Free, self-host], [Admin\'s discretion],
-  )]
-  , kind: table
-  )
+== 3. World Structure & Configuration <3-world-structure--configuration>
+
+=== 3.1 World Types & Hosting <31-world-types--hosting>
+#figure(align(center)[#table(
+  columns: 4,
+  align: (
+    auto,
+    auto,
+    auto,
+    auto,
+  ),
+  table.header(
+    [Type],
+    [Host],
+    [Access],
+    [Reset],
+  ),
+  table.hline(),            [#strong[Official Public];],   [Maintainer server], [Free,
+  public],
+  [Never (or major patch)], [#strong[Official Seasonal];], [Maintainer],        [Free,
+  public],
+  [After
+  season end],                         [#strong[Community Private];], [Self-hosted
+  (SBC, VPS, home
+  server)],                    [Free, self-host],
+  [Admin\'s discretion],
+)], kind: table)
 
 All world types share the same codebase and configuration system. There
 is no feature difference between official and self-hosted worlds.
 
-=== 3.2 World Configuration (`world.toml`)
-<32-world-configuration-worldtoml>
+=== 3.2 World Configuration (`world.toml`) <32-world-configuration-worldtoml>
 ```toml
 [world]
 name        = "Aeturnum"
@@ -352,14 +369,12 @@ heroes_enabled        = false     # Wave 2
 scripting_enabled     = false     # Wave 2
 ```
 
-=== 3.3 World Registry
-<33-world-registry>
+=== 3.3 World Registry <33-world-registry>
 A public API endpoint lists all worlds accepting players. Players browse
 by: mode, player count, world age, map type, ruleset, and active victory
 conditions. Private worlds may opt in or out of the registry.
 
-=== 3.4 World Lifecycle
-<34-world-lifecycle>
+=== 3.4 World Lifecycle <34-world-lifecycle>
 ```
 [Created] → [Map Generated] → [Lobby Open]
   → [Active: Gameplay] → [Endgame: Victory condition met or time limit reached]

@@ -1,34 +1,30 @@
-= 0 C.E. --- Academy
-<0-ce--academy>
+= 0 C.E. --- Academy <0-ce--academy>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 // TODO: Determine the actual academy level cap and adjust the data accordingly. The current cap of 35 is based on Grepolis, but may not be accurate for this game.
 
-== Notes
-<notes>
+== Notes <notes>
 - The Academy has a #strong[hard cap of 35] --- city tier bonuses do not
   raise this cap further.
 - See #link("../chapters/Research.pdf")[Research] for the full technology tree and
   research mechanics.
 
-== Starting Levels
-<starting-levels>
+== Starting Levels <starting-levels>
 #figure(
   align(center)[#table(
     columns: 2,
     align: (auto, auto),
     table.header([Mode], [Starting Level]),
-    table.hline(),
-    [Full World], [0],
-    [Campaign], [0],
-    [Skirmish], [3],
-    [Game Night], [7],
+    table.hline(), [Full World],
+    [0],           [Campaign],
+    [0],           [Skirmish],
+    [3],           [Game Night],
+    [7],
   )],
   kind: table,
 )
 
-== Academy Levels Data
-<academy-level-data>
+== Academy Levels Data <academy-level-data>
 #let max_level = 35
 
 // ── Base values & Functions ──

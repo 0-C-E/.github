@@ -1,9 +1,7 @@
-= 0 C.E. --- Harbor
-<0-ce--harbor>
+= 0 C.E. --- Harbor <0-ce--harbor>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
-== Notes
-<notes>
+== Notes <notes>
 - All naval units are trained, stored, and managed in the Harbor
   garrison context.
 - Land units are managed separately in the
@@ -11,24 +9,22 @@
 - See #link("../chapters/Military.pdf")[Military] for naval unit types and combat
   rules.
 
-== Starting Levels
-<starting-levels>
+== Starting Levels <starting-levels>
 #figure(
   align(center)[#table(
     columns: 2,
     align: (auto, auto),
     table.header([Mode], [Starting Level]),
-    table.hline(),
-    [Full World], [0],
-    [Campaign], [0],
-    [Skirmish], [1],
-    [Game Night], [1],
+    table.hline(), [Full World],
+    [0],           [Campaign],
+    [0],           [Skirmish],
+    [1],           [Game Night],
+    [1],
   )],
   kind: table,
 )
 
-== Harbor Levels Data
-<harbor-level-data>
+== Harbor Levels Data <harbor-level-data>
 #let max_level = 30
 
 // ── Base values & Functions ──

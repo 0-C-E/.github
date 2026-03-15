@@ -1,11 +1,9 @@
-= 0 C.E. - Heroes
-<0-ce---heroes>
+= 0 C.E. - Heroes <0-ce---heroes>
 #link("../nav/Home.pdf") | #link("Roadmap.pdf")[Previous] | Next
 
-== 22. Heroes System #emph[(Wave 2)]
-<22-heroes-system-wave-2>
-=== 21.1 Design Philosophy
-<211-design-philosophy>
+== 22. Heroes System #emph[(Wave 2)] <22-heroes-system-wave-2>
+
+=== 21.1 Design Philosophy <211-design-philosophy>
 Heroes are named historical figures --- real people from each
 civilization\'s history --- who can be recruited to lead armies or
 govern cities. They are not superweapons. A Hero\'s value lies in the
@@ -18,34 +16,38 @@ Heroes must not trivialize combat for experienced players. Their bonuses
 are meaningful but never decisive on their own --- a Hero leading a
 poorly composed army still loses to a well-composed army without one.
 
-=== 21.2 Hero Types --- Fixed at Selection
-<212-hero-types--fixed-at-selection>
+=== 21.2 Hero Types --- Fixed at Selection <212-hero-types--fixed-at-selection>
 Each Hero is permanently either a #strong[Military Commander] or a
 #strong[City Governor];. The type is determined by the historical
 figure, not player choice. A player selects a Hero knowing what type
 they are getting.
 
-#figure(
-  align(center)[#table(
-    columns: 3,
-    align: (auto,auto,auto,),
-    table.header([Type], [Assigned To], [Bonus Domain],),
-    table.hline(),
-    [#strong[Military Commander];], [An army --- marches with it, fights
-    in every battle], [Combat effectiveness, army speed, formation
-    bonuses],
-    [#strong[City Governor];], [A city --- stationed permanently until
-    reassigned], [Production, construction, Favor generation, Cultural
-    Points],
-  )]
-  , kind: table
-  )
+#figure(align(center)[#table(
+  columns: 3,
+  align: (
+    auto,
+    auto,
+    auto,
+  ),
+  table.header(
+    [Type],
+    [Assigned To],
+    [Bonus Domain],
+  ),
+  table.hline(), [#strong[Military Commander];], [An army --- marches with it, fights
+  in every battle],
+  [Combat effectiveness, army speed, formation
+  bonuses],              [#strong[City Governor];],      [A city --- stationed permanently
+  until
+  reassigned],
+  [Production, construction, Favor generation, Cultural
+  Points],
+)], kind: table)
 
 Reassigning a Hero from one army/city to another takes 12 real-time
 hours (travel). During transit the Hero provides no bonus.
 
-=== 21.3 Hero Slots --- One Per City
-<213-hero-slots--one-per-city>
+=== 21.3 Hero Slots --- One Per City <213-hero-slots--one-per-city>
 Each player city supports exactly #strong[one Hero slot];:
 
 - A city without a Hero assigned has an empty slot
@@ -59,8 +61,7 @@ Each player city supports exactly #strong[one Hero slot];:
 Hero slots cannot be increased by technology or any other means. The
 city count is the hard limit.
 
-=== 21.4 Acquiring Heroes
-<214-acquiring-heroes>
+=== 21.4 Acquiring Heroes <214-acquiring-heroes>
 Heroes are chosen from a #strong[civ-specific roster of named historical
 figures];. Each civilization has a fixed roster of recruitable Heroes. A
 player may only recruit a Hero that hasn\'t already been recruited in
@@ -93,8 +94,7 @@ Yax K\'uk\' Mo\'.
 Each figure has a brief historical flavor text on their recruitment
 card. The roster is data-file defined and expandable in future patches.
 
-=== 21.5 Hero Progression --- Linear XP
-<215-hero-progression--linear-xp>
+=== 21.5 Hero Progression --- Linear XP <215-hero-progression--linear-xp>
 Heroes gain XP from:
 
 - #strong[Military Commanders];: Each battle the army participates in
@@ -115,8 +115,7 @@ investment.
 level\'s XP threshold on recovery. This makes protecting a high-level
 Hero a real tactical priority.
 
-=== 21.6 When a Hero Is Defeated
-<216-when-a-hero-is-defeated>
+=== 21.6 When a Hero Is Defeated <216-when-a-hero-is-defeated>
 Heroes are never killed permanently. When a Military Commander\'s army
 loses a battle, the Hero is #strong[Wounded];:
 
@@ -133,50 +132,58 @@ can only be lost if their city is captured, in which case they defect to
 the capturing player (they stay with the city, not the player).
 Recapturing your city returns your Governor.
 
-=== 21.7 Ability Examples by Type
-<217-ability-examples-by-type>
+=== 21.7 Ability Examples by Type <217-ability-examples-by-type>
 #strong[Military Commander abilities] (illustrative --- final values
 tuned in playtesting):
 
-#figure(
-  align(center)[#table(
-    columns: 3,
-    align: (auto,auto,auto,),
-    table.header([Level], [Ability Type], [Example Effect],),
-    table.hline(),
-    [1], [Passive], [Army speed +10% while this Hero commands],
-    [3], [Passive], [Formation bonus of chosen formation +5%
-    additional],
-    [6], [Active (1/battle)], [First combat round: all units deal +20%
-    damage],
-    [10], [Passive], [Army suffers 20% fewer casualties in battle],
-  )]
-  , kind: table
-  )
+#figure(align(center)[#table(
+  columns: 3,
+  align: (
+    auto,
+    auto,
+    auto,
+  ),
+  table.header(
+    [Level],
+    [Ability Type],
+    [Example Effect],
+  ),
+  table.hline(),                                 [1],  [Passive],
+  [Army speed +10% while this Hero commands],    [3],  [Passive],
+  [Formation bonus of chosen formation +5%
+  additional],                                              [6],  [Active (1/battle)],
+  [First combat round: all units deal +20%
+  damage],                                              [10], [Passive],
+  [Army suffers 20% fewer casualties in battle],
+)], kind: table)
 
 #strong[City Governor abilities] (illustrative):
 
-#figure(
-  align(center)[#table(
-    columns: 3,
-    align: (auto,auto,auto,),
-    table.header([Level], [Ability Type], [Example Effect],),
-    table.hline(),
-    [1], [Passive], [Construction speed in this city +10%],
-    [3], [Passive], [Favor generation in this city +15%],
-    [6], [Active (1/day)], [Instantly complete lowest-tier building in
-    queue],
-    [10], [Passive], [Cultural event costs in this city −20%],
-  )]
-  , kind: table
-  )
+#figure(align(center)[#table(
+  columns: 3,
+  align: (
+    auto,
+    auto,
+    auto,
+  ),
+  table.header(
+    [Level],
+    [Ability Type],
+    [Example Effect],
+  ),
+  table.hline(),                            [1],  [Passive],
+  [Construction speed in this city +10%],   [3],  [Passive],
+  [Favor generation in this city +15%],     [6],  [Active (1/day)],
+  [Instantly complete lowest-tier building in
+  queue],                                         [10], [Passive],
+  [Cultural event costs in this city −20%],
+)], kind: table)
 
 Specific Hero figures have abilities themed to their historical role ---
 Pericles (Governor) boosts cultural output; Themistocles (Commander)
 specializes in naval bonuses; Imhotep (Governor) amplifies construction.
 
-=== 21.8 Hero Data Schema
-<218-hero-data-schema>
+=== 21.8 Hero Data Schema <218-hero-data-schema>
 ```toml
 # config/heroes/greece/themistocles.toml
 [hero]

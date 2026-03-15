@@ -1,9 +1,7 @@
-= 0 C.E. --- Barracks
-<0-ce--barracks>
+= 0 C.E. --- Barracks <0-ce--barracks>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
-== Notes
-<notes>
+== Notes <notes>
 - All land units are trained, stored, and managed in the Barracks
   garrison context.
 - Naval units are managed separately in the
@@ -13,24 +11,22 @@
   unlock.
 - See #link("../chapters/Military.pdf")[Military] for unit types and combat rules.
 
-== Starting Levels
-<starting-levels>
+== Starting Levels <starting-levels>
 #figure(
   align(center)[#table(
     columns: 2,
     align: (auto, auto),
     table.header([Mode], [Starting Level]),
-    table.hline(),
-    [Full World], [0],
-    [Campaign], [1],
-    [Skirmish], [3],
-    [Game Night], [5],
+    table.hline(), [Full World],
+    [0],           [Campaign],
+    [1],           [Skirmish],
+    [3],           [Game Night],
+    [5],
   )],
   kind: table,
 )
 
-== Barracks Levels Data
-<barracks-level-data>
+== Barracks Levels Data <barracks-level-data>
 #let max_level = 30
 
 // ── Base values & Functions ──

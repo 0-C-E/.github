@@ -1,12 +1,10 @@
-= 0 C.E. - Event System
-<0-ce---event-system>
+= 0 C.E. - Event System <0-ce---event-system>
 #link("../nav/Home.pdf") | #link("Data-Models.pdf")[Previous] |
 #link("Balancing.pdf")[Next]
 
-== 22. Event System
-<22-event-system>
-=== 22.1 Core Event Types
-<221-core-event-types>
+== 22. Event System <22-event-system>
+
+=== 22.1 Core Event Types <221-core-event-types>
 ```rust
 pub enum GameEvent {
     // Economy
@@ -59,8 +57,7 @@ pub enum GameEvent {
 }
 ```
 
-=== 22.2 Event Pipeline
-<222-event-pipeline>
+=== 22.2 Event Pipeline <222-event-pipeline>
 ```
 Game Action (player or server)
     → Validate (auth, rate limit, game rule check)

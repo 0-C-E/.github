@@ -1,32 +1,28 @@
-= 0 C.E. --- Granary
-<0-ce--granary>
+= 0 C.E. --- Granary <0-ce--granary>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
-== Notes
-<notes>
+== Notes <notes>
 - Food uses the Granary storage line; all other resources use the
   #link("Building-Warehouse.pdf")[Warehouse];.
 - A city can have both a Granary and a Warehouse; they apply to separate
   resource pools.
 
-== Starting Levels
-<starting-levels>
+== Starting Levels <starting-levels>
 #figure(
   align(center)[#table(
     columns: 2,
     align: (auto, auto),
     table.header([Mode], [Starting Level]),
-    table.hline(),
-    [Full World], [1],
-    [Campaign], [3],
-    [Skirmish], [6],
-    [Game Night], [15],
+    table.hline(), [Full World],
+    [1],           [Campaign],
+    [3],           [Skirmish],
+    [6],           [Game Night],
+    [15],
   )],
   kind: table,
 )
 
-== Granary Levels Data
-<granary-level-data>
+== Granary Levels Data <granary-level-data>
 #let max_level = 35
 
 // ── Base values & Functions ──
@@ -89,6 +85,7 @@
 )
 
 // ── Tables ──
+
 === Early game
 #building_table(1, 16)
 

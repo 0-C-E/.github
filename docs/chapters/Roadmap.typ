@@ -1,11 +1,9 @@
-= 0 C.E. - Roadmap
-<0-ce---roadmap>
+= 0 C.E. - Roadmap <0-ce---roadmap>
 #link("../nav/Home.pdf") | #link("Modding.pdf")[Previous] | #link("Heroes.pdf")[Next]
 
-== 25. Roadmap & MVP Scope
-<25-roadmap--mvp-scope>
-=== 25.1 MVP (v0.1 --- 6-Month Target)
-<251-mvp-v01--6-month-target>
+== 25. Roadmap & MVP Scope <25-roadmap--mvp-scope>
+
+=== 25.1 MVP (v0.1 --- 6-Month Target) <251-mvp-v01--6-month-target>
 #strong[In Scope];:
 
 - ☐ 5 civilizations with full TOML data definitions
@@ -41,28 +39,31 @@
 - Visual node-based scripting (Wave 2 / v0.3)
 - Mobile-optimized UI (v0.2)
 
-=== 25.2 Post-MVP Milestones
-<252-post-mvp-milestones>
-#figure(
-  align(center)[#table(
-    columns: 3,
-    align: (auto,auto,auto,),
-    table.header([Version], [Target], [Focus],),
-    table.hline(),
-    [v0.2], [+3 months], [Campaign + Skirmish modes, Wonders, full
-    Espionage, Lua scripting, mobile UI],
-    [v0.3], [+3 months], [Heroes system, Era III/IV, 2 new civs, visual
-    scripting node editor],
-    [v0.4], [+2 months], [Performance hardening, 100-player SBC
-    validation, balance pass],
-    [v1.0], [+4 months], [Public launch, full contributor docs,
-    community modding guide],
-  )]
-  , kind: table
-  )
+=== 25.2 Post-MVP Milestones <252-post-mvp-milestones>
+#figure(align(center)[#table(
+  columns: 3,
+  align: (
+    auto,
+    auto,
+    auto,
+  ),
+  table.header(
+    [Version],
+    [Target],
+    [Focus],
+  ),
+  table.hline(), [v0.2], [+3 months],
+  [Campaign + Skirmish modes, Wonders, full
+  Espionage, Lua scripting, mobile UI],              [v0.3], [+3 months],
+  [Heroes system, Era III/IV, 2 new civs, visual
+  scripting node editor],              [v0.4], [+2 months],
+  [Performance hardening, 100-player SBC
+  validation, balance pass],              [v1.0], [+4 months],
+  [Public launch, full contributor docs,
+  community modding guide],
+)], kind: table)
 
-=== 25.3 Wave 2 Features (Heroes)
-<253-wave-2-features-heroes>
+=== 25.3 Wave 2 Features (Heroes) <253-wave-2-features-heroes>
 Heroes are fully designed in #strong[§22 --- Heroes System] (see
 #link("Heroes.pdf")[Heroes];). Summary: named historical figures, fixed
 as military or governor type at selection, 1 per city (scaling with
