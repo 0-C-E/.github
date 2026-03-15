@@ -55,7 +55,7 @@
   [*Level*],
   [🪵],
   [🪨],
-  [⚔️],
+  [⛏️],
   [🌾],
   [👥],
   [⏱️],
@@ -103,6 +103,3 @@
 
 === City tier 3
 #building_table(46, 56)
-
-=== City tier 4
-#building_table(56, 66)

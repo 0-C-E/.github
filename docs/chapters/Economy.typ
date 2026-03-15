@@ -10,18 +10,18 @@
 #figure(
   align(center)[#table(
     columns: 4,
-    align: (auto,auto,auto,auto,),
-    table.header([Resource], [Symbol], [Source], [Scarcity],),
+    align: (auto, auto, auto, auto),
+    table.header([Resource], [Symbol], [Source], [Scarcity]),
     table.hline(),
     [Food], [🌾], [Tile-scan passive], [Abundant],
     [Wood], [🪵], [Tile-scan passive], [Abundant],
     [Stone], [🪨], [Tile-scan passive], [Common],
-    [Metal], [⚔️], [Tile-scan passive], [Scarce],
+    [Metal], [⛏️], [Tile-scan passive], [Scarce],
     [Gold], [💰], [One-time founding gift + trade], [Node-based],
     [Favor], [✨], [Temple buildings], [Generated],
-  )]
-  , kind: table
-  )
+  )],
+  kind: table,
+)
 
 No production chains. Resources are spent directly on buildings and
 units with no intermediate processing step.
@@ -29,11 +29,11 @@ units with no intermediate processing step.
 === 6.2 Tile-Scan Resource Production
 <62-tile-scan-resource-production>
 Each city\'s passive production profile is #strong[computed once at
-world generation time] by scanning a circular radius of 6 tiles around
+  world generation time] by scanning a circular radius of 6 tiles around
 the city slot (radius constant: `CITY_SCAN_RADIUS = 6`, producing
 approximately 113 scanned tiles). The result --- stored as
 `CityResources` in the world file --- is the #strong[permanent
-production profile] for that city. It never changes.
+  production profile] for that city. It never changes.
 
 #strong[This is a design constraint, not a limitation.] Fixed profiles
 make city placement a permanent strategic decision: you cannot farm a
@@ -101,13 +101,13 @@ Wonder bonus remains additive:
 #figure(
   align(center)[#table(
     columns: 2,
-    align: (auto,auto,),
-    table.header([Condition], [Bonus],),
+    align: (auto, auto),
+    table.header([Condition], [Bonus]),
     table.hline(),
     [Wonder bonus], [+25,000 on Wonder island],
-  )]
-  , kind: table
-  )
+  )],
+  kind: table,
+)
 
 Food has its own storage building line (Granary). All other resources
 share the Warehouse line. A city can have both a Granary and a Warehouse
@@ -122,18 +122,22 @@ scaling is the second constraint on expansion.
 #figure(
   align(center)[#table(
     columns: 3,
-    align: (auto,auto,auto,),
-    table.header([City number], [Founding cost multiplier], [Per-city
-      maintenance multiplier],),
+    align: (auto, auto, auto),
+    table.header(
+      [City number],
+      [Founding cost multiplier],
+      [Per-city
+        maintenance multiplier],
+    ),
     table.hline(),
     [1st], [--- (starting city)], [1.0×],
     [2nd], [1.5× base], [1.3×],
     [3rd], [2.5× base], [1.7×],
     [4th], [4.0× base], [2.5×],
     [5th+], [+2.0× per city], [+1.0× per city],
-  )]
-  , kind: table
-  )
+  )],
+  kind: table,
+)
 
 Rome\'s Provincial Administration passive reduces maintenance
 multipliers (see §5.6). All other civs use these defaults.
@@ -180,16 +184,16 @@ Where:
 #figure(
   align(center)[#table(
     columns: 2,
-    align: (auto,auto,),
-    table.header([Granary level], [pop\_cap],),
+    align: (auto, auto),
+    table.header([Granary level], [pop\_cap]),
     table.hline(),
     [0], [50],
     [1], [61],
     [2], [81],
     [3], [107],
-  )]
-  , kind: table
-  )
+  )],
+  kind: table,
+)
 
 With Rome Aqueduct at Granary level 3: `107 × 1.25 = 133.75` (typically
 rounded by game rules). With a Demeter divine bonus of +100:
@@ -216,8 +220,8 @@ growth_per_hour = base_growth_rate
 #figure(
   align(center)[#table(
     columns: 2,
-    align: (auto,auto,),
-    table.header([Condition], [Modifier],),
+    align: (auto, auto),
+    table.header([Condition], [Modifier]),
     table.hline(),
     [Food surplus \> 20% of consumption], [+15% growth],
     [Food surplus 0--20%], [×1.0 (normal)],
@@ -225,9 +229,9 @@ growth_per_hour = base_growth_rate
     [Sustained food deficit (\>12h)], [Population begins declining],
     [Active war: enemy army in city territory], [−10% growth],
     [Cultural Level milestone achieved (last 24h)], [+10% growth],
-  )]
-  , kind: table
-  )
+  )],
+  kind: table,
+)
 
 There is no rebellion mechanic. A starving city stops growing then
 shrinks. Recovery begins immediately when food surplus is restored.
