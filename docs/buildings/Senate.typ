@@ -8,9 +8,9 @@
     align: (auto, auto),
     table.header([Mode], [Starting Level]),
     table.hline(), [Full World],
-    [1],           [Campaign],
-    [2],           [Skirmish],
-    [5],           [Game Night],
+    [1], [Campaign],
+    [2], [Skirmish],
+    [5], [Game Night],
     [10],
   )],
   kind: table,
@@ -26,9 +26,14 @@
 #let food_cost(l) = calc.round(7 * calc.pow(l, 1.05))
 #let pop_cost(l) = calc.round(3 * calc.pow(l, 1.21))
 #let total_time(l) = calc.round(
-  if l <= max_level { calc.round(310 * calc.pow(1.22, l)) } else { 50 * calc.pow(l, 2) },
+  if l <= max_level { calc.round(310 * calc.pow(1.22, l)) } else {
+    50 * calc.pow(l, 2)
+  },
 )
-#let construction_time(l) = calc.round(100 * calc.pow(0.965, (l - 1)), digits: 1)
+#let construction_time(l) = calc.round(
+  100 * calc.pow(0.965, (l - 1)),
+  digits: 1,
+)
 #let points(l) = calc.round(110 * calc.pow(l, 0.75))
 
 // ── Helper functions ──

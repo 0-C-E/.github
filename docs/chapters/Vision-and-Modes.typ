@@ -19,39 +19,44 @@ city-building, economy, and combat systems power all four --- only their
 pace, feature set, and stakes differ.
 
 === 1.2 Core Design Pillars <12-core-design-pillars>
-#figure(align(center)[#table(
-  columns: 2,
-  align: (
-    auto,
-    auto,
-  ),
-  table.header(
-    [Pillar],
-    [Description],
-  ),
-  table.hline(), [#strong[Grepolis Soul, 0 A.D. Depth];],
-  [Browser accessibility and
-  MMORTS social dynamics from Grepolis; historical authenticity, unit
-  fidelity, and strategic depth from 0 A.D.],              [#strong[Four Time Contracts];],
-  [One engine, four modes. From a
-  years-long persistent world to a 1-hour game night --- the same
-  systems, compressed or expanded by mode configuration.],              [#strong[Deep
-  but Accessible];],
-  [Spreadsheet optimizers and casual
-  city-builders coexist. Every system has a simple surface and a deep
-  optimization layer underneath.],              [#strong[Open by Default];],
-  [Free to play, free to host, free to
-  mod. No pay-to-win. The scripting engine is a power-user convenience
-  tool, never a competitive gate.],              [#strong[Emergent Stories];],
-  [The game does not script drama --- it
-  creates conditions for it. Betrayed alliances, last-minute wonder
-  races, desperate defenses, and improbable comebacks emerge from
-  player decisions.],              [#strong[Playstyle Agnostic Civs];],
-  [Each civilization has a pushed
-  archetype (aggressive raider, patient builder, divine diplomat) but
-  never locks players into a single strategy. A city-builder can play
-  Rome; a warmonger can play Maya.],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 2,
+    align: (
+      auto,
+      auto,
+    ),
+    table.header([Pillar], [Description]),
+    table.hline(), [#strong[Grepolis Soul, 0 A.D. Depth];],
+    [Browser accessibility and
+      MMORTS social dynamics from Grepolis; historical authenticity, unit
+      fidelity, and strategic depth from 0 A.D.],
+    [#strong[Four Time Contracts];],
+    [One engine, four modes. From a
+      years-long persistent world to a 1-hour game night --- the same
+      systems, compressed or expanded by mode configuration.],
+    [#strong[Deep
+      but Accessible];],
+    [Spreadsheet optimizers and casual
+      city-builders coexist. Every system has a simple surface and a deep
+      optimization layer underneath.],
+    [#strong[Open by Default];],
+    [Free to play, free to host, free to
+      mod. No pay-to-win. The scripting engine is a power-user convenience
+      tool, never a competitive gate.],
+    [#strong[Emergent Stories];],
+    [The game does not script drama --- it
+      creates conditions for it. Betrayed alliances, last-minute wonder
+      races, desperate defenses, and improbable comebacks emerge from
+      player decisions.],
+    [#strong[Playstyle Agnostic Civs];],
+    [Each civilization has a pushed
+      archetype (aggressive raider, patient builder, divine diplomat) but
+      never locks players into a single strategy. A city-builder can play
+      Rome; a warmonger can play Maya.],
+  )],
+  kind: table,
+)
 
 === 1.3 Target Audience <13-target-audience>
 - #strong[Primary];: Veterans of Grepolis, Travian, OGame, and
@@ -83,75 +88,101 @@ on the same engine. Mode configuration compresses or expands time,
 restricts feature sets, and adjusts entry/exit mechanics.
 
 === 2.1 Mode Overview <21-mode-overview>
-#figure(align(center)[#table(
-  columns: 5,
-  align: (
-    auto,
-    auto,
-    auto,
-    auto,
-    auto,
-  ),
-  table.header(
-    [Attribute],
-    [Full
-    World],
-    [Campaign],
-    [Skirmish],
-    [Game Night],
-  ),
-  table.hline(),               [#strong[Duration];],      [2 months -- 10 years],     [2
-  weeks -- 2
-  months],               [Days],
-  [1 -- 4 hours],              [#strong[Entry];],         [Staggered (join anytime)], [Scheduled
-  start],               [Scheduled start],
-  [Cold start (simultaneous)], [#strong[Production];],    [Continuous real-time],     [Continuous
-  real-time],               [Continuous real-time],
-  [Continuous real-time
-  (accelerated)],                            [#strong[Players];],       [Configurable
-  (no canonical
-  size)],                           [Configurable], [Configurable],
-  [Configurable],              [#strong[Win Condition];], [World Domination],         [Wonder
-  hold],               [Score],
-  [Elimination / Score],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 5,
+    align: (
+      auto,
+      auto,
+      auto,
+      auto,
+      auto,
+    ),
+    table.header(
+      [Attribute],
+      [Full
+        World],
+      [Campaign],
+      [Skirmish],
+      [Game Night],
+    ),
+    table.hline(),
+    [#strong[Duration];],
+    [2 months -- 10 years],
+    [2
+      weeks -- 2
+      months],
+    [Days],
+    [1 -- 4 hours],
+    [#strong[Entry];],
+    [Staggered (join anytime)],
+    [Scheduled
+      start],
+    [Scheduled start],
+    [Cold start (simultaneous)],
+    [#strong[Production];],
+    [Continuous real-time],
+    [Continuous
+      real-time],
+    [Continuous real-time],
+    [Continuous real-time
+      (accelerated)],
+    [#strong[Players];],
+    [Configurable
+      (no canonical
+      size)],
+    [Configurable],
+    [Configurable],
+    [Configurable],
+    [#strong[Win Condition];],
+    [World Domination],
+    [Wonder
+      hold],
+    [Score],
+    [Elimination / Score],
+  )],
+  kind: table,
+)
 
 === 2.2 System Availability Matrix <22-system-availability-matrix>
-#figure(align(center)[#table(
-  columns: 5,
-  align: (
-    auto,
-    auto,
-    auto,
-    auto,
-    auto,
-  ),
-  table.header(
-    [System],
-    [Full World],
-    [Campaign],
-    [Skirmish],
-    [Game
-    Night],
-  ),
-  table.hline(), [City Building],             [✅], [✅], [✅],
-  [✅],           [Resource Economy],          [✅], [✅], [✅],
-  [✅],           [Ascension / Eras],          [✅], [✅], [✅],
-  [❌],           [Combat & Military],         [✅], [✅], [✅],
-  [✅],           [Research / Tech Tree],      [✅], [✅], [✅],
-  [❌],           [Alliances],                 [✅], [✅], [❌],
-  [❌],           [Diplomacy / Treaties],      [✅], [✅], [❌],
-  [❌],           [Trade],                     [✅], [✅], [✅],
-  [❌],           [Espionage],                 [✅], [✅], [✅],
-  [❌],           [Divine Abilities],          [✅], [✅], [✅],
-  [❌],           [Wonders],                   [✅], [✅], [❌],
-  [❌],           [Villages],                  [✅], [✅], [✅],
-  [❌],           [Social (chat, forum)],      [✅], [✅], [✅],
-  [✅],           [Prestige / Leaderboard],    [✅], [✅], [✅],
-  [✅],           [Scripting Engine (Wave 2)], [✅], [✅], [✅],
-  [❌],           [Heroes (Wave 2)],           [✅], [✅], [❌],
-  [❌],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 5,
+    align: (
+      auto,
+      auto,
+      auto,
+      auto,
+      auto,
+    ),
+    table.header(
+      [System],
+      [Full World],
+      [Campaign],
+      [Skirmish],
+      [Game
+        Night],
+    ),
+    table.hline(), [City Building], [✅], [✅], [✅],
+    [✅], [Resource Economy], [✅], [✅], [✅],
+    [✅], [Ascension / Eras], [✅], [✅], [✅],
+    [❌], [Combat & Military], [✅], [✅], [✅],
+    [✅], [Research / Tech Tree], [✅], [✅], [✅],
+    [❌], [Alliances], [✅], [✅], [❌],
+    [❌], [Diplomacy / Treaties], [✅], [✅], [❌],
+    [❌], [Trade], [✅], [✅], [✅],
+    [❌], [Espionage], [✅], [✅], [✅],
+    [❌], [Divine Abilities], [✅], [✅], [✅],
+    [❌], [Wonders], [✅], [✅], [❌],
+    [❌], [Villages], [✅], [✅], [✅],
+    [❌], [Social (chat, forum)], [✅], [✅], [✅],
+    [✅], [Prestige / Leaderboard], [✅], [✅], [✅],
+    [✅], [Scripting Engine (Wave 2)], [✅], [✅], [✅],
+    [❌], [Heroes (Wave 2)], [✅], [✅], [❌],
+    [❌],
+  )],
+  kind: table,
+)
 
 === 2.3 Full World <23-full-world>
 The canonical, persistent experience. No end date is set at creation ---
@@ -280,30 +311,37 @@ minutes).
 == 3. World Structure & Configuration <3-world-structure--configuration>
 
 === 3.1 World Types & Hosting <31-world-types--hosting>
-#figure(align(center)[#table(
-  columns: 4,
-  align: (
-    auto,
-    auto,
-    auto,
-    auto,
-  ),
-  table.header(
-    [Type],
-    [Host],
-    [Access],
-    [Reset],
-  ),
-  table.hline(),            [#strong[Official Public];],   [Maintainer server], [Free,
-  public],
-  [Never (or major patch)], [#strong[Official Seasonal];], [Maintainer],        [Free,
-  public],
-  [After
-  season end],                         [#strong[Community Private];], [Self-hosted
-  (SBC, VPS, home
-  server)],                    [Free, self-host],
-  [Admin\'s discretion],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 4,
+    align: (
+      auto,
+      auto,
+      auto,
+      auto,
+    ),
+    table.header([Type], [Host], [Access], [Reset]),
+    table.hline(),
+    [#strong[Official Public];],
+    [Maintainer server],
+    [Free,
+      public],
+    [Never (or major patch)],
+    [#strong[Official Seasonal];],
+    [Maintainer],
+    [Free,
+      public],
+    [After
+      season end],
+    [#strong[Community Private];],
+    [Self-hosted
+      (SBC, VPS, home
+      server)],
+    [Free, self-host],
+    [Admin\'s discretion],
+  )],
+  kind: table,
+)
 
 All world types share the same codebase and configuration system. There
 is no feature difference between official and self-hosted worlds.

@@ -40,28 +40,33 @@
 - Mobile-optimized UI (v0.2)
 
 === 25.2 Post-MVP Milestones <252-post-mvp-milestones>
-#figure(align(center)[#table(
-  columns: 3,
-  align: (
-    auto,
-    auto,
-    auto,
-  ),
-  table.header(
-    [Version],
-    [Target],
-    [Focus],
-  ),
-  table.hline(), [v0.2], [+3 months],
-  [Campaign + Skirmish modes, Wonders, full
-  Espionage, Lua scripting, mobile UI],              [v0.3], [+3 months],
-  [Heroes system, Era III/IV, 2 new civs, visual
-  scripting node editor],              [v0.4], [+2 months],
-  [Performance hardening, 100-player SBC
-  validation, balance pass],              [v1.0], [+4 months],
-  [Public launch, full contributor docs,
-  community modding guide],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 3,
+    align: (
+      auto,
+      auto,
+      auto,
+    ),
+    table.header([Version], [Target], [Focus]),
+    table.hline(), [v0.2], [+3 months],
+    [Campaign + Skirmish modes, Wonders, full
+      Espionage, Lua scripting, mobile UI],
+    [v0.3],
+    [+3 months],
+    [Heroes system, Era III/IV, 2 new civs, visual
+      scripting node editor],
+    [v0.4],
+    [+2 months],
+    [Performance hardening, 100-player SBC
+      validation, balance pass],
+    [v1.0],
+    [+4 months],
+    [Public launch, full contributor docs,
+      community modding guide],
+  )],
+  kind: table,
+)
 
 === 25.3 Wave 2 Features (Heroes) <253-wave-2-features-heroes>
 Heroes are fully designed in #strong[§22 --- Heroes System] (see

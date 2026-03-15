@@ -17,9 +17,13 @@
   - #link("../buildings/Building-City-Walls.pdf")[City Walls]
   - #link("../buildings/Building-Academy.pdf")[Academy]
   - #link("../buildings/Building-Harbor.pdf")[Harbor]
-  - #link("../buildings/Building-Siege-Workshop.pdf")[Siege Workshop] #emph[(special)]
+  - #link(
+      "../buildings/Building-Siege-Workshop.pdf",
+    )[Siege Workshop] #emph[(special)]
   - #link("../buildings/Building-Watchtower.pdf")[Watchtower] #emph[(special)]
-  - #link("../buildings/Building-Divine-Statue.pdf")[Divine Statue] #emph[(special)]
+  - #link(
+      "../buildings/Building-Divine-Statue.pdf",
+    )[Divine Statue] #emph[(special)]
 - #link("../chapters/Divine-System.pdf")[Divine System]
 - #link("../chapters/Cultural-Events.pdf")[Cultural Events]
 - #link("../chapters/Military.pdf")[Military]

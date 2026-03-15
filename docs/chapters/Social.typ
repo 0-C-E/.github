@@ -8,28 +8,29 @@
 All in-game communication tools are first-class citizens, not
 afterthoughts:
 
-#figure(align(center)[#table(
-  columns: 3,
-  align: (
-    auto,
-    auto,
-    auto,
-  ),
-  table.header(
-    [Tool],
-    [Scope],
-    [Persistence],
-  ),
-  table.hline(),                  [Direct Message],     [Player ↔ Player],
-  [Persists for world lifetime],  [Alliance Forum],     [Alliance members],
-  [Persists; threaded],           [Alliance Chat],      [Alliance members],
-  [Session-persistent],           [Diplomatic Channel], [Two players/alliances],
-  [Persists; formal
-  tone],                               [World Announcement], [All players],
-  [Public; throttled],            [Combat Report],      [Battle participants],
-  [Auto-generated; narrative],    [Event Feed],         [Individual player],
-  [Personal notification stream],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 3,
+    align: (
+      auto,
+      auto,
+      auto,
+    ),
+    table.header([Tool], [Scope], [Persistence]),
+    table.hline(), [Direct Message], [Player ↔ Player],
+    [Persists for world lifetime], [Alliance Forum], [Alliance members],
+    [Persists; threaded], [Alliance Chat], [Alliance members],
+    [Session-persistent], [Diplomatic Channel], [Two players/alliances],
+    [Persists; formal
+      tone],
+    [World Announcement],
+    [All players],
+    [Public; throttled], [Combat Report], [Battle participants],
+    [Auto-generated; narrative], [Event Feed], [Individual player],
+    [Personal notification stream],
+  )],
+  kind: table,
+)
 
 === 16.2 Event Feed <162-event-feed>
 Every player has a personal #strong[Event Feed] --- a chronological

@@ -22,27 +22,30 @@ Each Hero is permanently either a #strong[Military Commander] or a
 figure, not player choice. A player selects a Hero knowing what type
 they are getting.
 
-#figure(align(center)[#table(
-  columns: 3,
-  align: (
-    auto,
-    auto,
-    auto,
-  ),
-  table.header(
-    [Type],
-    [Assigned To],
-    [Bonus Domain],
-  ),
-  table.hline(), [#strong[Military Commander];], [An army --- marches with it, fights
-  in every battle],
-  [Combat effectiveness, army speed, formation
-  bonuses],              [#strong[City Governor];],      [A city --- stationed permanently
-  until
-  reassigned],
-  [Production, construction, Favor generation, Cultural
-  Points],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 3,
+    align: (
+      auto,
+      auto,
+      auto,
+    ),
+    table.header([Type], [Assigned To], [Bonus Domain]),
+    table.hline(),
+    [#strong[Military Commander];],
+    [An army --- marches with it, fights
+      in every battle],
+    [Combat effectiveness, army speed, formation
+      bonuses],
+    [#strong[City Governor];],
+    [A city --- stationed permanently
+      until
+      reassigned],
+    [Production, construction, Favor generation, Cultural
+      Points],
+  )],
+  kind: table,
+)
 
 Reassigning a Hero from one army/city to another takes 12 real-time
 hours (travel). During transit the Hero provides no bonus.
@@ -63,7 +66,7 @@ city count is the hard limit.
 
 === 21.4 Acquiring Heroes <214-acquiring-heroes>
 Heroes are chosen from a #strong[civ-specific roster of named historical
-figures];. Each civilization has a fixed roster of recruitable Heroes. A
+  figures];. Each civilization has a fixed roster of recruitable Heroes. A
 player may only recruit a Hero that hasn\'t already been recruited in
 that world (first-come, first-served --- rivals can take figures you
 wanted).
@@ -136,48 +139,52 @@ Recapturing your city returns your Governor.
 #strong[Military Commander abilities] (illustrative --- final values
 tuned in playtesting):
 
-#figure(align(center)[#table(
-  columns: 3,
-  align: (
-    auto,
-    auto,
-    auto,
-  ),
-  table.header(
-    [Level],
-    [Ability Type],
-    [Example Effect],
-  ),
-  table.hline(),                                 [1],  [Passive],
-  [Army speed +10% while this Hero commands],    [3],  [Passive],
-  [Formation bonus of chosen formation +5%
-  additional],                                              [6],  [Active (1/battle)],
-  [First combat round: all units deal +20%
-  damage],                                              [10], [Passive],
-  [Army suffers 20% fewer casualties in battle],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 3,
+    align: (
+      auto,
+      auto,
+      auto,
+    ),
+    table.header([Level], [Ability Type], [Example Effect]),
+    table.hline(), [1], [Passive],
+    [Army speed +10% while this Hero commands], [3], [Passive],
+    [Formation bonus of chosen formation +5%
+      additional],
+    [6],
+    [Active (1/battle)],
+    [First combat round: all units deal +20%
+      damage],
+    [10],
+    [Passive],
+    [Army suffers 20% fewer casualties in battle],
+  )],
+  kind: table,
+)
 
 #strong[City Governor abilities] (illustrative):
 
-#figure(align(center)[#table(
-  columns: 3,
-  align: (
-    auto,
-    auto,
-    auto,
-  ),
-  table.header(
-    [Level],
-    [Ability Type],
-    [Example Effect],
-  ),
-  table.hline(),                            [1],  [Passive],
-  [Construction speed in this city +10%],   [3],  [Passive],
-  [Favor generation in this city +15%],     [6],  [Active (1/day)],
-  [Instantly complete lowest-tier building in
-  queue],                                         [10], [Passive],
-  [Cultural event costs in this city −20%],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 3,
+    align: (
+      auto,
+      auto,
+      auto,
+    ),
+    table.header([Level], [Ability Type], [Example Effect]),
+    table.hline(), [1], [Passive],
+    [Construction speed in this city +10%], [3], [Passive],
+    [Favor generation in this city +15%], [6], [Active (1/day)],
+    [Instantly complete lowest-tier building in
+      queue],
+    [10],
+    [Passive],
+    [Cultural event costs in this city −20%],
+  )],
+  kind: table,
+)
 
 Specific Hero figures have abilities themed to their historical role ---
 Pericles (Governor) boosts cultural output; Themistocles (Commander)
@@ -217,8 +224,8 @@ effects = [{ target = "morale_immunity", value = true, scope = "naval_armies" }]
 ```
 
 #emph[This document supersedes v0.1.0 in full. All decisions herein are
-canonical until superseded by a numbered revision. Breaking design
-changes require a GDD version bump and a changelog entry describing what
-changed and why.]
+  canonical until superseded by a numbered revision. Breaking design
+  changes require a GDD version bump and a changelog entry describing what
+  changed and why.]
 
 #emph[Maintained by the 0 C.E. development team.]

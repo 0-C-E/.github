@@ -16,9 +16,9 @@
     align: (auto, auto),
     table.header([Mode], [Starting Level]),
     table.hline(), [Full World],
-    [0],           [Campaign],
-    [0],           [Skirmish],
-    [1],           [Game Night],
+    [0], [Campaign],
+    [0], [Skirmish],
+    [1], [Game Night],
     [1],
   )],
   kind: table,
@@ -34,7 +34,9 @@
 #let food_cost(l) = (l - 1) * 5
 #let pop_cost(l) = 0
 #let total_time(l) = calc.round(
-  if l <= max_level { calc.round(500 * calc.pow(1.1615, l)) } else { 50 * calc.pow(l, 2) },
+  if l <= max_level { calc.round(500 * calc.pow(1.1615, l)) } else {
+    50 * calc.pow(l, 2)
+  },
 )
 
 // ── Helper functions ──

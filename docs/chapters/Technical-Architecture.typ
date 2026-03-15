@@ -69,26 +69,31 @@ Browser (Leaflet.js + HTML5 Canvas)
 ```
 
 === 20.3 SBC Performance Targets <203-sbc-performance-targets>
-#figure(align(center)[#table(
-  columns: 3,
-  align: (
-    auto,
-    auto,
-    auto,
-  ),
-  table.header(
-    [Metric],
-    [Target],
-    [Strategy],
-  ),
-  table.hline(), [RAM at 100 players],    [\< 512MB],
-  [Connection pooling, stateless
-  handlers],              [Production processing], [\< 1s per cycle],
-  [Batched SQL, indexed
-  city queries],              [DB connections],        [\< 20 pooled],
-  [SQLx PgPool], [WebSocket connections], [100 concurrent],
-  [Tokio async, actor
-  model],              [Map tile serving],      [\< 50ms cached],
-  [Pre-generated tiles + HTTP
-  cache headers],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 3,
+    align: (
+      auto,
+      auto,
+      auto,
+    ),
+    table.header([Metric], [Target], [Strategy]),
+    table.hline(), [RAM at 100 players], [\< 512MB],
+    [Connection pooling, stateless
+      handlers],
+    [Production processing],
+    [\< 1s per cycle],
+    [Batched SQL, indexed
+      city queries],
+    [DB connections],
+    [\< 20 pooled],
+    [SQLx PgPool], [WebSocket connections], [100 concurrent],
+    [Tokio async, actor
+      model],
+    [Map tile serving],
+    [\< 50ms cached],
+    [Pre-generated tiles + HTTP
+      cache headers],
+  )],
+  kind: table,
+)

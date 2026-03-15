@@ -18,42 +18,57 @@ foundation:
   deterrent.
 
 === 13.2 Diplomatic Actions <132-diplomatic-actions>
-#figure(align(center)[#table(
-  columns: 3,
-  align: (
-    auto,
-    auto,
-    auto,
-  ),
-  table.header(
-    [Action],
-    [Requirement],
-    [Effect],
-  ),
-  table.hline(),                        [#strong[Declare War];],         [None],
-  [Enables combat; removes protection
-  treaties],                                     [#strong[Propose Peace];],       [During
-  war],
-  [Ends war; optional
-  reparations terms],                                     [#strong[Non-Aggression
-  Pact];], [Neutral+],
-  [Cannot initiate combat
-  for duration; breakable with 12h notice],                                     [#strong[Alliance];],            [Friendly+],
-  [Shared war/peace status; access
-  to alliance systems],                                     [#strong[Trade];],               [Both
-  have Market],
-  [Send resources to target
-  player; travel time based on distance],                                     [#strong[Embargo];],             [Hostile],
-  [Blocks trade dispatches between
-  both parties],                                     [#strong[Send Gift];],           [Any],
-  [Resource transfer; +relation score], [#strong[Military Access];],     [Alliance
-  or treaty],
-  [Armies may pass
-  through territory],                                     [#strong[Tribute Demand];],      [During/after
-  war],
-  [Request ongoing
-  resource payment; target can refuse],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 3,
+    align: (
+      auto,
+      auto,
+      auto,
+    ),
+    table.header([Action], [Requirement], [Effect]),
+    table.hline(), [#strong[Declare War];], [None],
+    [Enables combat; removes protection
+      treaties],
+    [#strong[Propose Peace];],
+    [During
+      war],
+    [Ends war; optional
+      reparations terms],
+    [#strong[Non-Aggression
+      Pact];],
+    [Neutral+],
+    [Cannot initiate combat
+      for duration; breakable with 12h notice],
+    [#strong[Alliance];],
+    [Friendly+],
+    [Shared war/peace status; access
+      to alliance systems],
+    [#strong[Trade];],
+    [Both
+      have Market],
+    [Send resources to target
+      player; travel time based on distance],
+    [#strong[Embargo];],
+    [Hostile],
+    [Blocks trade dispatches between
+      both parties],
+    [#strong[Send Gift];],
+    [Any],
+    [Resource transfer; +relation score],
+    [#strong[Military Access];],
+    [Alliance
+      or treaty],
+    [Armies may pass
+      through territory],
+    [#strong[Tribute Demand];],
+    [During/after
+      war],
+    [Request ongoing
+      resource payment; target can refuse],
+  )],
+  kind: table,
+)
 
 === 13.3 Alliance System <133-alliance-system>
 Alliances are formal multi-player groups (Grepolis-style):
@@ -71,7 +86,7 @@ Alliances are formal multi-player groups (Grepolis-style):
 
 === 13.4 Trade System <134-trade-system>
 Trade works exactly like Grepolis: it is an #strong[active,
-player-initiated transaction];, not a passive background income stream.
+  player-initiated transaction];, not a passive background income stream.
 There are no persistent trade routes. Every trade is a discrete action.
 
 #strong[How trade works];:

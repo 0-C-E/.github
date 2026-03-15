@@ -5,28 +5,33 @@
 == 14. Victory Conditions <14-victory-conditions>
 
 === 14.1 By Mode <141-by-mode>
-#figure(align(center)[#table(
-  columns: 3,
-  align: (
-    auto,
-    auto,
-    auto,
-  ),
-  table.header(
-    [Mode],
-    [Condition],
-    [Description],
-  ),
-  table.hline(),                   [#strong[Full World];], [World Domination],
-  [First alliance to
-  control every city slot wins],                                [#strong[Campaign];],   [Wonder
-  Hold],
-  [Construct the designated
-  Wonder and hold for N days],                                [#strong[Skirmish];],   [Score],
-  [Highest Prestige at world end], [#strong[Game Night];], [Elimination or Score],
-  [Last city standing,
-  or highest score at time limit],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 3,
+    align: (
+      auto,
+      auto,
+      auto,
+    ),
+    table.header([Mode], [Condition], [Description]),
+    table.hline(), [#strong[Full World];], [World Domination],
+    [First alliance to
+      control every city slot wins],
+    [#strong[Campaign];],
+    [Wonder
+      Hold],
+    [Construct the designated
+      Wonder and hold for N days],
+    [#strong[Skirmish];],
+    [Score],
+    [Highest Prestige at world end],
+    [#strong[Game Night];],
+    [Elimination or Score],
+    [Last city standing,
+      or highest score at time limit],
+  )],
+  kind: table,
+)
 
 === 14.2 Full World: World Domination <142-full-world-world-domination>
 The first #strong[alliance] to control every city slot on the map wins.
@@ -95,27 +100,27 @@ start. What carries is #strong[Prestige] --- a purely cosmetic
 account-level score tracking lifetime achievement.
 
 === 17.2 Prestige Sources <172-prestige-sources>
-#figure(align(center)[#table(
-  columns: 2,
-  align: (
-    auto,
-    auto,
-  ),
-  table.header(
-    [Action],
-    [Prestige Gain],
-  ),
-  table.hline(), [Wonder constructed],
-  [+500],        [Campaign victory],
-  [+1,000],      [Skirmish victory],
-  [+300],        [Military victories (cumulative)],
-  [+25 each],    [Cities founded (per world)],
-  [+100 each],   [Era advancements],
-  [+200 each],   [Trade milestones],
-  [+50 each],    [Diplomatic agreements],
-  [+10 each],    [Alliance founded],
-  [+150],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 2,
+    align: (
+      auto,
+      auto,
+    ),
+    table.header([Action], [Prestige Gain]),
+    table.hline(), [Wonder constructed],
+    [+500], [Campaign victory],
+    [+1,000], [Skirmish victory],
+    [+300], [Military victories (cumulative)],
+    [+25 each], [Cities founded (per world)],
+    [+100 each], [Era advancements],
+    [+200 each], [Trade milestones],
+    [+50 each], [Diplomatic agreements],
+    [+10 each], [Alliance founded],
+    [+150],
+  )],
+  kind: table,
+)
 
 === 17.3 Prestige Rewards (Cosmetic Only) <173-prestige-rewards-cosmetic-only>
 Prestige thresholds unlock #strong[cosmetic-only rewards] --- never

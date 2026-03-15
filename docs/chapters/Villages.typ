@@ -29,72 +29,78 @@ Holding a village requires either stationing a garrison or accepting the
 risk of losing it to an opportunistic attack.
 
 ==== 15.1.2 Owner Benefits <1512-owner-benefits>
-#figure(align(center)[#table(
-  columns: 2,
-  align: (
-    auto,
-    auto,
-  ),
-  table.header(
-    [Benefit],
-    [Description],
-  ),
-  table.hline(), [#strong[Resource Tribute];],
-  [Village pays a resource tribute every
-  production cycle (type varies by village --- farms pay food,
-  quarries pay stone, etc.)],              [#strong[Exclusive Recruitment];],
-  [Owner can recruit a small number
-  of village-specific units for gold (unit type varies by village
-  culture)],              [#strong[Trade Monopoly];],
-  [Owner receives +25% gold on any trade
-  dispatched through that village\'s region],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 2,
+    align: (
+      auto,
+      auto,
+    ),
+    table.header([Benefit], [Description]),
+    table.hline(), [#strong[Resource Tribute];],
+    [Village pays a resource tribute every
+      production cycle (type varies by village --- farms pay food,
+      quarries pay stone, etc.)],
+    [#strong[Exclusive Recruitment];],
+    [Owner can recruit a small number
+      of village-specific units for gold (unit type varies by village
+      culture)],
+    [#strong[Trade Monopoly];],
+    [Owner receives +25% gold on any trade
+      dispatched through that village\'s region],
+  )],
+  kind: table,
+)
 
 ==== 15.1.3 Non-Owner Interactions <1513-non-owner-interactions>
 Non-owners are not locked out entirely:
 
-#figure(align(center)[#table(
-  columns: 3,
-  align: (
-    auto,
-    auto,
-    auto,
-  ),
-  table.header(
-    [Interaction],
-    [Who],
-    [Effect],
-  ),
-  table.hline(), [#strong[Trade];], [Any player],
-  [Send a merchant to trade --- gold
-  exchange only, no resource tribute, no recruitment access],              [#strong[Raid];],  [Any
-  player],
-  [One-time attack on the village
-  treasury --- yields a resource cache but does not change ownership
-  unless garrison is defeated],              [#strong[Seize];], [Any player],
-  [Defeat garrison → become new
-  owner],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 3,
+    align: (
+      auto,
+      auto,
+      auto,
+    ),
+    table.header([Interaction], [Who], [Effect]),
+    table.hline(), [#strong[Trade];], [Any player],
+    [Send a merchant to trade --- gold
+      exchange only, no resource tribute, no recruitment access],
+    [#strong[Raid];],
+    [Any
+      player],
+    [One-time attack on the village
+      treasury --- yields a resource cache but does not change ownership
+      unless garrison is defeated],
+    [#strong[Seize];],
+    [Any player],
+    [Defeat garrison → become new
+      owner],
+  )],
+  kind: table,
+)
 
 ==== 15.1.4 Village Garrison <1514-village-garrison>
 Each village spawns a fixed NPC garrison scaled to world age:
 
-#figure(align(center)[#table(
-  columns: 2,
-  align: (
-    auto,
-    auto,
-  ),
-  table.header(
-    [World Phase],
-    [Garrison Strength],
-  ),
-  table.hline(),                                    [Early (0--30 days)],
-  [Weak --- defeatable by a small raiding
-  party],                                                 [Mid (30--90 days)],
-  [Moderate --- requires a real army commitment],   [Late (90+ days)],
-  [Strong --- discourages casual seizure attempts],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 2,
+    align: (
+      auto,
+      auto,
+    ),
+    table.header([World Phase], [Garrison Strength]),
+    table.hline(), [Early (0--30 days)],
+    [Weak --- defeatable by a small raiding
+      party],
+    [Mid (30--90 days)],
+    [Moderate --- requires a real army commitment], [Late (90+ days)],
+    [Strong --- discourages casual seizure attempts],
+  )],
+  kind: table,
+)
 
 The owner may reinforce the garrison by stationing their own military
 units alongside the NPC defenders. NPC garrison regenerates slowly after
@@ -103,34 +109,41 @@ battle; player-stationed units do not regenerate automatically.
 ==== 15.1.5 Village Types <1515-village-types>
 Village type determines tribute resource and recruitment unit:
 
-#figure(align(center)[#table(
-  columns: 3,
-  align: (
-    auto,
-    auto,
-    auto,
-  ),
-  table.header(
-    [Village Type],
-    [Tribute Resource],
-    [Recruitable Unit],
-  ),
-  table.hline(), [#strong[Farming Settlement];], [Food],
-  [Militia Infantry (cheap
-  light infantry)],              [#strong[Stone Quarry];],       [Stone],
-  [Siege Laborers (boost siege
-  weapon construction speed)],              [#strong[Hunting Ground];],     [Wood],
-  [Scout Cavalry (fast, low combat
-  strength, high map reveal range)],              [#strong[River Port];],         [Gold],
-  [River Traders (boost trade dispatch
-  gold yield)],              [#strong[Forge Village];],      [Metal],
-  [Auxiliary Warriors (medium
-  infantry, no tech requirement)],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 3,
+    align: (
+      auto,
+      auto,
+      auto,
+    ),
+    table.header([Village Type], [Tribute Resource], [Recruitable Unit]),
+    table.hline(), [#strong[Farming Settlement];], [Food],
+    [Militia Infantry (cheap
+      light infantry)],
+    [#strong[Stone Quarry];],
+    [Stone],
+    [Siege Laborers (boost siege
+      weapon construction speed)],
+    [#strong[Hunting Ground];],
+    [Wood],
+    [Scout Cavalry (fast, low combat
+      strength, high map reveal range)],
+    [#strong[River Port];],
+    [Gold],
+    [River Traders (boost trade dispatch
+      gold yield)],
+    [#strong[Forge Village];],
+    [Metal],
+    [Auxiliary Warriors (medium
+      infantry, no tech requirement)],
+  )],
+  kind: table,
+)
 
 ==== 15.1.6 Integration <1516-integration>
 A player who has owned the same village continuously for #strong[30
-days] unlocks the #strong[Integrate] action:
+  days] unlocks the #strong[Integrate] action:
 
 - Cost: 1 Cultural Level (city slot expenditure)
 - Effect: Village is permanently absorbed into the nearest player city

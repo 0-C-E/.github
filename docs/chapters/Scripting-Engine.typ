@@ -16,52 +16,55 @@ The engine launches in two waves:
   as Lua)
 
 === 18.2 Access Model (Freemium) <182-access-model-freemium>
-#figure(align(center)[#table(
-  columns: 3,
-  align: (
-    auto,
-    auto,
-    auto,
-  ),
-  table.header(
-    [Tier],
-    [Script Slots],
-    [Cost],
-  ),
-  table.hline(),                [Free],        [2 scripts],
-  [Free],                       [Supporter],   [10 scripts],
-  [One-time payment],           [Self-Hosted], [Unlimited],
-  [Free (server admin grants)],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 3,
+    align: (
+      auto,
+      auto,
+      auto,
+    ),
+    table.header([Tier], [Script Slots], [Cost]),
+    table.hline(), [Free], [2 scripts],
+    [Free], [Supporter], [10 scripts],
+    [One-time payment], [Self-Hosted], [Unlimited],
+    [Free (server admin grants)],
+  )],
+  kind: table,
+)
 
 Scripts are #strong[never available in Game Night mode] --- the
 compressed session length makes automation unfair in a way it isn\'t in
 longer modes.
 
 === 18.3 What Scripts Can and Cannot Do <183-what-scripts-can-and-cannot-do>
-#figure(align(center)[#table(
-  columns: 2,
-  align: (
-    auto,
-    auto,
-  ),
-  table.header(
-    [✅ Allowed],
-    [❌ Disallowed],
-  ),
-  table.hline(),        [Auto-queue building when resource \> threshold],
-  [Alter game state
-  directly],                     [Auto-trade when gold exceeds cap],
-  [Bypass rate limits], [Alert alliance members on incoming army],
-  [Access other players\'
-  data],                     [Rebalance unit training queue],
-  [Issue combat commands faster than
-  human-possible],                     [Auto-pray for Favor when cap is near],
-  [Exploit or chain actions in
-  impossible sequences],                     [Notify when construction completes],
-  [Run without execution time
-  limits],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 2,
+    align: (
+      auto,
+      auto,
+    ),
+    table.header([✅ Allowed], [❌ Disallowed]),
+    table.hline(), [Auto-queue building when resource \> threshold],
+    [Alter game state
+      directly],
+    [Auto-trade when gold exceeds cap],
+    [Bypass rate limits], [Alert alliance members on incoming army],
+    [Access other players\'
+      data],
+    [Rebalance unit training queue],
+    [Issue combat commands faster than
+      human-possible],
+    [Auto-pray for Favor when cap is near],
+    [Exploit or chain actions in
+      impossible sequences],
+    [Notify when construction completes],
+    [Run without execution time
+      limits],
+  )],
+  kind: table,
+)
 
 === 18.4 Lua API (Wave 1) <184-lua-api-wave-1>
 ```lua

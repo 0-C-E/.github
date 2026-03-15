@@ -12,7 +12,7 @@
 === 9.6 Cultural Events & City Progression <96-cultural-events--city-progression>
 Happiness does not exist in 0 C.E. #strong[Cultural Events] replace it
 entirely --- player-initiated activities generating #strong[Culture
-Points] that accumulate into #strong[Cultural Levels];.
+  Points] that accumulate into #strong[Cultural Levels];.
 
 #strong[Cultural Levels unlock (one level = one action):]
 
@@ -45,52 +45,60 @@ culture_points_required(level N) = base_cost × N^1.5
 
 #strong[Cultural Events --- Base (all civs):]
 
-#figure(align(center)[#table(
-  columns: 4,
-  align: (
-    auto,
-    auto,
-    auto,
-    auto,
-  ),
-  table.header(
-    [Event],
-    [Culture Points],
-    [Resource Cost],
-    [Duration],
-  ),
-  table.hline(), [City Festival],          [20], [Food + Gold],
-  [12h],         [Grand Games],            [50], [Food + Wood + Gold],
-  [24h],         [Theatrical Performance], [30], [Wood + Gold],
-  [16h],         [Sacred Ceremony],        [40], [Gold + Favor (any god)],
-  [20h],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 4,
+    align: (
+      auto,
+      auto,
+      auto,
+      auto,
+    ),
+    table.header([Event], [Culture Points], [Resource Cost], [Duration]),
+    table.hline(), [City Festival], [20], [Food + Gold],
+    [12h], [Grand Games], [50], [Food + Wood + Gold],
+    [24h], [Theatrical Performance], [30], [Wood + Gold],
+    [16h], [Sacred Ceremony], [40], [Gold + Favor (any god)],
+    [20h],
+  )],
+  kind: table,
+)
 
 #strong[Cultural Events --- Civ-Exclusive:]
 
-#figure(align(center)[#table(
-  columns: 4,
-  align: (
-    auto,
-    auto,
-    auto,
-    auto,
-  ),
-  table.header(
-    [Civ],
-    [Event],
-    [Culture Points],
-    [Flavor],
-  ),
-  table.hline(), [Greece], [Olympic Games],       [80],
-  [Requires Stadium special
-  building],              [Sumer],  [Ziggurat Dedication], [60],
-  [Requires Ziggurat; celebrates
-  completed building tier],              [Egypt],  [Sed Festival],        [70],
-  [Capital city only; Pharaoh\'s
-  jubilee],              [Rome],   [Triumph],             [65],
-  [Requires military victory within last 7
-  days],              [Maya],   [Blood Rite],          [55],
-  [Consumes population; generates Culture
-  \+ Favor simultaneously],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 4,
+    align: (
+      auto,
+      auto,
+      auto,
+      auto,
+    ),
+    table.header([Civ], [Event], [Culture Points], [Flavor]),
+    table.hline(), [Greece], [Olympic Games], [80],
+    [Requires Stadium special
+      building],
+    [Sumer],
+    [Ziggurat Dedication],
+    [60],
+    [Requires Ziggurat; celebrates
+      completed building tier],
+    [Egypt],
+    [Sed Festival],
+    [70],
+    [Capital city only; Pharaoh\'s
+      jubilee],
+    [Rome],
+    [Triumph],
+    [65],
+    [Requires military victory within last 7
+      days],
+    [Maya],
+    [Blood Rite],
+    [55],
+    [Consumes population; generates Culture
+      \+ Favor simultaneously],
+  )],
+  kind: table,
+)

@@ -12,7 +12,7 @@ building completion status, and research progress. Espionage reveals
 these.
 
 Its deepest gameplay purpose is #strong[making formations meaningful for
-attackers];. An attacker who invests in espionage before launching knows
+  attackers];. An attacker who invests in espionage before launching knows
 the defender\'s garrison composition --- and can choose a formation that
 counters it. An attacker who skips espionage is gambling.
 
@@ -25,31 +25,38 @@ Spies are #strong[persistent assets] assigned to missions
 - Failed missions: spy is captured (lost), diplomatic relation penalty
   with target
 
-#figure(align(center)[#table(
-  columns: 3,
-  align: (
-    auto,
-    auto,
-    auto,
-  ),
-  table.header(
-    [Mission],
-    [Duration],
-    [Success Reveals / Effect],
-  ),
-  table.hline(),                       [#strong[Scout Garrison];],  [2h],
-  [Exact garrison unit composition
-  for 12h],                                    [#strong[Scout Formation];], [3h],
-  [Attacker\'s set formation if
-  army is marching],                                    [#strong[Scout Resources];], [2h],
-  [Current resource levels of
-  target city],                                    [#strong[Scout Buildings];], [4h],
-  [Building composition and
-  completion status],                                    [#strong[Sabotage];],        [6h],
-  [Destroys 10% of one resource type], [#strong[Incite Unrest];],   [8h],
-  [Target city\'s Culture Points
-  generation −50% for 24h],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 3,
+    align: (
+      auto,
+      auto,
+      auto,
+    ),
+    table.header([Mission], [Duration], [Success Reveals / Effect]),
+    table.hline(), [#strong[Scout Garrison];], [2h],
+    [Exact garrison unit composition
+      for 12h],
+    [#strong[Scout Formation];],
+    [3h],
+    [Attacker\'s set formation if
+      army is marching],
+    [#strong[Scout Resources];],
+    [2h],
+    [Current resource levels of
+      target city],
+    [#strong[Scout Buildings];],
+    [4h],
+    [Building composition and
+      completion status],
+    [#strong[Sabotage];],
+    [6h],
+    [Destroys 10% of one resource type], [#strong[Incite Unrest];], [8h],
+    [Target city\'s Culture Points
+      generation −50% for 24h],
+  )],
+  kind: table,
+)
 
 === 11.3 Counter-Espionage <113-counter-espionage>
 A Watchtower building provides passive counter-espionage:
