@@ -20,7 +20,7 @@
     [Full World], [1],
     [Campaign], [3],
     [Skirmish], [5],
-    [Game Night], [7],
+    [Game Night], [10],
   )],
   kind: table,
 )

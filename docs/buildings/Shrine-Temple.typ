@@ -19,8 +19,8 @@
     table.hline(),
     [Full World], [0],
     [Campaign], [0],
-    [Skirmish], [0],
-    [Game Night], [0],
+    [Skirmish], [1],
+    [Game Night], [3],
   )],
   kind: table,
 )
@@ -30,9 +30,16 @@
 #let max_level = 30
 
 // ── Base values & Functions ──
+#let wood_cost(l) = calc.round(30 * calc.pow(l, 1.69))
+#let stone_cost(l) = calc.round(40 * calc.pow(l, 1.63))
+#let metal_cost(l) = calc.round(35 * calc.pow(l, 1.65))
+#let food_cost(l) = l * 7
+#let pop_cost(l) = l * 5
 #let total_time(l) = calc.round(
-  if l <= max_level { calc.round(500 * calc.pow(1.1615, l)) } else { 50 * calc.pow(l, 2) },
+  if l <= max_level { calc.round(1000 * calc.pow(1.188, l)) } else { 250 * calc.pow(l, 1.92) },
 )
+#let points(l) = calc.round(216 * calc.pow(l, 0.67))
+
 // ── Helper functions ──
 #let fmt_time(time) = {
   let h = calc.floor(time / 3600)
@@ -52,3 +59,41 @@
   [⏱️],
   [Points],
 )
+
+#let building_row(l) = (
+  [#l],
+  [#wood_cost(l)],
+  [#stone_cost(l)],
+  [#metal_cost(l)],
+  [#food_cost(l)],
+  [#pop_cost(l)],
+  [#fmt_time(total_time(l))],
+  [#points(l)],
+)
+
+#let building_table(from, to) = figure(
+  align(center)[#table(
+    columns: building_row(0).len(),
+    align: (center,) * building_row(0).len(),
+    building_header,
+    table.hline(),
+    ..for l in range(from, to) { building_row(l) },
+  )],
+  kind: table,
+)
+
+// ── Tables ──
+=== Early game
+#building_table(1, 11)
+
+=== Mid-game
+#building_table(11, 21)
+
+=== Late game
+#building_table(21, 31)
+
+=== City tier 2
+#building_table(31, 41)
+
+=== City tier 3
+#building_table(41, 51)
