@@ -23,5 +23,5 @@
       }
     }
   },
-  "postCreateCommand": "bash -lc 'set -e; typst --version; prettypst --help >/dev/null; echo prettypst available; pandoc --version | head -n 2; python3 --version; echo DevContainer ready.'"
+  "postCreateCommand": "bash -lc 'set -e; typst --version; typstyle --version; echo typstyle available; pandoc --version | head -n 2; python3 --version; echo DevContainer ready.'"
 }

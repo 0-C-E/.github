@@ -7,6 +7,7 @@ ARG USER_GID=1000
 ARG PANDOC_VERSION=3.6.1
 ARG TYPST_VERSION=0.13.1
 ARG RUSTUP_VERSION=1.27.1
+ARG TYPSTYLE_VERSION=0.14.4
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
@@ -77,17 +78,13 @@ RUN ARCH="$(dpkg --print-architecture)" \
 # Install Rust toolchain and prettypst formatter.
 RUN ARCH="$(dpkg --print-architecture)" \
     && case "${ARCH}" in \
-        amd64) RUSTUP_TARGET="x86_64-unknown-linux-gnu" ;; \
-        arm64) RUSTUP_TARGET="aarch64-unknown-linux-gnu" ;; \
-        *) echo "Unsupported architecture for rustup: ${ARCH}" && exit 1 ;; \
-       esac \
-    && curl -fsSL "https://static.rust-lang.org/rustup/archive/${RUSTUP_VERSION}/${RUSTUP_TARGET}/rustup-init" -o /tmp/rustup-init \
-    && chmod +x /tmp/rustup-init \
-    && /tmp/rustup-init -y --profile minimal --default-toolchain stable \
-    && rm -f /tmp/rustup-init \
-    && cargo --version \
-    && cargo install --git=https://github.com/antonWetzel/prettypst.git --locked \
-    && install -m 0755 "${CARGO_HOME}/bin/prettypst" /usr/local/bin/prettypst
+    amd64) TYPSTYLE_TARGET="x86_64-unknown-linux-gnu" ;; \
+    arm64) TYPSTYLE_TARGET="aarch64-unknown-linux-gnu" ;; \
+    *) echo "Unsupported architecture for typstyle: ${ARCH}" && exit 1 ;; \
+    esac \
+    && curl -fsSL "https://github.com/typstyle-rs/typstyle/releases/download/v${TYPSTYLE_VERSION}/typstyle-${TYPSTYLE_TARGET}" -o /tmp/typstyle \
+    && install -m 0755 /tmp/typstyle /usr/local/bin/typstyle \
+    && rm -f /tmp/typstyle
 
 # Use non-root user by default.
 USER ${USERNAME}

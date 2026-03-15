@@ -6,7 +6,7 @@
 
 === 10.1 Combat Philosophy <101-combat-philosophy>
 Combat in 0 C.E. rewards #strong[preparation and intelligence over
-reaction time];. The outcome of a battle is largely determined before
+  reaction time];. The outcome of a battle is largely determined before
 the first unit moves:
 
 - Army composition (unit mix)
@@ -44,75 +44,129 @@ speed, not unit availability.
       [Role],
       [Hard Counter],
       [Soft
-      Counter],
+        Counter],
       [Hard Countered By],
       [Soft Countered By],
     ),
-    table.hline(),                 [#strong[Sword Infantry];],    [⛏️ Attack],  [Core
-    melee
-    attacker], [#strong[Archer];],         [#strong[Slinger];],  [#strong[War
-    Chariot];],
-    [#strong[Heavy Infantryman];], [#strong[Light Cavalry];],     [⛏️ Attack],  [Fast
-    raider and
-    flanker], [#strong[Slinger];],        [#strong[Archer];],   [#strong[Spearman];],
-    [#strong[Pikeman];],           [#strong[War Chariot];],       [⛏️ Attack],  [Shock
-    impact
-    attacker], [#strong[Sword Infantry];], [#strong[Light
-    Cavalry];],                     [#strong[Heavy Infantryman];],
-    [#strong[Spearman];],          [#strong[Spearman];],          [⚖️ Mixed],   [Balanced
-    line
-    fighter], [#strong[Light Cavalry];],  [#strong[War
-    Chariot];],                     [#strong[Pikeman];],
-    [#strong[Peltast];],           [#strong[Archer];],            [⚖️ Mixed],   [Ranged
-    pressure], [#strong[Pikeman];],        [#strong[Heavy
-    Infantryman];],                     [#strong[Sword Infantry];],
+    table.hline(),
+    [#strong[Sword Infantry];],
+    [⛏️ Attack],
+    [Core
+      melee
+      attacker],
+    [#strong[Archer];],
+    [#strong[Slinger];],
+    [#strong[War
+      Chariot];],
+    [#strong[Heavy Infantryman];],
+    [#strong[Light Cavalry];],
+    [⛏️ Attack],
+    [Fast
+      raider and
+      flanker],
+    [#strong[Slinger];],
+    [#strong[Archer];],
+    [#strong[Spearman];],
+    [#strong[Pikeman];],
+    [#strong[War Chariot];],
+    [⛏️ Attack],
+    [Shock
+      impact
+      attacker],
+    [#strong[Sword Infantry];],
     [#strong[Light
-    Cavalry];],                              [#strong[Slinger];],           [⚖️ Mixed],   [Light
-    ranged
-    support], [#strong[Peltast];],        [#strong[Archer];],   [#strong[Light
-    Cavalry];],
-    [#strong[War Chariot];],       [#strong[Heavy Infantryman];], [🛡️ Defense], [Garrison
-    tank], [#strong[War Chariot];],    [#strong[Sword
-    Infantry];],                     [#strong[Peltast];],
-    [#strong[Archer];],            [#strong[Pikeman];],           [🛡️ Defense], [Anti-cavalry
-    phalanx], [#strong[Spearman];],       [#strong[War
-    Chariot];],                     [#strong[Archer];],
-    [#strong[Slinger];],           [#strong[Peltast];],           [🛡️ Defense], [Anti-ranged
-    skirmisher], [#strong[Heavy
-    Infantryman];],                           [#strong[Spearman];], [#strong[Slinger];],
+      Cavalry];],
+    [#strong[Heavy Infantryman];],
+    [#strong[Spearman];],
+    [#strong[Spearman];],
+    [⚖️ Mixed],
+    [Balanced
+      line
+      fighter],
+    [#strong[Light Cavalry];],
+    [#strong[War
+      Chariot];],
+    [#strong[Pikeman];],
+    [#strong[Peltast];],
+    [#strong[Archer];],
+    [⚖️ Mixed],
+    [Ranged
+      pressure],
+    [#strong[Pikeman];],
+    [#strong[Heavy
+      Infantryman];],
+    [#strong[Sword Infantry];],
     [#strong[Light
-    Cavalry];],
+      Cavalry];],
+    [#strong[Slinger];],
+    [⚖️ Mixed],
+    [Light
+      ranged
+      support],
+    [#strong[Peltast];],
+    [#strong[Archer];],
+    [#strong[Light
+      Cavalry];],
+    [#strong[War Chariot];],
+    [#strong[Heavy Infantryman];],
+    [🛡️ Defense],
+    [Garrison
+      tank],
+    [#strong[War Chariot];],
+    [#strong[Sword
+      Infantry];],
+    [#strong[Peltast];],
+    [#strong[Archer];],
+    [#strong[Pikeman];],
+    [🛡️ Defense],
+    [Anti-cavalry
+      phalanx],
+    [#strong[Spearman];],
+    [#strong[War
+      Chariot];],
+    [#strong[Archer];],
+    [#strong[Slinger];],
+    [#strong[Peltast];],
+    [🛡️ Defense],
+    [Anti-ranged
+      skirmisher],
+    [#strong[Heavy
+      Infantryman];],
+    [#strong[Spearman];],
+    [#strong[Slinger];],
+    [#strong[Light
+      Cavalry];],
   )],
   kind: table,
 )
 
 ==== 10.2.2 Siege Units <1022-siege-units>
-#figure(
-  align(center)[#table(
-    columns: 6,
-    align: (auto, auto, auto, auto, auto, auto),
-    table.header(
-      [Unit],
-      [Role],
-      [Hard Counter (heavy advantage)],
-      [Soft
-      Counter (light advantage)],
-      [Hard Countered By],
-      [Soft Countered
-      By],
-    ),
-    table.hline(),      [#strong[Catapult];],      [Ranged siege and structure
-    damage],                        [#strong[Walls / Defensive Structures];], [#strong[Dense
-    garrisons];],                                 [#strong[Light Cavalry];],
-    [#strong[Archer];], [#strong[Battering Ram];], [Close siege breaching], [#strong[Gates
-    /
-    Wall Segments];],                                         [#strong[Fortified
-    structures];], [#strong[Sword
-    Infantry];],
-    [#strong[Archer];],
-  )],
-  kind: table,
-)
+// #figure(
+//   align(center)[#table(
+//     columns: 6,
+//     align: (auto, auto, auto, auto, auto, auto),
+//     table.header(
+//       [Unit],
+//       [Role],
+//       [Hard Counter (heavy advantage)],
+//       [Soft
+//       Counter (light advantage)],
+//       [Hard Countered By],
+//       [Soft Countered
+//       By],
+//     ),
+//     table.hline(),      [#strong[Catapult];],      [Ranged siege and structure
+//     damage],                        [#strong[Walls / Defensive Structures];], [#strong[Dense
+//     garrisons];],                                 [#strong[Light Cavalry];],
+//     [#strong[Archer];], [#strong[Battering Ram];], [Close siege breaching], [#strong[Gates
+//     /
+//     Wall Segments];],                                         [#strong[Fortified
+//     structures];], [#strong[Sword
+//     Infantry];],
+//     [#strong[Archer];],
+//   )],
+//   kind: table,
+// )
 
 ==== 10.2.3 Naval Units (Harbor) <1023-naval-units-harbor>
 Trained at the #strong[Harbor];. Utility ships (Transport Boat, Fast
@@ -131,60 +185,115 @@ in the counter tables.
       [Role],
       [Hard Counter],
       [Soft
-      Counter],
+        Counter],
       [Hard Countered By],
       [Soft Countered By],
     ),
-    table.hline(),           [#strong[Fire Ship];],   [⛏️ Attack],  [Sacrificial
-    area
-    denial], [#strong[Tower
-    Ship];],                        [#strong[Quinquereme];], [#strong[Cataphract];],
-    [#strong[Liburnian];],   [#strong[Bireme];],      [⛏️ Attack],  [Fast strike
-    galley], [#strong[Liburnian];],   [#strong[Dromon];],      [#strong[Tower
-    Ship];],
-    [#strong[Trireme];],     [#strong[Quinquereme];], [⛏️ Attack],  [Heavy assault
-    galley], [#strong[Trireme];],     [#strong[Dromon];],      [#strong[War
-    Barge];],
-    [#strong[Fire Ship];],   [#strong[Trireme];],     [⚖️ Mixed],   [Balanced core
-    warship], [#strong[Dromon];],      [#strong[Bireme];],      [#strong[Quinquereme];],
-    [#strong[War
-    Barge];],                        [#strong[Dromon];],      [⚖️ Mixed],   [Fire-armed
-    war
-    galley], [#strong[Cataphract];],  [#strong[Quinquereme];], [#strong[Trireme];],
+    table.hline(),
+    [#strong[Fire Ship];],
+    [⛏️ Attack],
+    [Sacrificial
+      area
+      denial],
     [#strong[Tower
-    Ship];],                        [#strong[Liburnian];],   [⚖️ Mixed],   [Fast
-    patrol
-    galley], [#strong[War
-    Barge];],                        [#strong[Dromon];],      [#strong[Bireme];],
+      Ship];],
+    [#strong[Quinquereme];],
+    [#strong[Cataphract];],
+    [#strong[Liburnian];],
+    [#strong[Bireme];],
+    [⛏️ Attack],
+    [Fast strike
+      galley],
+    [#strong[Liburnian];],
+    [#strong[Dromon];],
+    [#strong[Tower
+      Ship];],
+    [#strong[Trireme];],
+    [#strong[Quinquereme];],
+    [⛏️ Attack],
+    [Heavy assault
+      galley],
+    [#strong[Trireme];],
+    [#strong[Dromon];],
+    [#strong[War
+      Barge];],
+    [#strong[Fire Ship];],
+    [#strong[Trireme];],
+    [⚖️ Mixed],
+    [Balanced core
+      warship],
+    [#strong[Dromon];],
+    [#strong[Bireme];],
+    [#strong[Quinquereme];],
+    [#strong[War
+      Barge];],
+    [#strong[Dromon];],
+    [⚖️ Mixed],
+    [Fire-armed
+      war
+      galley],
+    [#strong[Cataphract];],
+    [#strong[Quinquereme];],
+    [#strong[Trireme];],
+    [#strong[Tower
+      Ship];],
+    [#strong[Liburnian];],
+    [⚖️ Mixed],
+    [Fast
+      patrol
+      galley],
+    [#strong[War
+      Barge];],
+    [#strong[Dromon];],
+    [#strong[Bireme];],
     [#strong[Fire
-    Ship];],                        [#strong[Tower Ship];],  [🛡️ Defense], [Elevated
-    archer
-    platform], [#strong[Bireme];],      [#strong[Trireme];],     [#strong[Fire
-    Ship];],
-    [#strong[Quinquereme];], [#strong[Cataphract];],  [🛡️ Defense], [Armored escort
-    galley], [#strong[Fire Ship];],   [#strong[Tower
-    Ship];],                        [#strong[Dromon];],
-    [#strong[War Barge];],   [#strong[War Barge];],   [🛡️ Defense], [Hull-bulk harbor
-    guardian], [#strong[Quinquereme];], [#strong[Dromon];],      [#strong[Liburnian];],
+      Ship];],
+    [#strong[Tower Ship];],
+    [🛡️ Defense],
+    [Elevated
+      archer
+      platform],
+    [#strong[Bireme];],
+    [#strong[Trireme];],
+    [#strong[Fire
+      Ship];],
+    [#strong[Quinquereme];],
+    [#strong[Cataphract];],
+    [🛡️ Defense],
+    [Armored escort
+      galley],
+    [#strong[Fire Ship];],
+    [#strong[Tower
+      Ship];],
+    [#strong[Dromon];],
+    [#strong[War Barge];],
+    [#strong[War Barge];],
+    [🛡️ Defense],
+    [Hull-bulk harbor
+      guardian],
+    [#strong[Quinquereme];],
+    [#strong[Dromon];],
+    [#strong[Liburnian];],
     [#strong[Trireme];],
   )],
   kind: table,
 )
 
 #strong[Utility Ships] #emph[(no combat stats; never appear in counter
-tables)];:
+  tables)];:
 
 #figure(
   align(center)[#table(
     columns: 2,
     align: (auto, auto),
     table.header([Ship], [Role]),
-    table.hline(),           [#strong[Transport Boat];],
+    table.hline(), [#strong[Transport Boat];],
     [Basic troop transport], [#strong[Fast Transport Ship];],
     [Rapid reinforcement and timing
-    plays],                        [#strong[Colony Ship];],
+      plays],
+    [#strong[Colony Ship];],
     [City acquisition and expansion (see
-    §10.8)],
+      §10.8)],
   )],
   kind: table,
 )
@@ -216,24 +325,30 @@ profile, plus two operational stats:
     columns: 2,
     align: (auto, auto),
     table.header([Stat], [Description]),
-    table.hline(),                            [#strong[Blunt Dmg];],
+    table.hline(), [#strong[Blunt Dmg];],
     [Melee blunt damage (clubs, maces,
-    chariot/cavalry impact, shield bashes)],                                         [#strong[Distance
-    Dmg];],
+      chariot/cavalry impact, shield bashes)],
+    [#strong[Distance
+      Dmg];],
     [Ranged projectile damage (bows, slings,
-    javelins, thrown weapons)],                                         [#strong[Sharp
-    Dmg];],
+      javelins, thrown weapons)],
+    [#strong[Sharp
+      Dmg];],
     [Melee sharp damage (swords, spears, axes,
-    lances, pikes)],                                         [#strong[Def vs Blunt];],
+      lances, pikes)],
+    [#strong[Def vs Blunt];],
     [Damage reduction against incoming blunt
-    attacks],                                         [#strong[Def vs Distance];],
+      attacks],
+    [#strong[Def vs Distance];],
     [Damage reduction against incoming
-    ranged attacks],                                         [#strong[Def vs Sharp];],
+      ranged attacks],
+    [#strong[Def vs Sharp];],
     [Damage reduction against incoming sharp
-    attacks],                                         [#strong[Speed];],
+      attacks],
+    [#strong[Speed];],
     [March speed multiplier on open terrain], [#strong[Booty Capacity];],
     [Max resources this unit carries back
-    from a successful raid],
+      from a successful raid],
   )],
   kind: table,
 )
@@ -252,7 +367,7 @@ differentials (e.g., Pikeman has low Def vs Distance and cannot close
 the gap; Archer has high Distance Dmg → Archer hard counters Pikeman).
 
 #strong[Base Combat Stats] #emph[(placeholder --- fill during balance
-pass; `—` = weapon type not used by this unit)];:
+  pass; `—` = weapon type not used by this unit)];:
 
 #figure(
   align(center)[#table(
@@ -264,25 +379,65 @@ pass; `—` = weapon type not used by this unit)];:
       [Distance Dmg],
       [Sharp Dmg],
       [Def
-      vs Blunt],
+        vs Blunt],
       [Def vs Distance],
       [Def vs Sharp],
       [Speed],
       [Booty],
     ),
-    table.hline(), [#strong[Sword
-    Infantry];],                     [---], [---], [TBD], [TBD], [TBD], [TBD], [TBD],
-    [TBD],         [#strong[Light
-    Cavalry];],                     [---], [---], [TBD], [TBD], [TBD], [TBD], [TBD],
-    [TBD],         [#strong[War
-    Chariot];],                     [TBD], [---], [TBD], [TBD], [TBD], [TBD], [TBD],
-    [TBD],         [#strong[Spearman];], [TBD], [---], [TBD], [TBD], [TBD], [TBD], [TBD],
-    [TBD],         [#strong[Archer];],   [---], [TBD], [---], [TBD], [TBD], [TBD], [TBD],
-    [TBD],         [#strong[Slinger];],  [---], [TBD], [---], [TBD], [TBD], [TBD], [TBD],
-    [TBD],         [#strong[Heavy
-    Infantryman];],                     [---], [---], [TBD], [TBD], [TBD], [TBD], [TBD],
-    [TBD],         [#strong[Pikeman];],  [---], [---], [TBD], [TBD], [TBD], [TBD], [TBD],
-    [TBD],         [#strong[Peltast];],  [---], [TBD], [---], [TBD], [TBD], [TBD], [TBD],
+    table.hline(),
+    [#strong[Sword
+      Infantry];],
+    [---],
+    [---],
+    [TBD],
+    [TBD],
+    [TBD],
+    [TBD],
+    [TBD],
+    [TBD],
+    [#strong[Light
+      Cavalry];],
+    [---],
+    [---],
+    [TBD],
+    [TBD],
+    [TBD],
+    [TBD],
+    [TBD],
+    [TBD],
+    [#strong[War
+      Chariot];],
+    [TBD],
+    [---],
+    [TBD],
+    [TBD],
+    [TBD],
+    [TBD],
+    [TBD],
+    [TBD],
+    [#strong[Spearman];],
+    [TBD],
+    [---],
+    [TBD],
+    [TBD],
+    [TBD],
+    [TBD],
+    [TBD],
+    [TBD], [#strong[Archer];], [---], [TBD], [---], [TBD], [TBD], [TBD], [TBD],
+    [TBD], [#strong[Slinger];], [---], [TBD], [---], [TBD], [TBD], [TBD], [TBD],
+    [TBD],
+    [#strong[Heavy
+      Infantryman];],
+    [---],
+    [---],
+    [TBD],
+    [TBD],
+    [TBD],
+    [TBD],
+    [TBD],
+    [TBD], [#strong[Pikeman];], [---], [---], [TBD], [TBD], [TBD], [TBD], [TBD],
+    [TBD], [#strong[Peltast];], [---], [TBD], [---], [TBD], [TBD], [TBD], [TBD],
     [TBD],
   )],
   kind: table,
@@ -304,29 +459,101 @@ always required.
       [🪨 Stone],
       [⛏️ Metal],
       [🌾
-      Food],
+        Food],
       [✨ Favor],
       [👥 Pop],
       [⏱️ Build Time],
     ),
-    table.hline(), [#strong[Sword Infantry];],    [⛏️
-    Attack], [---], [---], [TBD], [TBD], [---], [1],
-    [TBD],         [#strong[Light Cavalry];],     [⛏️
-    Attack], [TBD], [---], [TBD], [TBD], [---], [2],
-    [TBD],         [#strong[War Chariot];],       [⛏️
-    Attack], [TBD], [---], [TBD], [TBD], [---], [2],
-    [TBD],         [#strong[Spearman];],          [⚖️
-    Mixed], [---], [---], [TBD], [TBD], [---], [1],
-    [TBD],         [#strong[Archer];],            [⚖️
-    Mixed], [TBD], [---], [TBD], [TBD], [---], [1],
-    [TBD],         [#strong[Slinger];],           [⚖️
-    Mixed], [TBD], [---], [---], [TBD], [---], [1],
-    [TBD],         [#strong[Heavy Infantryman];], [🛡️
-    Defense], [---], [---], [TBD], [TBD], [---], [1],
-    [TBD],         [#strong[Pikeman];],           [🛡️
-    Defense], [---], [---], [TBD], [TBD], [---], [1],
-    [TBD],         [#strong[Peltast];],           [🛡️
-    Defense], [TBD], [---], [---], [TBD], [---], [1],
+    table.hline(),
+    [#strong[Sword Infantry];],
+    [⛏️
+      Attack],
+    [---],
+    [---],
+    [TBD],
+    [TBD],
+    [---],
+    [1],
+    [TBD],
+    [#strong[Light Cavalry];],
+    [⛏️
+      Attack],
+    [TBD],
+    [---],
+    [TBD],
+    [TBD],
+    [---],
+    [2],
+    [TBD],
+    [#strong[War Chariot];],
+    [⛏️
+      Attack],
+    [TBD],
+    [---],
+    [TBD],
+    [TBD],
+    [---],
+    [2],
+    [TBD],
+    [#strong[Spearman];],
+    [⚖️
+      Mixed],
+    [---],
+    [---],
+    [TBD],
+    [TBD],
+    [---],
+    [1],
+    [TBD],
+    [#strong[Archer];],
+    [⚖️
+      Mixed],
+    [TBD],
+    [---],
+    [TBD],
+    [TBD],
+    [---],
+    [1],
+    [TBD],
+    [#strong[Slinger];],
+    [⚖️
+      Mixed],
+    [TBD],
+    [---],
+    [---],
+    [TBD],
+    [---],
+    [1],
+    [TBD],
+    [#strong[Heavy Infantryman];],
+    [🛡️
+      Defense],
+    [---],
+    [---],
+    [TBD],
+    [TBD],
+    [---],
+    [1],
+    [TBD],
+    [#strong[Pikeman];],
+    [🛡️
+      Defense],
+    [---],
+    [---],
+    [TBD],
+    [TBD],
+    [---],
+    [1],
+    [TBD],
+    [#strong[Peltast];],
+    [🛡️
+      Defense],
+    [TBD],
+    [---],
+    [---],
+    [TBD],
+    [---],
+    [1],
     [TBD],
   )],
   kind: table,
@@ -358,13 +585,13 @@ This design serves three goals:
     table.header(
       [Garrison Composition],
       [Offensive
-      Strength],
+        Strength],
       [Defensive Strength],
       [Raiding Efficiency],
     ),
-    table.hline(),        [Mostly ⛏️ Attack],  [High],     [Low],
-    [High booty per run], [Mostly ⚖️ Mixed],   [Moderate], [Moderate],
-    [Moderate],           [Mostly 🛡️ Defense], [Poor],     [Very High],
+    table.hline(), [Mostly ⛏️ Attack], [High], [Low],
+    [High booty per run], [Mostly ⚖️ Mixed], [Moderate], [Moderate],
+    [Moderate], [Mostly 🛡️ Defense], [Poor], [Very High],
     [Near zero],
   )],
   kind: table,
@@ -407,33 +634,54 @@ Attacker chooses one formation when dispatching:
       [Formation],
       [Primary Effect],
       [Best Against (defending
-      unit)],
+        unit)],
       [Weak Into],
     ),
-    table.hline(),             [#strong[Hammer];],          [Sword Infantry and Heavy
-    assault units gain
-    \+20% attack, -15% defense],                       [#strong[Sword
-    Infantry];],
-    [#strong[Spearman];],      [#strong[Shield Wall];],     [Frontline units gain
-    +20% defense, -10%
-    attack],                       [#strong[Archer];],
-    [#strong[Light Cavalry];], [#strong[Flanking];],        [Light Cavalry gain +30%
-    damage and bypass 20%
-    wall HP],                       [#strong[Slinger];],
-    [#strong[Spearman];],      [#strong[Spearhead];],       [Spearman and Sword Infantry
-    gain +15%
-    first-round damage],                       [#strong[Spearman];],
-    [#strong[Archer];],        [#strong[Skirmish Screen];], [Archer and Slinger gain
-    +20% damage,
-    \-10% defense],                       [#strong[Light Cavalry];],
+    table.hline(),
+    [#strong[Hammer];],
+    [Sword Infantry and Heavy
+      assault units gain
+      \+20% attack, -15% defense],
     [#strong[Sword
-    Infantry];],                          [#strong[Siege Focus];],     [Siege units
-    attack walls first and deal
-    \+25% wall damage],                       [#strong[Catapult / Battering Ram (defending
-    siege units)];],
-    [#strong[Light Cavalry];], [#strong[Balanced];],        [No bonus, no penalty], [No
-    specific
-    target],
+      Infantry];],
+    [#strong[Spearman];],
+    [#strong[Shield Wall];],
+    [Frontline units gain
+      +20% defense, -10%
+      attack],
+    [#strong[Archer];],
+    [#strong[Light Cavalry];],
+    [#strong[Flanking];],
+    [Light Cavalry gain +30%
+      damage and bypass 20%
+      wall HP],
+    [#strong[Slinger];],
+    [#strong[Spearman];],
+    [#strong[Spearhead];],
+    [Spearman and Sword Infantry
+      gain +15%
+      first-round damage],
+    [#strong[Spearman];],
+    [#strong[Archer];],
+    [#strong[Skirmish Screen];],
+    [Archer and Slinger gain
+      +20% damage,
+      \-10% defense],
+    [#strong[Light Cavalry];],
+    [#strong[Sword
+      Infantry];],
+    [#strong[Siege Focus];],
+    [Siege units
+      attack walls first and deal
+      \+25% wall damage],
+    [#strong[Catapult / Battering Ram (defending
+      siege units)];],
+    [#strong[Light Cavalry];],
+    [#strong[Balanced];],
+    [No bonus, no penalty],
+    [No
+      specific
+      target],
     [Specialized formations],
   )],
   kind: table,
@@ -524,15 +772,21 @@ Three layers of city defense:
     columns: 3,
     align: (auto, auto, auto),
     table.header([Layer], [Description], [Depletes?]),
-    table.hline(),                [#strong[Walls];],            [Stone HP barrier;
-    must be destroyed before
-    garrison is engaged],
-    [Yes; repairable with Stone], [#strong[Garrison];],         [Player-assigned
-    military units stationed in
-    city],
-    [Yes; lost in battle],        [#strong[Civilian Militia];], [Auto-spawned when
-    city is attacked;
-    weak but provide a final layer],
+    table.hline(),
+    [#strong[Walls];],
+    [Stone HP barrier;
+      must be destroyed before
+      garrison is engaged],
+    [Yes; repairable with Stone],
+    [#strong[Garrison];],
+    [Player-assigned
+      military units stationed in
+      city],
+    [Yes; lost in battle],
+    [#strong[Civilian Militia];],
+    [Auto-spawned when
+      city is attacked;
+      weak but provide a final layer],
     [Yes; resets after battle],
   )],
   kind: table,

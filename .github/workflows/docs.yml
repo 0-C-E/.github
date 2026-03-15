@@ -39,27 +39,18 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # ── Toolchain ──────────────────────────────────────────────────────────
-      - name: Set up Typst
-        uses: typst-community/setup-typst@v4
-        with:
-          typst-version: latest
+      - name: Install typstyle
+        run: |
+          curl -fsSL "https://github.com/typstyle-rs/typstyle/releases/download/v0.14.4/typstyle-x86_64-unknown-linux-gnu" -o /tmp/typstyle
+          sudo install -m 0755 /tmp/typstyle /usr/local/bin/typstyle
 
-      - name: Set up Rust
-        uses: dtolnay/rust-toolchain@stable
-
-      - name: Install prettypst
-        run: cargo install --git=https://github.com/antonWetzel/prettypst.git --locked
-
-      - name: Verify Typst installation
-        run: typst --version
-
-      - name: Verify prettypst installation
-        run: prettypst --help >/dev/null
+      - name: Verify typstyle installation
+        run: typstyle --version
 
       # ── Format source files ───────────────────────────────────────────────
       - name: Format Typst files
         run: |
-          find docs -type f -name "*.typ" ! -path "docs/templates/*" -exec prettypst {} \;
+          find docs -type f -name "*.typ" ! -path "docs/templates/*" -exec typstyle -i {} \;
 
       - name: Commit formatted files
         run: |

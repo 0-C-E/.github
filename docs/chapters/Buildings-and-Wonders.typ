@@ -109,40 +109,52 @@ Rules:
 
 Recommended default profiles:
 
-#figure(align(center)[#table(
-  columns: 4,
-  align: (
-    auto,
-    auto,
-    auto,
-    auto,
-  ),
-  table.header(
-    [Building],
-    [Standard World],
-    [Fast World],
-    [Game
-    Night],
-  ),
-  table.hline(), [#link("../buildings/Farm.pdf")[Farm]],                     [1], [4],
-  [8],           [#link("../buildings/Lumber-Camp.pdf")[Lumber Camp]],       [1], [3],
-  [7],           [#link("../buildings/Quarry.pdf")[Quarry]],                 [1], [3],
-  [7],           [#link("../buildings/Foundry.pdf")[Foundry]],               [0], [2],
-  [6],           [#link("../buildings/Granary.pdf")[Granary]],               [1], [3],
-  [6],           [#link("../buildings/Warehouse.pdf")[Warehouse]],           [1], [3],
-  [6],           [#link("../buildings/Shrine-Temple.pdf")[Shrine / Temple]], [0], [1],
-  [3],           [#link("../buildings/Senate.pdf")[Senate]],                 [1], [3],
-  [6],           [#link("../buildings/Market-Place.pdf")[Market]],           [0], [2],
-  [5],           [#link("../buildings/Barracks.pdf")[Barracks]],             [1], [3],
-  [6],           [#link("../buildings/City-Walls.pdf")[City Walls]],         [0], [2],
-  [5],           [#link("../buildings/Academy.pdf")[Academy]],               [0], [1],
-  [4],           [#link("../buildings/Harbor.pdf")[Harbor]],                 [0], [2],
-  [5],           [#link("../buildings/special/Siege-Workshop.pdf")[Siege Workshop
-  (special)]],                                                           [0], [0],
-  [0],           [#link("../buildings/special/Watchtower.pdf")[Watchtower (special)]],                                                           [0], [0],
-  [0],           [#link("../buildings/special/Divine-Statue.pdf")[Divine Statue (special)]],                                                           [0], [0],
-  [0],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 4,
+    align: (
+      auto,
+      auto,
+      auto,
+      auto,
+    ),
+    table.header(
+      [Building],
+      [Standard World],
+      [Fast World],
+      [Game
+        Night],
+    ),
+    table.hline(), [#link("../buildings/Farm.pdf")[Farm]], [1], [4],
+    [8], [#link("../buildings/Lumber-Camp.pdf")[Lumber Camp]], [1], [3],
+    [7], [#link("../buildings/Quarry.pdf")[Quarry]], [1], [3],
+    [7], [#link("../buildings/Foundry.pdf")[Foundry]], [0], [2],
+    [6], [#link("../buildings/Granary.pdf")[Granary]], [1], [3],
+    [6], [#link("../buildings/Warehouse.pdf")[Warehouse]], [1], [3],
+    [6], [#link("../buildings/Shrine-Temple.pdf")[Shrine / Temple]], [0], [1],
+    [3], [#link("../buildings/Senate.pdf")[Senate]], [1], [3],
+    [6], [#link("../buildings/Market-Place.pdf")[Market]], [0], [2],
+    [5], [#link("../buildings/Barracks.pdf")[Barracks]], [1], [3],
+    [6], [#link("../buildings/City-Walls.pdf")[City Walls]], [0], [2],
+    [5], [#link("../buildings/Academy.pdf")[Academy]], [0], [1],
+    [4], [#link("../buildings/Harbor.pdf")[Harbor]], [0], [2],
+    [5],
+    [#link("../buildings/special/Siege-Workshop.pdf")[Siege Workshop
+      (special)]],
+    [0],
+    [0],
+    [0],
+    [#link("../buildings/special/Watchtower.pdf")[Watchtower (special)]],
+    [0],
+    [0],
+    [0],
+    [#link("../buildings/special/Divine-Statue.pdf")[Divine Statue (special)]],
+    [0],
+    [0],
+    [0],
+  )],
+  kind: table,
+)
 
 These are initialization targets, not balance locks; worlds may override
 them through configuration.
@@ -154,102 +166,117 @@ All buildings below are standard upgradable buildings using level
 progression and formulas. Civ-specific replacements still occupy the
 same named slot.
 
-#figure(align(center)[#table(
-  columns: 5,
-  align: (
-    auto,
-    auto,
-    auto,
-    auto,
-    auto,
-  ),
-  table.header(
-    [Building],
-    [Slot],
-    [Cap (typical)],
-    [Passive
-    Effects],
-    [Effect Formula Template],
-  ),
-  table.hline(),                                               [#link("../buildings/Farm.pdf")[#strong[Farm];];],             [Farm],      [45], [Food
-  production, Militia
-  cap],
-  [`food_h = base_food_h * (1 + a_farm * L^p_farm)`;
-  `militia_cap = base_militia + b_farm * L`],                                                            [#link("../buildings/Lumber-Camp.pdf")[#strong[Lumber
-  Camp];];],                                                              [Lumber],    [40], [Wood
-  production],
-  [`wood_h = base_wood_h * (1 + a_lumber * L^p_lumber)`],      [#link("../buildings/Quarry.pdf")[#strong[Quarry];];],         [Quarry],    [40], [Stone
-  production],
-  [`stone_h = base_stone_h * (1 + a_quarry * L^p_quarry)`],    [#link("../buildings/Foundry.pdf")[#strong[Foundry];];],       [Foundry],   [40], [Metal
-  production],
-  [`metal_h = base_metal_h * (1 + a_foundry * L^p_foundry)`],  [#link("../buildings/Granary.pdf")[#strong[Granary];];],       [Granary],   [35], [Food
-  storage, Population cap],
-  [`food_storage(L) = 250 + 80 × L^1.5`;
-  `pop_cap(L) = 50 + 11 × L^1.5`],                                                            [#link("../buildings/Warehouse.pdf")[#strong[Warehouse];];],   [Warehouse], [35], [Non-food
-  storage
-  (wood/stone/metal)],
-  [`warehouse_storage(L) = 300 + 100 × L^1.5`],                [#link("../buildings/Shrine-Temple.pdf")[#strong[Shrine
-  / Temple];];],                                                              [Temple],    [35], [Favor
-  production],
-  [`favor_h = base_favor_h * (1 + a_temple * L^p_temple)`],    [#link("../buildings/Senate.pdf")[#strong[Senate];];],         [Senate],    [30], [Building
-  speed modifier],
-  [`build_speed_mult = 1 + a_senate * ln(1 + L)`],             [#link("../buildings/Market-Place.pdf")[#strong[Market];];],   [Market],    [30], [Trade
-  capacity and trade
-  throughput],
-  [`trade_capacity = base_trade + b_market * L`;
-  `trade_cooldown_mult = 1 / (1 + c_market * sqrt(L))`],                                                            [#link("../buildings/Barracks.pdf")[#strong[Barracks];];],     [Barracks],  [35], [Land
-  troop training speed (land garrison
-  only)],
-  [`land_train_time_mult = 1 / (1 + a_barracks * ln(1 + L))`], [#link("../buildings/City-Walls.pdf")[#strong[City
-  Walls];];], [Walls],     [35], [Passive
-  defender bonus when city is
-  attacked],
-  [`defense_mult = 1 + a_walls * L^p_walls`;
-  `wall_hp = base_wall_hp * (1 + b_walls * L^q_walls)`],                                                            [#link("../buildings/Academy.pdf")[#strong[Academy];];],       [Academy],   [35], [Research
-  points; research duration
-  reduction],
-  [`research_points_h = base_rp_h * (1 + a_academy * L^p_academy)`;
-  `research_time_mult = 1 / (1 + b_academy * ln(1 + L))`],                                                            [#link("../buildings/Harbor.pdf")[#strong[Harbor];];],         [Harbor],    [35], [Ship
-  training speed (naval garrison
-  only)],
-  [`ship_train_time_mult = 1 / (1 + a_harbor * ln(1 + L))`],
-)], kind: table)
+// #figure(align(center)[#table(
+//   columns: 5,
+//   align: (
+//     auto,
+//     auto,
+//     auto,
+//     auto,
+//     auto,
+//   ),
+//   table.header(
+//     [Building],
+//     [Slot],
+//     [Cap (typical)],
+//     [Passive
+//     Effects],
+//     [Effect Formula Template],
+//   ),
+//   table.hline(),                                               [#link("../buildings/Farm.pdf")[#strong[Farm];];],             [Farm],      [45], [Food
+//   production, Militia
+//   cap],
+//   [`food_h = base_food_h * (1 + a_farm * L^p_farm)`;
+//   `militia_cap = base_militia + b_farm * L`],                                                            [#link("../buildings/Lumber-Camp.pdf")[#strong[Lumber
+//   Camp];];],                                                              [Lumber],    [40], [Wood
+//   production],
+//   [`wood_h = base_wood_h * (1 + a_lumber * L^p_lumber)`],      [#link("../buildings/Quarry.pdf")[#strong[Quarry];];],         [Quarry],    [40], [Stone
+//   production],
+//   [`stone_h = base_stone_h * (1 + a_quarry * L^p_quarry)`],    [#link("../buildings/Foundry.pdf")[#strong[Foundry];];],       [Foundry],   [40], [Metal
+//   production],
+//   [`metal_h = base_metal_h * (1 + a_foundry * L^p_foundry)`],  [#link("../buildings/Granary.pdf")[#strong[Granary];];],       [Granary],   [35], [Food
+//   storage, Population cap],
+//   [`food_storage(L) = 250 + 80 × L^1.5`;
+//   `pop_cap(L) = 50 + 11 × L^1.5`],                                                            [#link("../buildings/Warehouse.pdf")[#strong[Warehouse];];],   [Warehouse], [35], [Non-food
+//   storage
+//   (wood/stone/metal)],
+//   [`warehouse_storage(L) = 300 + 100 × L^1.5`],                [#link("../buildings/Shrine-Temple.pdf")[#strong[Shrine
+//   / Temple];];],                                                              [Temple],    [35], [Favor
+//   production],
+//   [`favor_h = base_favor_h * (1 + a_temple * L^p_temple)`],    [#link("../buildings/Senate.pdf")[#strong[Senate];];],         [Senate],    [30], [Building
+//   speed modifier],
+//   [`build_speed_mult = 1 + a_senate * ln(1 + L)`],             [#link("../buildings/Market-Place.pdf")[#strong[Market];];],   [Market],    [30], [Trade
+//   capacity and trade
+//   throughput],
+//   [`trade_capacity = base_trade + b_market * L`;
+//   `trade_cooldown_mult = 1 / (1 + c_market * sqrt(L))`],                                                            [#link("../buildings/Barracks.pdf")[#strong[Barracks];];],     [Barracks],  [35], [Land
+//   troop training speed (land garrison
+//   only)],
+//   [`land_train_time_mult = 1 / (1 + a_barracks * ln(1 + L))`], [#link("../buildings/City-Walls.pdf")[#strong[City
+//   Walls];];], [Walls],     [35], [Passive
+//   defender bonus when city is
+//   attacked],
+//   [`defense_mult = 1 + a_walls * L^p_walls`;
+//   `wall_hp = base_wall_hp * (1 + b_walls * L^q_walls)`],                                                            [#link("../buildings/Academy.pdf")[#strong[Academy];];],       [Academy],   [35], [Research
+//   points; research duration
+//   reduction],
+//   [`research_points_h = base_rp_h * (1 + a_academy * L^p_academy)`;
+//   `research_time_mult = 1 / (1 + b_academy * ln(1 + L))`],                                                            [#link("../buildings/Harbor.pdf")[#strong[Harbor];];],         [Harbor],    [35], [Ship
+//   training speed (naval garrison
+//   only)],
+//   [`ship_train_time_mult = 1 / (1 + a_harbor * ln(1 + L))`],
+// )], kind: table)
 
 ==== 8.3.2 Special Buildings (Non-Upgradable) <832-special-buildings-non-upgradable>
 Special buildings are separated from the main progression track. They
 are built once at level 1 and never upgraded.
 
-#figure(align(center)[#table(
-  columns: 5,
-  align: (
-    auto,
-    auto,
-    auto,
-    auto,
-    auto,
-  ),
-  table.header(
-    [Building],
-    [Slot],
-    [Cap],
-    [Purpose],
-    [Effect Formula
-    Template],
-  ),
-  table.hline(),                                          [#link("../buildings/special/Siege-Workshop.pdf")[#strong[Siege
-  Workshop];];],                                                                      [Siege
-  Workshop],             [1 (special)], [Enables siege weapon
-  training],
-  [`siege_unlocked = true`],                              [#link("../buildings/special/Watchtower.pdf")[#strong[Watchtower];];], [Watchtower], [1
-  (special)],              [Improves City Walls bonus; intel
-  radius/quality],
-  [`effective_defense_mult = defense_mult * (1 + watchtower_bonus)`;
-  `intel_radius = 20`],                                                       [#link("../buildings/special/Divine-Statue.pdf")[#strong[Divine
-  Statue];];],                                                                      [Divine
-  Statue],             [1 (special)], [Additional Favor production
-  multiplier],
-  [`favor_h_final = favor_h * (1 + statue_favor_bonus)`],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 5,
+    align: (
+      auto,
+      auto,
+      auto,
+      auto,
+      auto,
+    ),
+    table.header(
+      [Building],
+      [Slot],
+      [Cap],
+      [Purpose],
+      [Effect Formula
+        Template],
+    ),
+    table.hline(),
+    [#link("../buildings/special/Siege-Workshop.pdf")[#strong[Siege
+      Workshop];];],
+    [Siege
+      Workshop],
+    [1 (special)],
+    [Enables siege weapon
+      training],
+    [`siege_unlocked = true`],
+    [#link("../buildings/special/Watchtower.pdf")[#strong[Watchtower];];],
+    [Watchtower],
+    [1
+      (special)],
+    [Improves City Walls bonus; intel
+      radius/quality],
+    [`effective_defense_mult = defense_mult * (1 + watchtower_bonus)`;
+      `intel_radius = 20`],
+    [#link("../buildings/special/Divine-Statue.pdf")[#strong[Divine
+      Statue];];],
+    [Divine
+      Statue],
+    [1 (special)],
+    [Additional Favor production
+      multiplier],
+    [`favor_h_final = favor_h * (1 + statue_favor_bonus)`],
+  )],
+  kind: table,
+)
 
 Other special buildings can be added later using this same level-1
 non-upgradable pattern.
@@ -443,7 +470,7 @@ on their island. They are the game\'s most powerful persistent effects
 
 ==== 8.5.2 Island-Scoped Effects <852-island-scoped-effects>
 Wonder effects apply to #strong[all players whose cities are on the same
-island as the Wonder] --- owner and enemies alike. This is the central
+  island as the Wonder] --- owner and enemies alike. This is the central
 strategic tension: Wonders benefit your neighbors as much as you.
 Holding a Wonder island means:
 
@@ -471,41 +498,52 @@ The player who completes a Wonder first on any island earns a
   reputational
 
 ==== 8.5.4 Wonder Roster <854-wonder-roster>
-#figure(align(center)[#table(
-  columns: 3,
-  align: (
-    auto,
-    auto,
-    auto,
-  ),
-  table.header(
-    [Wonder],
-    [Island Effect],
-    [Campaign Role],
-  ),
-  table.hline(),              [#strong[The Eternal Pyre];],         [Favor generation
-  +50% for all cities
-  on this island],
-  [Victory Wonder candidate], [#strong[The Tessellated Colossus];], [Military unit
-  training speed
-  \+30% for all cities on this island],
-  [Victory Wonder candidate], [#strong[The Undying Archive];],      [Construction
-  speed +35% for all
-  cities on this island; building level caps +2],
-  [Victory Wonder
-  candidate],                           [#strong[The Grand Thalasseum];],     [Trade
-  dispatch capacity +3 for
-  all players on island; gold per trade +50%],
-  [Victory Wonder
-  candidate],                           [#strong[The Hanging Sanctum];],      [Food
-  production +40% for all
-  cities on island; population cap +150 per city],
-  [Victory Wonder
-  candidate],                           [#strong[The Iron Mausoleum];],       [All
-  cities on island: +5 effective
-  City Walls levels],
-  [Victory Wonder candidate],
-)], kind: table)
+#figure(
+  align(center)[#table(
+    columns: 3,
+    align: (
+      auto,
+      auto,
+      auto,
+    ),
+    table.header([Wonder], [Island Effect], [Campaign Role]),
+    table.hline(),
+    [#strong[The Eternal Pyre];],
+    [Favor generation
+      +50% for all cities
+      on this island],
+    [Victory Wonder candidate],
+    [#strong[The Tessellated Colossus];],
+    [Military unit
+      training speed
+      \+30% for all cities on this island],
+    [Victory Wonder candidate],
+    [#strong[The Undying Archive];],
+    [Construction
+      speed +35% for all
+      cities on this island; building level caps +2],
+    [Victory Wonder
+      candidate],
+    [#strong[The Grand Thalasseum];],
+    [Trade
+      dispatch capacity +3 for
+      all players on island; gold per trade +50%],
+    [Victory Wonder
+      candidate],
+    [#strong[The Hanging Sanctum];],
+    [Food
+      production +40% for all
+      cities on island; population cap +150 per city],
+    [Victory Wonder
+      candidate],
+    [#strong[The Iron Mausoleum];],
+    [All
+      cities on island: +5 effective
+      City Walls levels],
+    [Victory Wonder candidate],
+  )],
+  kind: table,
+)
 
 #strong[Design note];: Effects are deliberately island-scoped rather
 than empire-wide to make Wonder islands genuinely valuable geography
