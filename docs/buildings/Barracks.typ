@@ -22,15 +22,15 @@
     table.header([Mode], [Starting Level]),
     table.hline(),
     [Full World], [0],
-    [Campaign], [0],
-    [Skirmish], [0],
-    [Game Night], [0],
+    [Campaign], [1],
+    [Skirmish], [3],
+    [Game Night], [5],
   )],
   kind: table,
 )
 
-== barracks Levels Data
-<academy-level-data>
+== Barracks Levels Data
+<barracks-level-data>
 #let max_level = 30
 
 // ── Base values & Functions ──

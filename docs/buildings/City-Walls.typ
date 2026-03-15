@@ -19,9 +19,37 @@
     table.header([Mode], [Starting Level]),
     table.hline(),
     [Full World], [0],
-    [Campaign], [0],
-    [Skirmish], [0],
-    [Game Night], [0],
+    [Campaign], [1],
+    [Skirmish], [3],
+    [Game Night], [7],
   )],
   kind: table,
+)
+
+== City Walls Levels Data
+<city-walls-level-data>
+#let max_level = 25
+
+// ── Base values & Functions ──
+#let total_time(l) = calc.round(
+  if l <= max_level { calc.round(500 * calc.pow(1.1615, l)) } else { 50 * calc.pow(l, 2) },
+)
+// ── Helper functions ──
+#let fmt_time(time) = {
+  let h = calc.floor(time / 3600)
+  let m = calc.floor(calc.rem(time, 3600) / 60)
+  let s = calc.floor(calc.rem(time, 60))
+  let pad(n) = if n < 10 { "0" + str(n) } else { str(n) }
+  pad(h) + ":" + pad(m) + ":" + pad(s)
+}
+
+#let building_header = table.header(
+  [*Level*],
+  [🪵],
+  [🪨],
+  [⛏️],
+  [🌾],
+  [👥],
+  [⏱️],
+  [Points],
 )
