@@ -1,5 +1,5 @@
 {
-  "name": "0ce-gdd-wiki (Debian Bookworm)",
+  "name": "0 C.E. - GDD",
   "build": {
     "dockerfile": "Dockerfile",
     "context": ".."
