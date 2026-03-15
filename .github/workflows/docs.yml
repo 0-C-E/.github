@@ -42,8 +42,22 @@ jobs:
         with:
           typst-version: latest
 
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install prettypst
+        run: cargo install --git=https://github.com/antonWetzel/prettypst.git --locked
+
       - name: Verify Typst installation
         run: typst --version
+
+      - name: Verify prettypst installation
+        run: prettypst --help >/dev/null
+
+      # ── Format source files ───────────────────────────────────────────────
+      - name: Format Typst files
+        run: |
+          find docs -type f -name "*.typ" ! -path "docs/templates/*" -exec prettypst {} \;
 
       # ── Typst → PDF ────────────────────────────────────────────────────────
       - name: Compile Typst to PDF

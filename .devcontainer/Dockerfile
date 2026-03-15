@@ -6,6 +6,7 @@ ARG USER_UID=1000
 ARG USER_GID=1000
 ARG PANDOC_VERSION=3.6.1
 ARG TYPST_VERSION=0.13.1
+ARG RUSTUP_VERSION=1.27.1
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
@@ -16,6 +17,7 @@ RUN apt-get update \
         curl \
         wget \
         git \
+        build-essential \
         bash-completion \
         less \
         sudo \
@@ -37,6 +39,9 @@ RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen \
 ENV LANG=en_US.UTF-8
 ENV LANGUAGE=en_US:en
 ENV LC_ALL=en_US.UTF-8
+ENV RUSTUP_HOME=/usr/local/rustup
+ENV CARGO_HOME=/usr/local/cargo
+ENV PATH=/usr/local/cargo/bin:${PATH}
 
 # Create non-root user.
 RUN groupadd --gid ${USER_GID} ${USERNAME} \
@@ -68,6 +73,21 @@ RUN ARCH="$(dpkg --print-architecture)" \
     && tar -xJf /tmp/typst.tar.xz -C /tmp \
     && install -m 0755 /tmp/typst-${TYPST_TARGET}/typst /usr/local/bin/typst \
     && rm -rf /tmp/typst.tar.xz /tmp/typst-${TYPST_TARGET}
+
+# Install Rust toolchain and prettypst formatter.
+RUN ARCH="$(dpkg --print-architecture)" \
+    && case "${ARCH}" in \
+        amd64) RUSTUP_TARGET="x86_64-unknown-linux-gnu" ;; \
+        arm64) RUSTUP_TARGET="aarch64-unknown-linux-gnu" ;; \
+        *) echo "Unsupported architecture for rustup: ${ARCH}" && exit 1 ;; \
+       esac \
+    && curl -fsSL "https://static.rust-lang.org/rustup/archive/${RUSTUP_VERSION}/${RUSTUP_TARGET}/rustup-init" -o /tmp/rustup-init \
+    && chmod +x /tmp/rustup-init \
+    && /tmp/rustup-init -y --profile minimal --default-toolchain stable \
+    && rm -f /tmp/rustup-init \
+    && cargo --version \
+    && cargo install --git=https://github.com/antonWetzel/prettypst.git --locked \
+    && install -m 0755 "${CARGO_HOME}/bin/prettypst" /usr/local/bin/prettypst
 
 # Use non-root user by default.
 USER ${USERNAME}
