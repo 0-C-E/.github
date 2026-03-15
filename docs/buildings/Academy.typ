@@ -76,8 +76,8 @@
 
 #let building_table(from, to) = figure(
   align(center)[#table(
-    columns: 9,
-    align: (center,) * 9,
+    columns: building_row(0).len(),
+    align: (center,) * building_row(0).len(),
     building_header,
     table.hline(),
     ..for l in range(from, to) { building_row(l) },

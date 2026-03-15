@@ -5,16 +5,16 @@
 #figure(
   align(center)[#table(
     columns: 2,
-    align: (auto,auto,),
-    table.header([Property], [Value],),
+    align: (auto, auto),
+    table.header([Property], [Value]),
     table.hline(),
     [#strong[Type];], [Special (non-upgradable)],
     [#strong[Slot];], [Divine Statue],
     [#strong[Max Level];], [1],
     [#strong[Effects];], [Additional Favor production multiplier],
-  )]
-  , kind: table
-  )
+  )],
+  kind: table,
+)
 
 == Effect Formulas
 <effect-formulas>
@@ -39,15 +39,16 @@ buildings have a flat one-time construction cost (no level scaling).
 #figure(
   align(center)[#table(
     columns: 2,
-    align: (auto,auto,),
-    table.header([Mode], [Starting Level],),
+    align: (auto, auto),
+    table.header([Mode], [Starting Level]),
     table.hline(),
-    [Standard], [0],
-    [Fast], [0],
+    [Full World], [0],
+    [Campaign], [0],
+    [Skirmish], [0],
     [Game Night], [0],
-  )]
-  , kind: table
-  )
+  )],
+  kind: table,
+)
 
 == Notes
 <notes>

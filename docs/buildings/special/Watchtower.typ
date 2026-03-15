@@ -5,17 +5,18 @@
 #figure(
   align(center)[#table(
     columns: 2,
-    align: (auto,auto,),
-    table.header([Property], [Value],),
+    align: (auto, auto),
+    table.header([Property], [Value]),
     table.hline(),
     [#strong[Type];], [Special (non-upgradable)],
     [#strong[Slot];], [Watchtower],
     [#strong[Max Level];], [1],
-    [#strong[Effects];], [Improves City Walls defense bonus; intel
-    radius],
-  )]
-  , kind: table
-  )
+    [#strong[Effects];],
+    [Improves City Walls defense bonus; intel
+      radius],
+  )],
+  kind: table,
+)
 
 == Effect Formulas
 <effect-formulas>
@@ -27,14 +28,14 @@ intel_radius           = 20
 #figure(
   align(center)[#table(
     columns: 2,
-    align: (auto,auto,),
-    table.header([Coefficient], [Value],),
+    align: (auto, auto),
+    table.header([Coefficient], [Value]),
     table.hline(),
     [`watchtower_bonus`], [0.12],
     [`intel_radius`], [20],
-  )]
-  , kind: table
-  )
+  )],
+  kind: table,
+)
 
 `defense_mult` is the value produced by
 #link("Building-City-Walls.pdf")[City Walls] at its current level. The
@@ -59,15 +60,16 @@ scaling).
 #figure(
   align(center)[#table(
     columns: 2,
-    align: (auto,auto,),
-    table.header([Mode], [Starting Level],),
+    align: (auto, auto),
+    table.header([Mode], [Starting Level]),
     table.hline(),
-    [Standard], [0],
-    [Fast], [0],
+    [Full World], [0],
+    [Campaign], [0],
+    [Skirmish], [0],
     [Game Night], [0],
-  )]
-  , kind: table
-  )
+  )],
+  kind: table,
+)
 
 == Notes
 <notes>
