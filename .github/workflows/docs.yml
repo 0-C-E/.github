@@ -45,24 +45,7 @@ jobs:
       - name: Verify Typst installation
         run: typst --version
 
-      # ── Typst → HTML ───────────────────────────────────────────────────────
-      - name: Compile Typst to HTML
-        run: |
-          set -euo pipefail
-          mkdir -p _site
-
-          find docs -type f -name "*.typ" \
-            ! -path "docs/templates/*" | while IFS= read -r src; do
-            rel="${src#docs/}"                         # e.g. chapters/03-Economy.typ
-            dest="_site/${rel%.typ}.html"              # e.g. _site/chapters/03-Economy.html
-            mkdir -p "$(dirname "$dest")"
-
-            typst compile "$src" "$dest" \
-              --format html \
-              --features html \
-              --root "$GITHUB_WORKSPACE"
-          done
-
+      # ── Typst → PDF ────────────────────────────────────────────────────────
       - name: Compile Typst to PDF
         run: |
           set -euo pipefail
@@ -75,13 +58,6 @@ jobs:
 
             typst compile "$src" "$dest" \
               --root "$GITHUB_WORKSPACE"
-          done
-
-      - name: Rewrite internal Typst links for Pages
-        run: |
-          set -euo pipefail
-          find _site -type f -name "*.html" -print0 | while IFS= read -r -d '' file; do
-            perl -0pi -e 's/(href="[^"]*)\.typ((?:#[^"]*)?")/$1.pdf$2/g' "$file"
           done
 
       - name: Validate generated artifact content
@@ -97,23 +73,13 @@ jobs:
             exit 1
           fi
 
-          if [ ! -f _site/nav/Home.html ]; then
-            echo "Missing expected file: _site/nav/Home.html"
-            exit 1
-          fi
-
           if [ ! -f _site/nav/Home.pdf ]; then
             echo "Missing expected file: _site/nav/Home.pdf"
             exit 1
           fi
 
-          if [ ! -f _site/buildings/Building-Granary.html ]; then
-            echo "Missing expected file: _site/buildings/Building-Granary.html"
-            exit 1
-          fi
-
-          if [ ! -f _site/buildings/Building-Granary.pdf ]; then
-            echo "Missing expected file: _site/buildings/Building-Granary.pdf"
+          if [ ! -f _site/buildings/Granary.pdf ]; then
+            echo "Missing expected file: _site/buildings/Granary.pdf"
             exit 1
           fi
 
