@@ -24,7 +24,9 @@
   },
 )
 #let construction_time(l) = calc.round(
-  if l <= max_level { 100 * calc.pow(0.965, (l - 1)) } else { -47 + 100 * calc.pow(0.995, l) },
+  if l <= max_level { 100 * calc.pow(0.965, (l - 1)) } else {
+    -47 + 100 * calc.pow(0.995, l)
+  },
   digits: 1,
 )
 #let points(l) = calc.round(110 * calc.pow(l, 0.75))

@@ -46,13 +46,36 @@
   )
 }
 
-#let building_table(from, to, costs: none, time: none, points: none, extra_headers: (), extra: l => ()) = figure(
+#let building_table(
+  from,
+  to,
+  costs: none,
+  time: none,
+  points: none,
+  extra_headers: (),
+  extra: l => (),
+) = figure(
   align(center)[#table(
-    columns: building_row(1, costs: costs, time: time, points: points, extra: extra).len(),
-    align: (center,) * building_row(1, costs: costs, time: time, points: points, extra: extra).len(),
+    columns: building_row(
+      1,
+      costs: costs,
+      time: time,
+      points: points,
+      extra: extra,
+    ).len(),
+    align: (center,)
+      * building_row(
+        1,
+        costs: costs,
+        time: time,
+        points: points,
+        extra: extra,
+      ).len(),
     building_header(extra: extra_headers),
     table.hline(),
-    ..for l in range(from, to) { building_row(l, costs: costs, time: time, points: points, extra: extra) },
+    ..for l in range(from, to) {
+      building_row(l, costs: costs, time: time, points: points, extra: extra)
+    },
   )],
   kind: table,
 )

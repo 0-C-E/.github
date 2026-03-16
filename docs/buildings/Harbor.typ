@@ -1,4 +1,6 @@
-#import "../utils/formulas.typ": building_table, format_time, starting_levels, units_table
+#import "../utils/formulas.typ": (
+  building_table, format_time, starting_levels, units_table,
+)
 
 = 0 C.E. --- Harbor <0-ce--harbor>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
@@ -39,19 +41,45 @@
 #let points(l) = calc.round(66 * calc.pow(l, 0.61))
 
 // ── Units training times ──
-#let fire_ship_time(l) = calc.round(400 * 40 * calc.pow(training_time_reduction, (l - 1)))
-#let bireme_time(l) = calc.round(650 * 40 * calc.pow(training_time_reduction, (l - 1)))
-#let hemolia_time(l) = calc.round(1100 * 40 * calc.pow(training_time_reduction, (l - 1)))
-#let trireme_time(l) = calc.round(900 * 40 * calc.pow(training_time_reduction, (l - 1)))
-#let quadrireme_time(l) = calc.round(1050 * 40 * calc.pow(training_time_reduction, (l - 1)))
-#let liburnian_time(l) = calc.round(750 * 40 * calc.pow(training_time_reduction, (l - 1)))
-#let tower_ship_time(l) = calc.round(1350 * 40 * calc.pow(training_time_reduction, (l - 1)))
-#let cataphract_time(l) = calc.round(1450 * 40 * calc.pow(training_time_reduction, (l - 1)))
-#let penteconters_time(l) = calc.round(1600 * 40 * calc.pow(training_time_reduction, (l - 1)))
-#let freighter_time(l) = calc.round(550 * 40 * calc.pow(training_time_reduction, (l - 1)))
-#let converted_trireme_time(l) = calc.round(850 * 40 * calc.pow(training_time_reduction, (l - 1)))
-#let invasion_galley_time(l) = calc.round(1250 * 40 * calc.pow(training_time_reduction, (l - 1)))
-#let colony_ship_time(l) = calc.round(1550 * 40 * calc.pow(training_time_reduction, (l - 1)))
+#let fire_ship_time(l) = calc.round(
+  400 * 40 * calc.pow(training_time_reduction, (l - 1)),
+)
+#let bireme_time(l) = calc.round(
+  650 * 40 * calc.pow(training_time_reduction, (l - 1)),
+)
+#let hemolia_time(l) = calc.round(
+  1100 * 40 * calc.pow(training_time_reduction, (l - 1)),
+)
+#let trireme_time(l) = calc.round(
+  900 * 40 * calc.pow(training_time_reduction, (l - 1)),
+)
+#let quadrireme_time(l) = calc.round(
+  1050 * 40 * calc.pow(training_time_reduction, (l - 1)),
+)
+#let liburnian_time(l) = calc.round(
+  750 * 40 * calc.pow(training_time_reduction, (l - 1)),
+)
+#let tower_ship_time(l) = calc.round(
+  1350 * 40 * calc.pow(training_time_reduction, (l - 1)),
+)
+#let cataphract_time(l) = calc.round(
+  1450 * 40 * calc.pow(training_time_reduction, (l - 1)),
+)
+#let penteconters_time(l) = calc.round(
+  1600 * 40 * calc.pow(training_time_reduction, (l - 1)),
+)
+#let freighter_time(l) = calc.round(
+  550 * 40 * calc.pow(training_time_reduction, (l - 1)),
+)
+#let converted_trireme_time(l) = calc.round(
+  850 * 40 * calc.pow(training_time_reduction, (l - 1)),
+)
+#let invasion_galley_time(l) = calc.round(
+  1250 * 40 * calc.pow(training_time_reduction, (l - 1)),
+)
+#let colony_ship_time(l) = calc.round(
+  1550 * 40 * calc.pow(training_time_reduction, (l - 1)),
+)
 
 // ── Helper functions ──
 #let this_table = (from, to) => {
@@ -93,7 +121,12 @@
         [#format_time(quadrireme_time(l))],
         [#format_time(liburnian_time(l))],
       ),
-      header: table.header([*Level*], [*Trireme*], [*Quadrireme*], [*Liburnian*]),
+      header: table.header(
+        [*Level*],
+        [*Trireme*],
+        [*Quadrireme*],
+        [*Liburnian*],
+      ),
     ),
 
     units_table(
@@ -105,7 +138,12 @@
         [#format_time(cataphract_time(l))],
         [#format_time(penteconters_time(l))],
       ),
-      header: table.header([*Level*], [*Tower Ship*], [*Cataphract*], [*Penteconters*]),
+      header: table.header(
+        [*Level*],
+        [*Tower Ship*],
+        [*Cataphract*],
+        [*Penteconters*],
+      ),
     ),
     units_table(
       from,
@@ -117,7 +155,13 @@
         [#format_time(invasion_galley_time(l))],
         [#format_time(colony_ship_time(l))],
       ),
-      header: table.header([*Level*], [*Freighter*], [*Converted Trireme*], [*Invasion Galley*], [*Colony Ship*]),
+      header: table.header(
+        [*Level*],
+        [*Freighter*],
+        [*Converted Trireme*],
+        [*Invasion Galley*],
+        [*Colony Ship*],
+      ),
     ),
   )
 }

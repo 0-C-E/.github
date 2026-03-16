@@ -1,4 +1,6 @@
-#import "../utils/formulas.typ": building_table, format_time, starting_levels, units_table
+#import "../utils/formulas.typ": (
+  building_table, format_time, starting_levels, units_table,
+)
 
 = 0 C.E. --- Barracks <0-ce--barracks>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
@@ -41,15 +43,31 @@
 #let points(l) = calc.round(33 * calc.pow(l, 1.21))
 
 // ── Units training times ──
-#let swordsman_time(l) = calc.round(20 * 60 * calc.pow(training_time_reduction, l))
-#let light_cavalry_time(l) = calc.round(55 * 60 * calc.pow(training_time_reduction, l))
-#let war_chariot_time(l) = calc.round(80 * 60 * calc.pow(training_time_reduction, l))
-#let spearman_time(l) = calc.round(18 * 60 * calc.pow(training_time_reduction, l))
+#let swordsman_time(l) = calc.round(
+  20 * 60 * calc.pow(training_time_reduction, l),
+)
+#let light_cavalry_time(l) = calc.round(
+  55 * 60 * calc.pow(training_time_reduction, l),
+)
+#let war_chariot_time(l) = calc.round(
+  80 * 60 * calc.pow(training_time_reduction, l),
+)
+#let spearman_time(l) = calc.round(
+  18 * 60 * calc.pow(training_time_reduction, l),
+)
 #let archer_time(l) = calc.round(20 * 60 * calc.pow(training_time_reduction, l))
-#let slinger_time(l) = calc.round(22 * 60 * calc.pow(training_time_reduction, l))
-#let heavy_infantry_time(l) = calc.round(75 * 60 * calc.pow(training_time_reduction, l))
-#let pikeman_time(l) = calc.round(25 * 60 * calc.pow(training_time_reduction, l))
-#let peltast_time(l) = calc.round(35 * 60 * calc.pow(training_time_reduction, l))
+#let slinger_time(l) = calc.round(
+  22 * 60 * calc.pow(training_time_reduction, l),
+)
+#let heavy_infantry_time(l) = calc.round(
+  75 * 60 * calc.pow(training_time_reduction, l),
+)
+#let pikeman_time(l) = calc.round(
+  25 * 60 * calc.pow(training_time_reduction, l),
+)
+#let peltast_time(l) = calc.round(
+  35 * 60 * calc.pow(training_time_reduction, l),
+)
 
 // ── Helper functions ──
 #let this_table = (from, to) => {
@@ -83,7 +101,18 @@
       [#format_time(pikeman_time(l))],
       [#format_time(peltast_time(l))],
     ),
-    header: table.header([*Level*], [⚔️], [🐎], [🐴], [↗️], [🏹], [🪨], [🛡️], [↗️], [🪓]),
+    header: table.header(
+      [*Level*],
+      [⚔️],
+      [🐎],
+      [🐴],
+      [↗️],
+      [🏹],
+      [🪨],
+      [🛡️],
+      [↗️],
+      [🪓],
+    ),
   )
 }
 
