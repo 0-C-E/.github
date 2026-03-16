@@ -1,9 +1,8 @@
 #import "../utils/formulas.typ": (
-  building_table, capped_construction_time, format_time, growth_time,
-  polynomial_time, starting_levels,
+  building_table, capped_construction_time, format_time, growth_time, polynomial_time, starting_levels,
 )
 
-= 0 C.E. --- Lumber Camp <0-ce--lumber-camp>
+= 0 C.E. --- Lumber Camp <lumber-camp>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 == Starting Levels <starting-levels>

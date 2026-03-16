@@ -1,4 +1,4 @@
-= 0 C.E. - Military <0-ce---military>
+= 0 C.E. - Military <military>
 #link("../nav/Home.pdf") | #link("Cultural-Events.pdf")[Previous] |
 #link("Espionage.pdf")[Next]
 

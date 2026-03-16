@@ -1,9 +1,8 @@
 #import "../utils/formulas.typ": (
-  building_table, capped_construction_time, format_time, growth_time,
-  polynomial_time, starting_levels,
+  building_table, capped_construction_time, format_time, growth_time, polynomial_time, starting_levels,
 )
 
-= 0 C.E. --- Quarry <0-ce--quarry>
+= 0 C.E. --- Quarry <quarry>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 == Starting Levels <starting-levels>

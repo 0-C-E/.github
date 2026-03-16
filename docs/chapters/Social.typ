@@ -1,4 +1,4 @@
-= 0 C.E. - Social <0-ce---social>
+= 0 C.E. - Social <social>
 #link("../nav/Home.pdf") | #link("Villages.pdf")[Previous] |
 #link("Scripting-Engine.pdf")[Next]
 

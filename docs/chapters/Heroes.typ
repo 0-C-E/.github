@@ -1,4 +1,4 @@
-= 0 C.E. - Heroes <0-ce---heroes>
+= 0 C.E. - Heroes <heroes>
 #link("../nav/Home.pdf") | #link("Roadmap.pdf")[Previous] | Next
 
 == 22. Heroes System #emph[(Wave 2)] <22-heroes-system-wave-2>

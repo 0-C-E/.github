@@ -1,4 +1,4 @@
-= 0 C.E. - Scripting Engine <0-ce---scripting-engine>
+= 0 C.E. - Scripting Engine <scripting-engine>
 #link("../nav/Home.pdf") | #link("Social.pdf")[Previous] | #link("UI-UX.pdf")[Next]
 
 == 18. Scripting Engine <18-scripting-engine>

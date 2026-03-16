@@ -1,4 +1,4 @@
-= 0 C.E. - Cultural Events <0-ce---cultural-events>
+= 0 C.E. - Cultural Events <cultural-events>
 #link("../nav/Home.pdf") | #link("Divine-System.pdf")[Previous] |
 #link("Military.pdf")[Next]
 

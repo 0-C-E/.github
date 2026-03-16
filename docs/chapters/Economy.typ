@@ -1,4 +1,4 @@
-= 0 C.E. - Economy <0-ce---economy>
+= 0 C.E. - Economy <economy>
 #link("../nav/Home.pdf") | #link("World-and-Civilizations.pdf")[Previous] |
 #link("Buildings-and-Wonders.pdf")[Next]
 

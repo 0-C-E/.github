@@ -1,4 +1,4 @@
-= 0 C.E. - Espionage <0-ce---espionage>
+= 0 C.E. - Espionage <espionage>
 #link("../nav/Home.pdf") | #link("Military.pdf")[Previous] |
 #link("Research.pdf")[Next]
 

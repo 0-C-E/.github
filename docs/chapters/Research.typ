@@ -1,4 +1,4 @@
-= 0 C.E. - Research <0-ce---research>
+= 0 C.E. - Research <research>
 #link("../nav/Home.pdf") | #link("Espionage.pdf")[Previous] |
 #link("Diplomacy-and-Trade.pdf")[Next]
 

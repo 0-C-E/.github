@@ -35,3 +35,7 @@ This folder is organized by document role. Keep files in the matching subfolder.
 
 - After moving/renaming files, run a link integrity check before commit.
 - Keep this README updated if folder purposes or naming patterns change.
+
+## City illustration
+
+![Temporary AI-generated image](./city_illustration.png)

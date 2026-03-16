@@ -1,4 +1,4 @@
-= 0 C.E. - UI and UX <0-ce---ui-and-ux>
+= 0 C.E. - UI and UX <ui-and-ux>
 #link("../nav/Home.pdf") | #link("Scripting-Engine.pdf")[Previous] |
 #link("Technical-Architecture.pdf")[Next]
 

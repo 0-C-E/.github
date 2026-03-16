@@ -1,4 +1,4 @@
-= 0 C.E. - Buildings and Wonders <0-ce---buildings-and-wonders>
+= 0 C.E. - Buildings and Wonders <buildings-and-wonders>
 #link("../nav/Home.pdf") | #link("Economy.pdf")[Previous] |
 #link("Divine-System.pdf")[Next]
 

@@ -1,4 +1,4 @@
-= 0 C.E. - Divine System <0-ce---divine-system>
+= 0 C.E. - Divine System <divine-system>
 #link("../nav/Home.pdf") | #link("Buildings-and-Wonders.pdf")[Previous] |
 #link("Cultural-Events.pdf")[Next]
 

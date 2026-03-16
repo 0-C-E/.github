@@ -1,4 +1,4 @@
-= 0 C.E. - Diplomacy and Trade <0-ce---diplomacy-and-trade>
+= 0 C.E. - Diplomacy and Trade <diplomacy-and-trade>
 #link("../nav/Home.pdf") | #link("Research.pdf")[Previous] |
 #link("Victory-and-Prestige.pdf")[Next]
 

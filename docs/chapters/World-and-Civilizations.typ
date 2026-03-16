@@ -1,4 +1,4 @@
-= 0 C.E. - World and Civilizations <0-ce---world-and-civilizations>
+= 0 C.E. - World and Civilizations <world-and-civilizations>
 #link("../nav/Home.pdf") | #link("Vision-and-Modes.pdf")[Previous] |
 #link("Economy.pdf")[Next]
 

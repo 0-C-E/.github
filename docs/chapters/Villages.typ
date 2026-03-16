@@ -1,4 +1,4 @@
-= 0 C.E. - Villages <0-ce---villages>
+= 0 C.E. - Villages <villages>
 #link("../nav/Home.pdf") | #link("Victory-and-Prestige.pdf")[Previous] |
 #link("Social.pdf")[Next]
 

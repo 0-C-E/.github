@@ -1,9 +1,8 @@
 #import "../utils/formulas.typ": (
-  building_table, capped_construction_time, format_time, growth_time,
-  polynomial_time, starting_levels, units_table,
+  building_table, capped_construction_time, format_time, growth_time, polynomial_time, starting_levels, units_table,
 )
 
-= 0 C.E. --- Barracks <0-ce--barracks>
+= 0 C.E. --- Barracks <barracks>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 == Notes <notes>

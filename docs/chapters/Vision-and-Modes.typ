@@ -1,4 +1,4 @@
-= 0 C.E. - Vision and Modes <0-ce---vision-and-modes>
+= 0 C.E. - Vision and Modes <vision-and-modes>
 #link("../nav/Home.pdf") | Previous | #link("World-and-Civilizations.pdf")[Next]
 
 == 1. Vision & Pillars <1-vision--pillars>

@@ -1,4 +1,4 @@
-= 0 C.E. - Event System <0-ce---event-system>
+= 0 C.E. - Event System <event-system>
 #link("../nav/Home.pdf") | #link("Data-Models.pdf")[Previous] |
 #link("Balancing.pdf")[Next]
 

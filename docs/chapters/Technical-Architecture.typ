@@ -1,4 +1,4 @@
-= 0 C.E. - Technical Architecture <0-ce---technical-architecture>
+= 0 C.E. - Technical Architecture <technical-architecture>
 #link("../nav/Home.pdf") | #link("UI-UX.pdf")[Previous] |
 #link("Data-Models.pdf")[Next]
 

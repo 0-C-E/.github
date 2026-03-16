@@ -1,9 +1,8 @@
 #import "../utils/formulas.typ": (
-  building_table, capped_construction_time, format_time, growth_time,
-  polynomial_time, starting_levels,
+  building_table, capped_construction_time, format_time, growth_time, polynomial_time, starting_levels,
 )
 
-= 0 C.E. --- Market <0-ce--market>
+= 0 C.E. --- Market <market>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 == Notes <notes>

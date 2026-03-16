@@ -1,4 +1,4 @@
-= 0 C.E. - Balancing <0-ce---balancing>
+= 0 C.E. - Balancing <balancing>
 #link("../nav/Home.pdf") | #link("Event-System.pdf")[Previous] |
 #link("Modding.pdf")[Next]
 

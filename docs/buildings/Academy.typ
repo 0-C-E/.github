@@ -1,8 +1,6 @@
-#import "../utils/formulas.typ": (
-  building_table, format_time, growth_time, starting_levels,
-)
+#import "../utils/formulas.typ": building_table, format_time, growth_time, starting_levels
 
-= 0 C.E. --- Academy <0-ce--academy>
+= 0 C.E. --- Academy <academy>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 // TODO: Determine the actual academy level cap and adjust the data accordingly. The current cap of 35 is based on Grepolis, but may not be accurate for this game.

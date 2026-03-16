@@ -1,4 +1,4 @@
-= 0 C.E. - Modding <0-ce---modding>
+= 0 C.E. - Modding <modding>
 #link("../nav/Home.pdf") | #link("Balancing.pdf")[Previous] |
 #link("Roadmap.pdf")[Next]
 

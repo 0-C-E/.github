@@ -1,4 +1,4 @@
-= 0 C.E. - Victory and Prestige <0-ce---victory-and-prestige>
+= 0 C.E. - Victory and Prestige <victory-and-prestige>
 #link("../nav/Home.pdf") | #link("Diplomacy-and-Trade.pdf")[Previous] |
 #link("Villages.pdf")[Next]
 
