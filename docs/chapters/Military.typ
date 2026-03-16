@@ -197,7 +197,7 @@ in the counter tables.
       denial],
     [#strong[Tower
       Ship];],
-    [#strong[Quinquereme];],
+    [#strong[Hemolia];],
     [#strong[Cataphract];],
     [#strong[Liburnian];],
     [#strong[Bireme];],
@@ -205,16 +205,16 @@ in the counter tables.
     [Fast strike
       galley],
     [#strong[Liburnian];],
-    [#strong[Dromon];],
+    [#strong[Quadrireme];],
     [#strong[Tower
       Ship];],
     [#strong[Trireme];],
-    [#strong[Quinquereme];],
+    [#strong[Hemolia];],
     [⛏️ Attack],
     [Heavy assault
       galley],
     [#strong[Trireme];],
-    [#strong[Dromon];],
+    [#strong[Quadrireme];],
     [#strong[War
       Barge];],
     [#strong[Fire Ship];],
@@ -222,18 +222,18 @@ in the counter tables.
     [⚖️ Mixed],
     [Balanced core
       warship],
-    [#strong[Dromon];],
+    [#strong[Quadrireme];],
     [#strong[Bireme];],
-    [#strong[Quinquereme];],
+    [#strong[Hemolia];],
     [#strong[War
       Barge];],
-    [#strong[Dromon];],
+    [#strong[Quadrireme];],
     [⚖️ Mixed],
     [Fire-armed
       war
       galley],
     [#strong[Cataphract];],
-    [#strong[Quinquereme];],
+    [#strong[Hemolia];],
     [#strong[Trireme];],
     [#strong[Tower
       Ship];],
@@ -244,7 +244,7 @@ in the counter tables.
       galley],
     [#strong[War
       Barge];],
-    [#strong[Dromon];],
+    [#strong[Quadrireme];],
     [#strong[Bireme];],
     [#strong[Fire
       Ship];],
@@ -257,7 +257,7 @@ in the counter tables.
     [#strong[Trireme];],
     [#strong[Fire
       Ship];],
-    [#strong[Quinquereme];],
+    [#strong[Hemolia];],
     [#strong[Cataphract];],
     [🛡️ Defense],
     [Armored escort
@@ -265,14 +265,14 @@ in the counter tables.
     [#strong[Fire Ship];],
     [#strong[Tower
       Ship];],
-    [#strong[Dromon];],
-    [#strong[War Barge];],
-    [#strong[War Barge];],
+    [#strong[Quadrireme];],
+    [#strong[Penteconters];],
+    [#strong[Penteconters];],
     [🛡️ Defense],
     [Hull-bulk harbor
       guardian],
-    [#strong[Quinquereme];],
-    [#strong[Dromon];],
+    [#strong[Hemolia];],
+    [#strong[Quadrireme];],
     [#strong[Liburnian];],
     [#strong[Trireme];],
   )],

@@ -1,18 +1,11 @@
+#import "../utils/formulas.typ": building_table, format_time, starting_levels
+
 = 0 C.E. --- Foundry <0-ce--foundry>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 == Starting Levels <starting-levels>
 #figure(
-  align(center)[#table(
-    columns: 2,
-    align: (auto, auto),
-    table.header([Mode], [Starting Level]),
-    table.hline(),
-    [Full World], [0],
-    [Campaign], [1],
-    [Skirmish], [5],
-    [Game Night], [15],
-  )],
+  align(center)[#starting_levels(0, 1, 5, 15)],
   kind: table,
 )
 
@@ -20,33 +13,48 @@
 #let max_level = 40
 
 // ── Base values & Functions ──
-#let wood_cost(l) = calc.round(1 * calc.pow(l, 1))
-#let stone_cost(l) = calc.round(1 * calc.pow(l, 1))
-#let metal_cost(l) = calc.round(1 * calc.pow(l, 1))
+#let wood_cost(l) = calc.round(19 * calc.pow(l, 1.54))
+#let stone_cost(l) = calc.round(4 * calc.pow(l, 1.81))
+#let metal_cost(l) = calc.round(14 * calc.pow(l, 1.46))
 #let food_cost(l) = (l - 1) * 5
-#let pop_cost(l) = 0
+#let pop_cost(l) = calc.round(0.5 * calc.pow(l, 1.44))
 #let total_time(l) = calc.round(
-  if l <= max_level { calc.round(500 * calc.pow(1.1615, l)) } else {
-    50 * calc.pow(l, 2)
+  if l <= max_level { calc.round(20 * calc.pow(1.23, l)) } else {
+    48 * calc.pow(l, 2)
   },
 )
+#let production(l) = calc.round(10 * calc.pow(l, 1.1))
+#let points(l) = calc.round(10 * calc.pow(l, 1.23))
 
 // ── Helper functions ──
-#let fmt_time(time) = {
-  let h = calc.floor(time / 3600)
-  let m = calc.floor(calc.rem(time, 3600) / 60)
-  let s = calc.floor(calc.rem(time, 60))
-  let pad(n) = if n < 10 { "0" + str(n) } else { str(n) }
-  pad(h) + ":" + pad(m) + ":" + pad(s)
-}
-
-#let building_header = table.header(
-  [*Level*],
-  [🪵],
-  [🪨],
-  [⛏️],
-  [🌾],
-  [👥],
-  [⏱️],
-  [Points],
+#let this_table = (from, to) => building_table(
+  from,
+  to,
+  costs: l => (
+    wood_cost(l),
+    stone_cost(l),
+    metal_cost(l),
+    food_cost(l),
+    pop_cost(l),
+  ),
+  time: total_time,
+  points: l => points(l),
+  extra_headers: ([*Production per hour*],),
+  extra: l => ([#production(l)],),
 )
+
+// ── Tables ──
+=== Early game
+#this_table(1, 16)
+
+=== Mid-game
+#this_table(16, 31)
+
+=== Late-game
+#this_table(31, 41)
+
+=== City tier 2
+#this_table(41, 51)
+
+=== City tier 3
+#this_table(51, 61)

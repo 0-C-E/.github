@@ -1,3 +1,5 @@
+#import "../utils/formulas.typ": building_table, format_time, starting_levels
+
 = 0 C.E. --- Granary <0-ce--granary>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
@@ -9,16 +11,7 @@
 
 == Starting Levels <starting-levels>
 #figure(
-  align(center)[#table(
-    columns: 2,
-    align: (auto, auto),
-    table.header([Mode], [Starting Level]),
-    table.hline(),
-    [Full World], [1],
-    [Campaign], [3],
-    [Skirmish], [6],
-    [Game Night], [15],
-  )],
+  align(center)[#starting_levels(1, 3, 6, 15)],
   kind: table,
 )
 
@@ -39,64 +32,34 @@
 #let points(l) = calc.round(17 + 2 * calc.pow(l, 1.355))
 
 // ── Helper functions ──
-#let fmt_time(time) = {
-  let h = calc.floor(time / 3600)
-  let m = calc.floor(calc.rem(time, 3600) / 60)
-  let s = calc.floor(calc.rem(time, 60))
-  let pad(n) = if n < 10 { "0" + str(n) } else { str(n) }
-  pad(h) + ":" + pad(m) + ":" + pad(s)
-}
-
-#let building_header = table.header(
-  [*Level*],
-  [🪵],
-  [🪨],
-  [⛏️],
-  [🌾],
-  [👥],
-  [⏱️],
-  [*Max. Population*],
-  [*Storage*],
-  [*Points*],
-)
-
-#let building_row(l) = (
-  [#l],
-  [#wood_cost(l)],
-  [#stone_cost(l)],
-  [#metal_cost(l)],
-  [#food_cost(l)],
-  [#pop_cost(l)],
-  [#fmt_time(total_time(l))],
-  [#pop_cap(l)],
-  [#food_storage(l)],
-  [#points(l)],
-)
-
-#let building_table(from, to) = figure(
-  align(center)[#table(
-    columns: building_row(0).len(),
-    align: (center,) * building_row(0).len(),
-    building_header,
-    table.hline(),
-    ..for l in range(from, to) { building_row(l) },
-  )],
-  kind: table,
+#let this_table = (from, to) => building_table(
+  from,
+  to,
+  costs: l => (
+    wood_cost(l),
+    stone_cost(l),
+    metal_cost(l),
+    food_cost(l),
+    pop_cost(l),
+  ),
+  time: total_time,
+  points: points,
+  extra_headers: ([*Max. Population*], [*Storage*]),
+  extra: l => ([#pop_cap(l)], [#food_storage(l)]),
 )
 
 // ── Tables ──
-
 === Early game
-#building_table(1, 16)
+#this_table(1, 16)
 
 === Mid-game
-#building_table(16, 26)
+#this_table(16, 26)
 
 === Late-game
-#building_table(26, 36)
+#this_table(26, 36)
 
 === City tier 2
-#building_table(36, 46)
+#this_table(36, 46)
 
 === City tier 3
-#building_table(46, 56)
+#this_table(46, 56)
