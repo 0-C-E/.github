@@ -1,4 +1,6 @@
-#import "../utils/formulas.typ": building_table, format_time, starting_levels
+#import "../utils/formulas.typ": (
+  building_table, capped_construction_time, format_time, growth_time, polynomial_time, starting_levels,
+)
 
 = 0 C.E. --- Warehouse <0-ce--warehouse>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
@@ -24,10 +26,11 @@
 #let metal_cost(l) = calc.round(-96 + 100 * calc.pow(l, 1.27))
 #let food_cost(l) = (l - 1) * 5
 #let pop_cost(l) = 0
-#let total_time(l) = calc.round(
-  if l <= max_level { 100 * l * calc.pow(1.101, l) } else {
-    101 * calc.pow(l, 2)
-  },
+#let total_time(l) = capped_construction_time(
+  l,
+  max_level,
+  early: l => growth_time(l, base: 100, growth: 1.101, linear: true),
+  late: l => polynomial_time(l, coefficient: 101),
 )
 #let storage(l) = calc.round(300 + 181 * calc.pow(l, 1.42))
 #let stash_size(l) = l * 100

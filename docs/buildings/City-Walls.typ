@@ -1,4 +1,6 @@
-#import "../utils/formulas.typ": building_table, format_time, starting_levels
+#import "../utils/formulas.typ": (
+  building_table, capped_construction_time, format_time, growth_time, polynomial_time, starting_levels,
+)
 
 = 0 C.E. --- City Walls <0-ce--city-walls>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
@@ -27,10 +29,11 @@
 #let metal_cost(l) = calc.round(242 * calc.pow(l, 1.04))
 #let food_cost(l) = (l - 1) * 5
 #let pop_cost(l) = calc.round(2.9 * calc.pow(l, 1.05))
-#let total_time(l) = calc.round(
-  if l <= max_level { calc.round(200 * l * calc.pow(1.103, l)) } else {
-    100 * calc.pow(l, 2)
-  },
+#let total_time(l) = capped_construction_time(
+  l,
+  max_level,
+  early: l => growth_time(l, base: 200, growth: 1.103, linear: true),
+  late: l => polynomial_time(l, coefficient: 100),
 )
 #let defense_bonus(l) = calc.round(2.95 * calc.pow(l, 1.2), digits: 1)
 #let base_defense(l) = (l + 1) * 10
@@ -50,7 +53,7 @@
   time: total_time,
   points: points,
   extra_headers: ([*Defense Bonus*], [*Base Defense*]),
-  extra: l => ([#defense_bonus(l)], [#base_defense(l)]),
+  extra: l => ([#defense_bonus(l)%], [#base_defense(l)]),
 )
 
 // ── Tables ──

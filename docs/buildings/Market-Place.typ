@@ -1,4 +1,6 @@
-#import "../utils/formulas.typ": building_table, format_time, starting_levels
+#import "../utils/formulas.typ": (
+  building_table, capped_construction_time, format_time, growth_time, polynomial_time, starting_levels,
+)
 
 = 0 C.E. --- Market <0-ce--market>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
@@ -24,10 +26,11 @@
 #let metal_cost(l) = calc.round(20 * calc.pow(l, 1.57))
 #let food_cost(l) = (l - 1) * 5
 #let pop_cost(l) = calc.round(2 * calc.pow(l, 1.1))
-#let total_time(l) = calc.round(
-  if l <= max_level { calc.round(150 * l * calc.pow(1.111, l)) } else {
-    120 * calc.pow(l, 2)
-  },
+#let total_time(l) = capped_construction_time(
+  l,
+  max_level,
+  early: l => growth_time(l, base: 150, growth: 1.111, linear: true),
+  late: l => polynomial_time(l, coefficient: 120),
 )
 #let trade_capacity(l) = if l <= max_level { l * 500 } else {
   max_level * 500 + (l - max_level) * 350

@@ -1,5 +1,5 @@
 #import "../utils/formulas.typ": (
-  building_table, format_time, starting_levels, units_table,
+  building_table, capped_construction_time, format_time, growth_time, polynomial_time, starting_levels, units_table,
 )
 
 = 0 C.E. --- Harbor <0-ce--harbor>
@@ -28,10 +28,11 @@
 #let metal_cost(l) = calc.round(1 * calc.pow(l, 1))
 #let food_cost(l) = (l - 1) * 5
 #let pop_cost(l) = l * 4
-#let total_time(l) = calc.round(
-  if l <= max_level { calc.round(300 * l * calc.pow(1.082, l)) } else {
-    50 * calc.pow(l, 2)
-  },
+#let total_time(l) = capped_construction_time(
+  l,
+  max_level,
+  early: l => growth_time(l, base: 300, growth: 1.082, linear: true),
+  late: l => polynomial_time(l, coefficient: 50),
 )
 #let training_time_reduction = 0.982
 #let training_time(l) = calc.round(

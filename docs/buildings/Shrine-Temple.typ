@@ -1,4 +1,6 @@
-#import "../utils/formulas.typ": building_table, format_time, starting_levels
+#import "../utils/formulas.typ": (
+  building_table, capped_construction_time, format_time, growth_time, polynomial_time, starting_levels,
+)
 
 = 0 C.E. --- Shrine / Temple <0-ce--shrine--temple>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
@@ -24,10 +26,11 @@
 #let metal_cost(l) = calc.round(35 * calc.pow(l, 1.65))
 #let food_cost(l) = l * 7
 #let pop_cost(l) = l * 5
-#let total_time(l) = calc.round(
-  if l <= max_level { calc.round(830 * calc.pow(1.195, l)) } else {
-    250 * calc.pow(l, 1.92)
-  },
+#let total_time(l) = capped_construction_time(
+  l,
+  max_level,
+  early: l => growth_time(l, base: 830, growth: 1.195),
+  late: l => polynomial_time(l, coefficient: 250, exponent: 1.92),
 )
 #let points(l) = calc.round(216 * calc.pow(l, 0.67))
 

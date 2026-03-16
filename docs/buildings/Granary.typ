@@ -1,4 +1,6 @@
-#import "../utils/formulas.typ": building_table, format_time, starting_levels
+#import "../utils/formulas.typ": (
+  building_table, capped_construction_time, format_time, growth_time, polynomial_time, starting_levels,
+)
 
 = 0 C.E. --- Granary <0-ce--granary>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
@@ -24,10 +26,11 @@
 #let metal_cost(l) = calc.round(-99 + 100 * calc.pow(l, 1.27))
 #let food_cost(l) = (l - 1) * 5
 #let pop_cost(l) = 0
-#let total_time(l) = calc.round(
-  if l <= max_level { 120 * l * calc.pow(1.093, l) } else {
-    100 * calc.pow(l, 2)
-  },
+#let total_time(l) = capped_construction_time(
+  l,
+  max_level,
+  early: l => growth_time(l, base: 120, growth: 1.093, linear: true),
+  late: l => polynomial_time(l, coefficient: 100),
 )
 #let food_storage(l) = calc.round(250 + 80 * calc.pow(l, 1.5))
 #let pop_cap(l) = calc.round(50 + 11 * calc.pow(l, 1.625))

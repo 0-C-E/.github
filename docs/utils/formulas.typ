@@ -7,6 +7,18 @@
   pad(h) + ":" + pad(m) + ":" + pad(s)
 }
 
+#let growth_time(l, base: none, growth: none, linear: false) = base * (if linear { l } else { 1 }) * calc.pow(growth, l)
+
+#let polynomial_time(l, coefficient: none, exponent: 2) = coefficient * calc.pow(l, exponent)
+
+#let capped_construction_time(l, max_level, early: none, late: none) = calc.round(
+  if l <= max_level { early(l) } else { late(l) },
+)
+
+#let construction_duration_curve(l, base: 2, growth: 1.4983, level_offset: 1) = calc.round(
+  base * calc.pow(growth, l - level_offset),
+)
+
 // ── Building-specific formulas ──
 #let starting_levels(full_world, campaign, skirmish, game_night) = table(
   columns: 2,

@@ -1,4 +1,4 @@
-#import "../utils/formulas.typ": building_table, format_time, starting_levels
+#import "../utils/formulas.typ": building_table, format_time, growth_time, starting_levels
 
 = 0 C.E. --- Academy <0-ce--academy>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
@@ -26,7 +26,7 @@
 #let metal_cost(l) = calc.round(20 + 100 * calc.pow(l, 1.27))
 #let food_cost(l) = l * 5
 #let pop_cost(l) = l * 3
-#let total_time(l) = calc.round(250 * l * calc.pow(1.08, l))
+#let total_time(l) = calc.round(growth_time(l, base: 250, growth: 1.08, linear: true))
 #let research_points(l) = l * 4
 #let points(l) = calc.round(67 * calc.pow(l, 1.1))
 
