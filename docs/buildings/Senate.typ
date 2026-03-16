@@ -1,5 +1,6 @@
 #import "../utils/formulas.typ": (
-  building_table, capped_construction_time, format_time, growth_time, polynomial_time, starting_levels,
+  building_table, capped_construction_time, format_time, growth_time,
+  polynomial_time, starting_levels,
 )
 
 = 0 C.E. --- Senate <0-ce--senate>
@@ -27,7 +28,9 @@
   late: l => polynomial_time(l, coefficient: 50),
 )
 #let construction_time(l) = calc.round(
-  if l <= max_level { 100 * calc.pow(0.965, (l - 1)) } else { -47 + 100 * calc.pow(0.995, l) },
+  if l <= max_level { 100 * calc.pow(0.965, (l - 1)) } else {
+    -47 + 100 * calc.pow(0.995, l)
+  },
   digits: 1,
 )
 #let points(l) = calc.round(110 * calc.pow(l, 0.75))
