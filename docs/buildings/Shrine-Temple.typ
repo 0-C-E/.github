@@ -25,8 +25,9 @@
 #let food_cost(l) = l * 7
 #let pop_cost(l) = l * 5
 #let total_time(l) = calc.round(
-  if l <= max_level { calc.round(830 * calc.pow(1.195, l)) }
-  else { 250 * calc.pow(l, 1.92) },
+  if l <= max_level { calc.round(830 * calc.pow(1.195, l)) } else {
+    250 * calc.pow(l, 1.92)
+  },
 )
 #let points(l) = calc.round(216 * calc.pow(l, 0.67))
 

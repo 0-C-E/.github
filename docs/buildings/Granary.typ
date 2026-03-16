@@ -25,8 +25,9 @@
 #let food_cost(l) = (l - 1) * 5
 #let pop_cost(l) = 0
 #let total_time(l) = calc.round(
-  if l <= max_level { 120 * l * calc.pow(1.093, l) }
-  else { 100 * calc.pow(l, 2) },
+  if l <= max_level { 120 * l * calc.pow(1.093, l) } else {
+    100 * calc.pow(l, 2)
+  },
 )
 #let food_storage(l) = calc.round(250 + 80 * calc.pow(l, 1.5))
 #let pop_cap(l) = calc.round(50 + 11 * calc.pow(l, 1.625))

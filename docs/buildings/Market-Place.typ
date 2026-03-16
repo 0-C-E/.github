@@ -25,8 +25,9 @@
 #let food_cost(l) = (l - 1) * 5
 #let pop_cost(l) = calc.round(2 * calc.pow(l, 1.1))
 #let total_time(l) = calc.round(
-  if l <= max_level { calc.round(150 * l * calc.pow(1.111, l)) }
-  else { 120 * calc.pow(l, 2) },
+  if l <= max_level { calc.round(150 * l * calc.pow(1.111, l)) } else {
+    120 * calc.pow(l, 2)
+  },
 )
 #let trade_capacity(l) = if l <= max_level { l * 500 } else {
   max_level * 500 + (l - max_level) * 350

@@ -19,12 +19,14 @@
 #let food_cost(l) = calc.round(7 * calc.pow(l, 1.05))
 #let pop_cost(l) = calc.round(3 * calc.pow(l, 1.21))
 #let total_time(l) = calc.round(
-  if l <= max_level { calc.round(110 * l * calc.pow(1.157, l)) }
-  else { 50 * calc.pow(l, 2) },
+  if l <= max_level { calc.round(110 * l * calc.pow(1.157, l)) } else {
+    50 * calc.pow(l, 2)
+  },
 )
 #let construction_time(l) = calc.round(
-  if l <= max_level { 100 * calc.pow(0.965, (l - 1)) }
-  else { -47 + 100 * calc.pow(0.995, l) },
+  if l <= max_level { 100 * calc.pow(0.965, (l - 1)) } else {
+    -47 + 100 * calc.pow(0.995, l)
+  },
   digits: 1,
 )
 #let points(l) = calc.round(110 * calc.pow(l, 0.75))

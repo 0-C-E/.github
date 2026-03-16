@@ -19,8 +19,9 @@
 #let food_cost(l) = (l - 1) * 3
 #let pop_cost(l) = 0
 #let total_time(l) = calc.round(
-  if l <= max_level { calc.round(300 * l * calc.pow(1.061, l)) } 
-  else { 50 * calc.pow(l, 2) },
+  if l <= max_level { calc.round(300 * l * calc.pow(1.061, l)) } else {
+    50 * calc.pow(l, 2)
+  },
 )
 #let production(l) = calc.round(10 * calc.pow(l, 1.1))
 #let militia(l) = if l <= max_level { l * 10 } else {
