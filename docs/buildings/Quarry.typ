@@ -19,9 +19,8 @@
 #let food_cost(l) = (l - 1) * 5
 #let pop_cost(l) = calc.round(0.5 * calc.pow(l, 1.44))
 #let total_time(l) = calc.round(
-  if l <= max_level { calc.round(21 * calc.pow(1.23, l)) } else {
-    52 * calc.pow(l, 2)
-  },
+  if l <= max_level { calc.round(300 * l * calc.pow(1.049, l)) }
+  else { 60 * calc.pow(l, 2) },
 )
 #let production(l) = calc.round(10 * calc.pow(l, 1.1))
 #let points(l) = calc.round(10 * calc.pow(l, 1.22))

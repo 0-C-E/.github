@@ -26,7 +26,7 @@
 #let metal_cost(l) = calc.round(20 + 100 * calc.pow(l, 1.27))
 #let food_cost(l) = l * 5
 #let pop_cost(l) = l * 3
-#let total_time(l) = calc.round(135 * calc.pow(1.21, l))
+#let total_time(l) = calc.round(250 * l * calc.pow(1.08, l))
 #let research_points(l) = l * 4
 #let points(l) = calc.round(67 * calc.pow(l, 1.1))
 

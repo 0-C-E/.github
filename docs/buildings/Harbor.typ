@@ -29,9 +29,8 @@
 #let food_cost(l) = (l - 1) * 5
 #let pop_cost(l) = l * 4
 #let total_time(l) = calc.round(
-  if l <= max_level { calc.round(500 * calc.pow(1.1615, l)) } else {
-    50 * calc.pow(l, 2)
-  },
+  if l <= max_level { calc.round(300 * l * calc.pow(1.082, l)) }
+  else { 50 * calc.pow(l, 2) },
 )
 #let training_time_reduction = 0.982
 #let training_time(l) = calc.round(

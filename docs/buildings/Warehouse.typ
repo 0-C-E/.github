@@ -25,7 +25,7 @@
 #let food_cost(l) = (l - 1) * 5
 #let pop_cost(l) = 0
 #let total_time(l) = calc.round(
-  if l <= max_level { 127 * calc.pow(1.21, l) } else { 101 * calc.pow(l, 2) },
+  if l <= max_level { 100 * l * calc.pow(1.101, l) } else { 101 * calc.pow(l, 2) },
 )
 #let storage(l) = calc.round(300 + 181 * calc.pow(l, 1.42))
 #let stash_size(l) = l * 100
