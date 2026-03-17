@@ -89,22 +89,22 @@
     (
       (
         "Changelog",
-        "/docs/overview/Changelog.pdf",
+        "overview/Changelog.pdf",
         "History of significant design decisions and revisions.",
       ),
       (
         "Glossary",
-        "/docs/overview/Glossary.pdf",
+        "overview/Glossary.pdf",
         "Key terms and abbreviations used throughout the wiki.",
       ),
       (
         "Roadmap",
-        "/docs/overview/Roadmap.pdf",
+        "overview/Roadmap.pdf",
         "MVP scope, post-launch phases, and milestone tracking.",
       ),
       (
         "Vision",
-        "/docs/overview/Vision.pdf",
+        "overview/Vision.pdf",
         "Design pillars, target audiences, and playstyle philosophy.",
       ),
     ),
@@ -117,17 +117,17 @@
     (
       (
         "Game Loop",
-        "/docs/gameplay/core/Game-Loop.pdf",
+        "gameplay/core/Game-Loop.pdf",
         "Tick system, real-time phases, and session structure.",
       ),
       (
         "Progression",
-        "/docs/gameplay/core/Progression.pdf",
+        "gameplay/core/Progression.pdf",
         "Player growth curve, unlock thresholds, and pacing.",
       ),
       (
         "Victory & Prestige",
-        "/docs/gameplay/core/Victory-and-Prestige.pdf",
+        "gameplay/core/Victory-and-Prestige.pdf",
         "Win conditions, prestige scoring, and end-game.",
       ),
     ),
@@ -139,27 +139,27 @@
     (
       (
         "Balancing",
-        "/docs/gameplay/economy/Balancing.pdf",
+        "gameplay/economy/Balancing.pdf",
         "Tuning parameters, formulas, and simulation targets.",
       ),
       (
         "Overview",
-        "/docs/gameplay/economy/Overview.pdf",
+        "gameplay/economy/Overview.pdf",
         "Economy model, resource loop, and design goals.",
       ),
       (
         "Production Chains",
-        "/docs/gameplay/economy/Production-Chains.pdf",
+        "gameplay/economy/Production-Chains.pdf",
         "Input/output ratios, chain efficiency, bottlenecks.",
       ),
       (
         "Resources",
-        "/docs/gameplay/economy/Resources.pdf",
+        "gameplay/economy/Resources.pdf",
         "Food, Wood, Stone, Gold, Population — definitions and caps.",
       ),
       (
         "Trade",
-        "/docs/gameplay/economy/Trade.pdf",
+        "gameplay/economy/Trade.pdf",
         "Trade routes, Market mechanics, inter-player exchange.",
       ),
     ),
@@ -171,127 +171,127 @@
     (
       (
         "Overview",
-        "/docs/gameplay/buildings/Overview.pdf",
+        "gameplay/buildings/Overview.pdf",
         "Building tiers (1–8), slot rules, and upgrade logic.",
       ),
       // Civic
       (
         "Market Place",
-        "/docs/gameplay/buildings/civic/Marketplace.pdf",
+        "gameplay/buildings/civic/Marketplace.pdf",
         "Local trade capacity and tax revenue.",
       ),
       (
         "Senate",
-        "/docs/gameplay/buildings/civic/Senate.pdf",
+        "gameplay/buildings/civic/Senate.pdf",
         "Governance, policy slots, and decree costs.",
       ),
       // Culture & Religion
       (
         "Academy",
-        "/docs/gameplay/buildings/culture-religion/Academy.pdf",
+        "gameplay/buildings/culture-religion/Academy.pdf",
         "Research speed and scholar capacity.",
       ),
       (
         "Shrine / Temple",
-        "/docs/gameplay/buildings/culture-religion/Shrine-Temple.pdf",
+        "gameplay/buildings/culture-religion/Shrine-Temple.pdf",
         "Faith generation and deity favour.",
       ),
       // Military
       (
         "Barracks",
-        "/docs/gameplay/buildings/military/Barracks.pdf",
+        "gameplay/buildings/military/Barracks.pdf",
         "Unit training queues and capacity.",
       ),
       (
         "City Walls",
-        "/docs/gameplay/buildings/military/City-Walls.pdf",
+        "gameplay/buildings/military/City-Walls.pdf",
         "Defensive rating, repair, and breach mechanics.",
       ),
       (
         "Harbor",
-        "/docs/gameplay/buildings/civic/Harbor.pdf",
+        "gameplay/buildings/civic/Harbor.pdf",
         "Naval trade routes and fleet support.",
       ),
       // Production
       (
         "Farm",
-        "/docs/gameplay/buildings/production/Farm.pdf",
+        "gameplay/buildings/production/Farm.pdf",
         "Food production, fertility modifiers.",
       ),
       (
         "Foundry",
-        "/docs/gameplay/buildings/production/Foundry.pdf",
+        "gameplay/buildings/production/Foundry.pdf",
         "Metal processing, fuel consumption.",
       ),
       (
         "Granary",
-        "/docs/gameplay/buildings/production/Granary.pdf",
+        "gameplay/buildings/production/Granary.pdf",
         "Food storage and spoilage mechanics.",
       ),
       (
         "Lumber Camp",
-        "/docs/gameplay/buildings/production/Lumber-Camp.pdf",
+        "gameplay/buildings/production/Lumber-Camp.pdf",
         "Wood production and deforestation limits.",
       ),
       (
         "Quarry",
-        "/docs/gameplay/buildings/production/Quarry.pdf",
+        "gameplay/buildings/production/Quarry.pdf",
         "Stone extraction and terrain constraints.",
       ),
       (
         "Warehouse",
-        "/docs/gameplay/buildings/production/Warehouse.pdf",
+        "gameplay/buildings/production/Warehouse.pdf",
         "General storage, overflow penalties.",
       ),
       // Special
       (
         "Central Storehouses",
-        "/docs/gameplay/buildings/production/Central-Storehouses.pdf",
+        "gameplay/buildings/production/Central-Storehouses.pdf",
         "Alliance-level shared storage.",
       ),
       (
         "Governor's Palace",
-        "/docs/gameplay/buildings/civic/Governors-Palace.pdf",
+        "gameplay/buildings/civic/Governors-Palace.pdf",
         "Regional control and administrator assignment.",
       ),
       (
         "Grand Bazaar",
-        "/docs/gameplay/buildings/culture-religion/Grand-Bazaar.pdf",
+        "gameplay/buildings/culture-religion/Grand-Bazaar.pdf",
         "Wonder-class; trade network hub.",
       ),
       (
         "Grand Temple",
-        "/docs/gameplay/buildings/culture-religion/Grand-Temple.pdf",
+        "gameplay/buildings/culture-religion/Grand-Temple.pdf",
         "Wonder-class religious building, civ-specific.",
       ),
       (
         "Great Library",
-        "/docs/gameplay/buildings/culture-religion/Great-Library.pdf",
+        "gameplay/buildings/culture-religion/Great-Library.pdf",
         "Wonder-class; unlocks unique tech branches.",
       ),
       (
         "Guild District",
-        "/docs/gameplay/buildings/civic/Guild-District.pdf",
+        "gameplay/buildings/civic/Guild-District.pdf",
         "Artisan bonuses and trade-good unlocks.",
       ),
       (
         "Public Baths",
-        "/docs/gameplay/buildings/civic/Public-Baths.pdf",
+        "gameplay/buildings/civic/Public-Baths.pdf",
         "Happiness bonus and disease mitigation.",
       ),
       (
         "Siege Workshop",
-        "/docs/gameplay/buildings/military/Siege-Workshop.pdf",
+        "gameplay/buildings/military/Siege-Workshop.pdf",
         "Siege engine construction and deployment.",
       ),
       (
         "Theatre",
-        "/docs/gameplay/buildings/civic/Theatre.pdf",
+        "gameplay/buildings/civic/Theatre.pdf",
         "Culture output and unrest reduction.",
       ),
       (
         "Watchtower",
-        "/docs/gameplay/buildings/military/Watchtower.pdf",
+        "gameplay/buildings/military/Watchtower.pdf",
         "Visibility radius and early-warning triggers.",
       ),
     ),
@@ -303,27 +303,27 @@
     (
       (
         "Combat Resolution",
-        "/docs/gameplay/military/Combat-Resolution.pdf",
+        "gameplay/military/Combat-Resolution.pdf",
         "Battle formula, modifiers, and outcome calculation.",
       ),
       (
         "Navy",
-        "/docs/gameplay/military/Navy.pdf",
+        "gameplay/military/Navy.pdf",
         "Naval units, sea lanes, and coastal combat.",
       ),
       (
         "Overview",
-        "/docs/gameplay/military/Overview.pdf",
+        "gameplay/military/Overview.pdf",
         "Military design philosophy and scope.",
       ),
       (
         "Sieges",
-        "/docs/gameplay/military/Sieges.pdf",
+        "gameplay/military/Sieges.pdf",
         "Siege phases, wall mechanics, and defender bonuses.",
       ),
       (
         "Unit Types",
-        "/docs/gameplay/military/Unit-Types.pdf",
+        "gameplay/military/Unit-Types.pdf",
         "Infantry, cavalry, ranged, siege — stats and counters.",
       ),
     ),
@@ -335,17 +335,17 @@
     (
       (
         "Overview",
-        "/docs/gameplay/research/Overview.pdf",
+        "gameplay/research/Overview.pdf",
         "Research system design and pacing goals.",
       ),
       (
         "Research Mechanics",
-        "/docs/gameplay/research/Research-Mechanics.pdf",
+        "gameplay/research/Research-Mechanics.pdf",
         "Research points, speed modifiers, prerequisites.",
       ),
       (
         "Tech Trees",
-        "/docs/gameplay/research/Tech-Trees.pdf",
+        "gameplay/research/Tech-Trees.pdf",
         "Full technology trees per civilisation.",
       ),
     ),
@@ -357,22 +357,22 @@
     (
       (
         "Fog of War",
-        "/docs/gameplay/territory/Fog-of-War.pdf",
+        "gameplay/territory/Fog-of-War.pdf",
         "Visibility rules, scouting, and intel decay.",
       ),
       (
         "Territory Control",
-        "/docs/gameplay/territory/Territory-Control.pdf",
+        "gameplay/territory/Territory-Control.pdf",
         "Border expansion, influence, and contested zones.",
       ),
       (
         "Villages",
-        "/docs/gameplay/territory/Villages.pdf",
+        "gameplay/territory/Villages.pdf",
         "Neutral villages, capture mechanics, and bonuses.",
       ),
       (
         "World Map",
-        "/docs/gameplay/territory/World-Map.pdf",
+        "gameplay/territory/World-Map.pdf",
         "Map generation, tile types, and region structure.",
       ),
     ),
@@ -384,17 +384,17 @@
     (
       (
         "Alliances",
-        "/docs/gameplay/social/Alliances.pdf",
+        "gameplay/social/Alliances.pdf",
         "Alliance structure, roles, and shared objectives.",
       ),
       (
         "Diplomacy",
-        "/docs/gameplay/social/Diplomacy.pdf",
+        "gameplay/social/Diplomacy.pdf",
         "Diplomatic actions, treaties, and reputation.",
       ),
       (
         "Forums",
-        "/docs/gameplay/social/Forums.pdf",
+        "gameplay/social/Forums.pdf",
         "In-game communication, announcements, and councils.",
       ),
     ),
