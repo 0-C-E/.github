@@ -92,8 +92,8 @@ jobs:
             exit 1
           fi
 
-          if [ ! -f _site/nav/Home.pdf ]; then
-            echo "Missing expected file: _site/nav/Home.pdf"
+          if [ ! -f _site/overview/Home.pdf ]; then
+            echo "Missing expected file: _site/overview/Home.pdf"
             exit 1
           fi
 
@@ -113,9 +113,9 @@ jobs:
           <head>
             <meta charset="utf-8">
             <title>0 C.E. — GDD</title>
-            <meta http-equiv="refresh" content="0; url=nav/Home.pdf">
+            <meta http-equiv="refresh" content="0; url=overview/Home.pdf">
           </head>
-          <body><a href="nav/Home.pdf">Open documentation (PDF)</a></body>
+          <body><a href="overview/Home.pdf">Open documentation (PDF)</a></body>
           </html>
           EOF
 
