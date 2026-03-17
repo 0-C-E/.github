@@ -3,14 +3,14 @@
 )
 
 = 0 C.E. --- Academy <academy>
-#link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
+#link("/docs/chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 // TODO: Determine the actual academy level cap and adjust the data accordingly. The current cap of 35 is based on Grepolis, but may not be accurate for this game.
 
 == Notes <notes>
 - The Academy has a #strong[hard cap of 35] --- city tier bonuses do not
   raise this cap further #strong[yet].
-- See #link("../chapters/Research.pdf")[Research] for the full technology tree and
+- See #link("/docs/chapters/Research.pdf")[Research] for the full technology tree and
   research mechanics.
 
 == Starting Levels <starting-levels>

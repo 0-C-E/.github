@@ -4,7 +4,7 @@
 )
 
 = 0 C.E. --- Granary <granary>
-#link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
+#link("/docs/chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 == Notes <notes>
 - Food uses the Granary storage line; all other resources use the

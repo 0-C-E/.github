@@ -4,7 +4,7 @@
 )
 
 = 0 C.E. --- Lumber Camp <lumber-camp>
-#link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
+#link("/docs/chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 == Starting Levels <starting-levels>
 #figure(

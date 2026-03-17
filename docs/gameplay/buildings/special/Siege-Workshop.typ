@@ -1,17 +1,16 @@
 #import "/docs/utils/formulas.typ": building_table, starting_levels
-#import "../../utils/constants.typ": (
-  special_building_construction_duration, special_building_points,
-  special_building_population_cost,
+#import "/docs/utils/constants.typ": (
+  special_building_construction_duration, special_building_points, special_building_population_cost,
 )
 
 = 0 C.E. --- Siege Workshop #emph[(Special)] <siege-workshop-special>
-#link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
+#link("/docs/chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 == Purpose <purpose>
 
 Power is power, and sometimes you need to break down a door to assert it. Siege weapons can break through even the most hardened city walls, but building and operating them requires a dedicated facility. The Siege Workshop provides the infrastructure, tools, and trained crews necessary to manufacture and field siege weapons.
 
-Once built, all siege weapon unit types become available to train in the #link("../Barracks.pdf")[Barracks] and #link("../Siege-Workshop.pdf")[Siege Workshop]. Demolishing the Siege Workshop removes access to siege weapons, disbands any currently queued units and removes any already trained siege units from your garrison.
+Once built, all siege weapon unit types become available to train in the #link("/docs/Barracks.pdf")[Barracks] and #link("/docs/Siege-Workshop.pdf")[Siege Workshop]. Demolishing the Siege Workshop removes access to siege weapons, disbands any currently queued units and removes any already trained siege units from your garrison.
 
 == Requirements <requirements>
 

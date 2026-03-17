@@ -4,7 +4,7 @@
 )
 
 = 0 C.E. --- Barracks <barracks>
-#link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
+#link("/docs/chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 == Notes <notes>
 - All land units are trained, stored, and managed in the Barracks
@@ -14,7 +14,7 @@
 - Siege weapons require the
   #link("Building-Siege-Workshop.pdf")[Siege Workshop] special building to
   unlock.
-- See #link("../chapters/Military.pdf")[Military] for unit types and combat rules.
+- See #link("/docs/chapters/Military.pdf")[Military] for unit types and combat rules.
 
 == Starting Levels <starting-levels>
 #figure(

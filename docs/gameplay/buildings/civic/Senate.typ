@@ -4,7 +4,7 @@
 )
 
 = 0 C.E. --- Senate <senate>
-#link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
+#link("/docs/chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 == Starting Levels <starting-levels>
 #figure(

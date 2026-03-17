@@ -4,7 +4,7 @@
 )
 
 = 0 C.E. --- Warehouse <warehouse>
-#link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
+#link("/docs/chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 == Notes <notes>
 - Food has its own storage building: the

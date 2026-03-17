@@ -4,11 +4,11 @@
 )
 
 = 0 C.E. --- Shrine / Temple <shrine--temple>
-#link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
+#link("/docs/chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 == Notes <notes>
 - Favor is consumed by the Divine System (see
-  #link("../chapters/Divine-System.pdf")[Divine System];).
+  #link("/docs/chapters/Divine-System.pdf")[Divine System];).
 - The #link("Building-Divine-Statue.pdf")[Divine Statue] special building
   multiplies the output of this building.
 

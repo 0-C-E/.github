@@ -29,7 +29,7 @@ This folder is organized by document role. Keep files in the matching subfolder.
 
 - Use relative Typst links with explicit `.typ` extension.
 - Prefer links that remain valid when files move within their category.
-- Keep anchors only when needed, e.g. `../chapters/Economy.typ#section-id`.
+- Keep anchors only when needed, e.g. `/docs/chapters/Economy.typ#section-id`.
 
 ## Maintenance Notes
 
