@@ -239,7 +239,7 @@
       ),
       (
         "Market Place",
-        "gameplay/buildings/civic/Market-Place.pdf",
+        "gameplay/buildings/civic/Marketplace.pdf",
         "Local trade capacity and tax revenue.",
       ),
       (

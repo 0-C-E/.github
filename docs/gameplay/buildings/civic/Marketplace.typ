@@ -1,9 +1,8 @@
 #import "../utils/formulas.typ": (
-  building_table, capped_construction_time, format_time, growth_time,
-  polynomial_time, starting_levels,
+  building_table, capped_construction_time, format_time, growth_time, polynomial_time, starting_levels,
 )
 
-= 0 C.E. --- Market <market>
+= 0 C.E. --- Marketplace <marketplace>
 #link("../chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
 
 == Notes <notes>
@@ -18,7 +17,7 @@
   kind: table,
 )
 
-== Market Place Levels Data <market-place-level-data>
+== Marketplace Levels Data <Marketplace-level-data>
 #let max_level = 30
 
 // ── Base values & Functions ──
