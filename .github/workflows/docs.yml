@@ -3,10 +3,20 @@
 #
 # SETUP (do once in the main game repo):
 #   1. Copy this file to  .github/workflows/docs.yml  in the main repo.
-#   2. Keep all Typst docs under  docs/  using subfolders (chapters, buildings).
-#   3. Keep shared files in  docs/templates  and helper scripts in  docs/scripts .
-#   4. In GitHub → Settings → Pages → Source, choose "GitHub Actions".
-#   5. Push — the site builds automatically on every push that touches docs/.
+#   2. Keep all Typst docs under  docs/  using the new arborescence:
+#        docs/overview/       docs/gameplay/       docs/civilizations/
+#        docs/advanced/       docs/technical/
+#   3. Keep shared files in  docs/templates/  and helpers in  docs/scripts/.
+#   4. ALL imports must use absolute paths from the repo root, e.g.:
+#        #import "/docs/templates/_preamble.typ": gdd-page
+#        #import "/docs/utils/formulas.typ": building_table
+#      Relative imports (../../utils/...) will break under --root.
+#   5. Do NOT use Linux Libertine, Georgia, Fira Code, or Cascadia Mono —
+#      use "New Computer Modern" (body) and "DejaVu Sans Mono" (code) only.
+#      Both are bundled with Typst and always available in CI.
+#   6. Escape $ in Typst source — it opens math mode. Write "50 USD" not "$50".
+#   7. In GitHub → Settings → Pages → Source, choose "GitHub Actions".
+#   8. Push — the site builds automatically on every push that touches docs/.
 # ─────────────────────────────────────────────────────────────────────────────
 
 name: Build and Deploy Documentation
@@ -55,7 +65,10 @@ jobs:
       # ── Format source files ───────────────────────────────────────────────
       - name: Format Typst files
         run: |
-          find docs -type f -name "*.typ" ! -path "docs/templates/*" -exec typstyle -i {} \;
+          find docs -type f -name "*.typ" \
+            ! -path "docs/templates/*" \
+            ! -path "docs/utils/*" \
+            -exec typstyle -i {} \;
 
       - name: Commit formatted files
         run: |
@@ -70,7 +83,8 @@ jobs:
           set -euo pipefail
 
           find docs -type f -name "*.typ" \
-            ! -path "docs/templates/*" | while IFS= read -r src; do
+            ! -path "docs/templates/*" \
+            ! -path "docs/utils/*" | while IFS= read -r src; do
             rel="${src#docs/}"
             dest="_site/${rel%.typ}.pdf"
             mkdir -p "$(dirname "$dest")"
@@ -79,30 +93,33 @@ jobs:
               --root "$GITHUB_WORKSPACE"
           done
 
+      # ── Validate ───────────────────────────────────────────────────────────
       - name: Validate generated artifact content
         run: |
           set -euo pipefail
 
           echo "--- _site artifact preview ---"
           if [ -d _site ]; then
-            # Use sed instead of head to avoid SIGPIPE failures under pipefail.
-            find _site -maxdepth 3 -type f | sort | sed -n '1,200p'
+            find _site -maxdepth 4 -type f | sort | sed -n '1,200p'
           else
             echo "_site directory is missing"
             exit 1
           fi
 
-          if [ ! -f _site/overview/Home.pdf ]; then
-            echo "Missing expected file: _site/overview/Home.pdf"
-            exit 1
-          fi
+          # Required files — CI fails if these are missing.
+          REQUIRED=(
+            "_site/overview/Home.pdf"
+            "_site/overview/Vision.pdf"
+          )
 
-          if [ ! -f _site/buildings/Granary.pdf ]; then
-            echo "Missing expected file: _site/buildings/Granary.pdf"
-            exit 1
-          fi
+          for f in "${REQUIRED[@]}"; do
+            if [ ! -f "$f" ]; then
+              echo "Missing required file: $f"
+              exit 1
+            fi
+          done
 
-          echo "PDF fallback is available for pages with incomplete HTML rendering."
+          echo "All required files present."
 
       # ── Root redirect ──────────────────────────────────────────────────────
       - name: Create root redirect

@@ -1,6 +1,5 @@
-#import "../../../utils/formulas.typ": (
-  building_table, capped_construction_time, format_time, growth_time,
-  polynomial_time, starting_levels, units_table,
+#import "/docs/utils/formulas.typ": (
+  building_table, capped_construction_time, format_time, growth_time, polynomial_time, starting_levels, units_table,
 )
 
 = 0 C.E. --- Harbor <harbor>
