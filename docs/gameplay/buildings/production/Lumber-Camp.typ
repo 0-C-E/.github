@@ -1,10 +1,9 @@
 #import "/docs/utils/formulas.typ": (
-  building_table, capped_construction_time, format_time, growth_time,
-  polynomial_time, starting_levels,
+  building_table, capped_construction_time, format_time, growth_time, polynomial_time, starting_levels,
 )
 
 = 0 C.E. --- Lumber Camp <lumber-camp>
-#link("/docs/chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
+#link("#")[← Buildings & Wonders]
 
 == Starting Levels <starting-levels>
 #figure(

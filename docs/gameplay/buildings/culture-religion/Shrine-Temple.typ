@@ -1,15 +1,14 @@
 #import "/docs/utils/formulas.typ": (
-  building_table, capped_construction_time, format_time, growth_time,
-  polynomial_time, starting_levels,
+  building_table, capped_construction_time, format_time, growth_time, polynomial_time, starting_levels,
 )
 
 = 0 C.E. --- Shrine / Temple <shrine--temple>
-#link("/docs/chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
+#link("#")[← Buildings & Wonders]
 
 == Notes <notes>
 - Favor is consumed by the Divine System (see
-  #link("/docs/chapters/Divine-System.pdf")[Divine System];).
-- The #link("Building-Divine-Statue.pdf")[Divine Statue] special building
+  #link("#")[Divine System];).
+- The #link("Divine-Statue.pdf")[Divine Statue] special building
   multiplies the output of this building.
 
 == Starting Levels <starting-levels>

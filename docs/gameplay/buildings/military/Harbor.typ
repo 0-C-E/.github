@@ -1,17 +1,16 @@
 #import "/docs/utils/formulas.typ": (
-  building_table, capped_construction_time, format_time, growth_time,
-  polynomial_time, starting_levels, units_table,
+  building_table, capped_construction_time, format_time, growth_time, polynomial_time, starting_levels, units_table,
 )
 
 = 0 C.E. --- Harbor <harbor>
-#link("/docs/chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
+#link("#")[← Buildings & Wonders]
 
 == Notes <notes>
 - All naval units are trained, stored, and managed in the Harbor
   garrison context.
 - Land units are managed separately in the
-  #link("Building-Barracks.pdf")[Barracks] garrison.
-- See #link("/docs/chapters/Military.pdf")[Military] for naval unit types and combat
+  #link("Barracks.pdf")[Barracks] garrison.
+- See #link("#")[Military] for naval unit types and combat
   rules.
 
 == Starting Levels <starting-levels>

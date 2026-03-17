@@ -1,20 +1,19 @@
 #import "/docs/utils/formulas.typ": (
-  building_table, capped_construction_time, format_time, growth_time,
-  polynomial_time, starting_levels, units_table,
+  building_table, capped_construction_time, format_time, growth_time, polynomial_time, starting_levels, units_table,
 )
 
 = 0 C.E. --- Barracks <barracks>
-#link("/docs/chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
+#link("#")[← Buildings & Wonders]
 
 == Notes <notes>
 - All land units are trained, stored, and managed in the Barracks
   garrison context.
 - Naval units are managed separately in the
-  #link("Building-Harbor.pdf")[Harbor] garrison.
+  #link("Harbor.pdf")[Harbor] garrison.
 - Siege weapons require the
-  #link("Building-Siege-Workshop.pdf")[Siege Workshop] special building to
+  #link("Siege-Workshop.pdf")[Siege Workshop] special building to
   unlock.
-- See #link("/docs/chapters/Military.pdf")[Military] for unit types and combat rules.
+- See #link("#")[Military] for unit types and combat rules.
 
 == Starting Levels <starting-levels>
 #figure(

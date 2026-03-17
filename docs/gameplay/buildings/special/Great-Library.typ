@@ -1,11 +1,10 @@
 #import "/docs/utils/formulas.typ": building_table, starting_levels
 #import "/docs/utils/constants.typ": (
-  special_building_construction_duration, special_building_points,
-  special_building_population_cost,
+  special_building_construction_duration, special_building_points, special_building_population_cost,
 )
 
 = 0 C.E. --- Great Library #emph[(Special)] <great-library-special>
-#link("/docs/chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
+#link("#")[← Buildings & Wonders]
 
 == Purpose <purpose>
 

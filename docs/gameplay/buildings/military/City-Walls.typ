@@ -1,17 +1,16 @@
 #import "/docs/utils/formulas.typ": (
-  building_table, capped_construction_time, format_time, growth_time,
-  polynomial_time, starting_levels,
+  building_table, capped_construction_time, format_time, growth_time, polynomial_time, starting_levels,
 )
 
 = 0 C.E. --- City Walls <city-walls>
-#link("/docs/chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
+#link("#")[← Buildings & Wonders]
 
 == Notes <notes>
-- The #link("Building-Watchtower.pdf")[Watchtower] special building further
+- The #link("Watchtower.pdf")[Watchtower] special building further
   multiplies `defense_mult`.
 - Wall HP is a passive layer; walls must be breached before the city
   itself can be attacked at full strength.
-- See #link("/docs/chapters/Military.pdf")[Military] for siege and assault mechanics.
+- See #link("#")[Military] for siege and assault mechanics.
 
 == Starting Levels <starting-levels>
 #figure(

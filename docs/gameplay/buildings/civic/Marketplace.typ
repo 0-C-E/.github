@@ -1,15 +1,14 @@
 #import "/docs/utils/formulas.typ": (
-  building_table, capped_construction_time, format_time, growth_time,
-  polynomial_time, starting_levels,
+  building_table, capped_construction_time, format_time, growth_time, polynomial_time, starting_levels,
 )
 
 = 0 C.E. --- Marketplace <marketplace>
-#link("/docs/chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
+#link("#")[← Buildings & Wonders]
 
 == Notes <notes>
 - Trade is the primary post-founding source of Gold (see
   #link("/docs/chapters/Economy.typ#62-tile-scan-resource-production")[Economy §6.2];).
-- See #link("/docs/chapters/Diplomacy-and-Trade.pdf")[Diplomacy and Trade] for trade
+- See #link("#")[Diplomacy and Trade] for trade
   route rules.
 
 == Starting Levels <starting-levels>

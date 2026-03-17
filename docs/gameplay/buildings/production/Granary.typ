@@ -1,14 +1,13 @@
 #import "/docs/utils/formulas.typ": (
-  building_table, capped_construction_time, format_time, growth_time,
-  polynomial_time, starting_levels,
+  building_table, capped_construction_time, format_time, growth_time, polynomial_time, starting_levels,
 )
 
 = 0 C.E. --- Granary <granary>
-#link("/docs/chapters/Buildings-and-Wonders.pdf")[← Buildings & Wonders]
+#link("#")[← Buildings & Wonders]
 
 == Notes <notes>
 - Food uses the Granary storage line; all other resources use the
-  #link("Building-Warehouse.pdf")[Warehouse];.
+  #link("Warehouse.pdf")[Warehouse];.
 - A city can have both a Granary and a Warehouse; they apply to separate
   resource pools.
 
