@@ -25,7 +25,11 @@
   grid(
     columns: (2pt, 1fr),
     column-gutter: 1em,
-    block(fill: accent-color, width: 4pt, height: 1.6em + 1.8em * entries.len()),
+    block(
+      fill: accent-color,
+      width: 4pt,
+      height: 1.6em + 1.8em * entries.len(),
+    ),
     [
       #text(size: 13pt, weight: "bold", fill: accent-color)[#title]
       #v(1.3em, weak: true)
@@ -83,10 +87,26 @@
     "Overview",
     rgb("#e94560"),
     (
-      ("Vision", "overview/Vision.pdf", "Design pillars, target audiences, and playstyle philosophy."),
-      ("Roadmap", "overview/Roadmap.pdf", "MVP scope, post-launch phases, and milestone tracking."),
-      ("Glossary", "overview/Glossary.pdf", "Key terms and abbreviations used throughout the wiki."),
-      ("Changelog", "overview/Changelog.pdf", "History of significant design decisions and revisions."),
+      (
+        "Vision",
+        "overview/Vision.pdf",
+        "Design pillars, target audiences, and playstyle philosophy.",
+      ),
+      (
+        "Roadmap",
+        "overview/Roadmap.pdf",
+        "MVP scope, post-launch phases, and milestone tracking.",
+      ),
+      (
+        "Glossary",
+        "overview/Glossary.pdf",
+        "Key terms and abbreviations used throughout the wiki.",
+      ),
+      (
+        "Changelog",
+        "overview/Changelog.pdf",
+        "History of significant design decisions and revisions.",
+      ),
     ),
   )
 
@@ -95,13 +115,21 @@
     "Gameplay — Core",
     rgb("#2a7a4b"),
     (
-      ("Game Loop", "gameplay/core/Game-Loop.pdf", "Tick system, real-time phases, and session structure."),
+      (
+        "Game Loop",
+        "gameplay/core/Game-Loop.pdf",
+        "Tick system, real-time phases, and session structure.",
+      ),
       (
         "Victory & Prestige",
         "gameplay/core/Victory-and-Prestige.pdf",
         "Win conditions, prestige scoring, and end-game.",
       ),
-      ("Progression", "gameplay/core/Progression.pdf", "Player growth curve, unlock thresholds, and pacing."),
+      (
+        "Progression",
+        "gameplay/core/Progression.pdf",
+        "Player growth curve, unlock thresholds, and pacing.",
+      ),
     ),
   )
 
@@ -109,15 +137,31 @@
     "Gameplay — Economy",
     rgb("#2a7a4b"),
     (
-      ("Overview", "gameplay/economy/Overview.pdf", "Economy model, resource loop, and design goals."),
-      ("Resources", "gameplay/economy/Resources.pdf", "Food, Wood, Stone, Gold, Population — definitions and caps."),
+      (
+        "Overview",
+        "gameplay/economy/Overview.pdf",
+        "Economy model, resource loop, and design goals.",
+      ),
+      (
+        "Resources",
+        "gameplay/economy/Resources.pdf",
+        "Food, Wood, Stone, Gold, Population — definitions and caps.",
+      ),
       (
         "Production Chains",
         "gameplay/economy/Production-Chains.pdf",
         "Input/output ratios, chain efficiency, bottlenecks.",
       ),
-      ("Trade", "gameplay/economy/Trade.pdf", "Trade routes, Market mechanics, inter-player exchange."),
-      ("Balancing", "gameplay/economy/Balancing.pdf", "Tuning parameters, formulas, and simulation targets."),
+      (
+        "Trade",
+        "gameplay/economy/Trade.pdf",
+        "Trade routes, Market mechanics, inter-player exchange.",
+      ),
+      (
+        "Balancing",
+        "gameplay/economy/Balancing.pdf",
+        "Tuning parameters, formulas, and simulation targets.",
+      ),
     ),
   )
 
@@ -125,31 +169,99 @@
     "Gameplay — Buildings",
     rgb("#2a7a4b"),
     (
-      ("Overview", "gameplay/buildings/Overview.pdf", "Building tiers (1–8), slot rules, and upgrade logic."),
+      (
+        "Overview",
+        "gameplay/buildings/Overview.pdf",
+        "Building tiers (1–8), slot rules, and upgrade logic.",
+      ),
       // Production
-      ("Farm", "gameplay/buildings/production/Farm.pdf", "Food production, fertility modifiers."),
-      ("Granary", "gameplay/buildings/production/Granary.pdf", "Food storage and spoilage mechanics."),
-      ("Lumber Camp", "gameplay/buildings/production/Lumber-Camp.pdf", "Wood production and deforestation limits."),
-      ("Quarry", "gameplay/buildings/production/Quarry.pdf", "Stone extraction and terrain constraints."),
-      ("Foundry", "gameplay/buildings/production/Foundry.pdf", "Metal processing, fuel consumption."),
-      ("Warehouse", "gameplay/buildings/production/Warehouse.pdf", "General storage, overflow penalties."),
+      (
+        "Farm",
+        "gameplay/buildings/production/Farm.pdf",
+        "Food production, fertility modifiers.",
+      ),
+      (
+        "Granary",
+        "gameplay/buildings/production/Granary.pdf",
+        "Food storage and spoilage mechanics.",
+      ),
+      (
+        "Lumber Camp",
+        "gameplay/buildings/production/Lumber-Camp.pdf",
+        "Wood production and deforestation limits.",
+      ),
+      (
+        "Quarry",
+        "gameplay/buildings/production/Quarry.pdf",
+        "Stone extraction and terrain constraints.",
+      ),
+      (
+        "Foundry",
+        "gameplay/buildings/production/Foundry.pdf",
+        "Metal processing, fuel consumption.",
+      ),
+      (
+        "Warehouse",
+        "gameplay/buildings/production/Warehouse.pdf",
+        "General storage, overflow penalties.",
+      ),
       (
         "Central Storehouses",
         "gameplay/buildings/production/Central-Storehouses.pdf",
         "Alliance-level shared storage.",
       ),
       // Military
-      ("Barracks", "gameplay/buildings/military/Barracks.pdf", "Unit training queues and capacity."),
-      ("City Walls", "gameplay/buildings/military/City-Walls.pdf", "Defensive rating, repair, and breach mechanics."),
-      ("Siege Workshop", "gameplay/buildings/military/Siege-Workshop.pdf", "Siege engine construction and deployment."),
-      ("Watchtower", "gameplay/buildings/military/Watchtower.pdf", "Visibility radius and early-warning triggers."),
+      (
+        "Barracks",
+        "gameplay/buildings/military/Barracks.pdf",
+        "Unit training queues and capacity.",
+      ),
+      (
+        "City Walls",
+        "gameplay/buildings/military/City-Walls.pdf",
+        "Defensive rating, repair, and breach mechanics.",
+      ),
+      (
+        "Siege Workshop",
+        "gameplay/buildings/military/Siege-Workshop.pdf",
+        "Siege engine construction and deployment.",
+      ),
+      (
+        "Watchtower",
+        "gameplay/buildings/military/Watchtower.pdf",
+        "Visibility radius and early-warning triggers.",
+      ),
       // Civic
-      ("Senate", "gameplay/buildings/civic/Senate.pdf", "Governance, policy slots, and decree costs."),
-      ("Market Place", "gameplay/buildings/civic/Market-Place.pdf", "Local trade capacity and tax revenue."),
-      ("Harbor", "gameplay/buildings/civic/Harbor.pdf", "Naval trade routes and fleet support."),
-      ("Public Baths", "gameplay/buildings/civic/Public-Baths.pdf", "Happiness bonus and disease mitigation."),
-      ("Theatre", "gameplay/buildings/civic/Theatre.pdf", "Culture output and unrest reduction."),
-      ("Guild District", "gameplay/buildings/civic/Guild-District.pdf", "Artisan bonuses and trade-good unlocks."),
+      (
+        "Senate",
+        "gameplay/buildings/civic/Senate.pdf",
+        "Governance, policy slots, and decree costs.",
+      ),
+      (
+        "Market Place",
+        "gameplay/buildings/civic/Market-Place.pdf",
+        "Local trade capacity and tax revenue.",
+      ),
+      (
+        "Harbor",
+        "gameplay/buildings/civic/Harbor.pdf",
+        "Naval trade routes and fleet support.",
+      ),
+      (
+        "Public Baths",
+        "gameplay/buildings/civic/Public-Baths.pdf",
+        "Happiness bonus and disease mitigation.",
+      ),
+      (
+        "Theatre",
+        "gameplay/buildings/civic/Theatre.pdf",
+        "Culture output and unrest reduction.",
+      ),
+      (
+        "Guild District",
+        "gameplay/buildings/civic/Guild-District.pdf",
+        "Artisan bonuses and trade-good unlocks.",
+      ),
       (
         "Governor's Palace",
         "gameplay/buildings/civic/Governors-Palace.pdf",
@@ -166,13 +278,21 @@
         "gameplay/buildings/culture-religion/Grand-Temple.pdf",
         "Wonder-class religious building, civ-specific.",
       ),
-      ("Academy", "gameplay/buildings/culture-religion/Academy.pdf", "Research speed and scholar capacity."),
+      (
+        "Academy",
+        "gameplay/buildings/culture-religion/Academy.pdf",
+        "Research speed and scholar capacity.",
+      ),
       (
         "Great Library",
         "gameplay/buildings/culture-religion/Great-Library.pdf",
         "Wonder-class; unlocks unique tech branches.",
       ),
-      ("Grand Bazaar", "gameplay/buildings/culture-religion/Grand-Bazaar.pdf", "Wonder-class; trade network hub."),
+      (
+        "Grand Bazaar",
+        "gameplay/buildings/culture-religion/Grand-Bazaar.pdf",
+        "Wonder-class; trade network hub.",
+      ),
     ),
   )
 
@@ -180,15 +300,31 @@
     "Gameplay — Military",
     rgb("#2a7a4b"),
     (
-      ("Overview", "gameplay/military/Overview.pdf", "Military design philosophy and scope."),
-      ("Unit Types", "gameplay/military/Unit-Types.pdf", "Infantry, cavalry, ranged, siege — stats and counters."),
+      (
+        "Overview",
+        "gameplay/military/Overview.pdf",
+        "Military design philosophy and scope.",
+      ),
+      (
+        "Unit Types",
+        "gameplay/military/Unit-Types.pdf",
+        "Infantry, cavalry, ranged, siege — stats and counters.",
+      ),
       (
         "Combat Resolution",
         "gameplay/military/Combat-Resolution.pdf",
         "Battle formula, modifiers, and outcome calculation.",
       ),
-      ("Sieges", "gameplay/military/Sieges.pdf", "Siege phases, wall mechanics, and defender bonuses."),
-      ("Navy", "gameplay/military/Navy.pdf", "Naval units, sea lanes, and coastal combat."),
+      (
+        "Sieges",
+        "gameplay/military/Sieges.pdf",
+        "Siege phases, wall mechanics, and defender bonuses.",
+      ),
+      (
+        "Navy",
+        "gameplay/military/Navy.pdf",
+        "Naval units, sea lanes, and coastal combat.",
+      ),
     ),
   )
 
@@ -196,8 +332,16 @@
     "Gameplay — Research",
     rgb("#2a7a4b"),
     (
-      ("Overview", "gameplay/research/Overview.pdf", "Research system design and pacing goals."),
-      ("Tech Trees", "gameplay/research/Tech-Trees.pdf", "Full technology trees per civilisation."),
+      (
+        "Overview",
+        "gameplay/research/Overview.pdf",
+        "Research system design and pacing goals.",
+      ),
+      (
+        "Tech Trees",
+        "gameplay/research/Tech-Trees.pdf",
+        "Full technology trees per civilisation.",
+      ),
       (
         "Research Mechanics",
         "gameplay/research/Research-Mechanics.pdf",
@@ -210,9 +354,21 @@
     "Gameplay — Territory",
     rgb("#2a7a4b"),
     (
-      ("World Map", "gameplay/territory/World-Map.pdf", "Map generation, tile types, and region structure."),
-      ("Villages", "gameplay/territory/Villages.pdf", "Neutral villages, capture mechanics, and bonuses."),
-      ("Fog of War", "gameplay/territory/Fog-of-War.pdf", "Visibility rules, scouting, and intel decay."),
+      (
+        "World Map",
+        "gameplay/territory/World-Map.pdf",
+        "Map generation, tile types, and region structure.",
+      ),
+      (
+        "Villages",
+        "gameplay/territory/Villages.pdf",
+        "Neutral villages, capture mechanics, and bonuses.",
+      ),
+      (
+        "Fog of War",
+        "gameplay/territory/Fog-of-War.pdf",
+        "Visibility rules, scouting, and intel decay.",
+      ),
       (
         "Territory Control",
         "gameplay/territory/Territory-Control.pdf",
@@ -225,9 +381,21 @@
     "Gameplay — Social",
     rgb("#2a7a4b"),
     (
-      ("Diplomacy", "gameplay/social/Diplomacy.pdf", "Diplomatic actions, treaties, and reputation."),
-      ("Alliances", "gameplay/social/Alliances.pdf", "Alliance structure, roles, and shared objectives."),
-      ("Forums", "gameplay/social/Forums.pdf", "In-game communication, announcements, and councils."),
+      (
+        "Diplomacy",
+        "gameplay/social/Diplomacy.pdf",
+        "Diplomatic actions, treaties, and reputation.",
+      ),
+      (
+        "Alliances",
+        "gameplay/social/Alliances.pdf",
+        "Alliance structure, roles, and shared objectives.",
+      ),
+      (
+        "Forums",
+        "gameplay/social/Forums.pdf",
+        "In-game communication, announcements, and councils.",
+      ),
     ),
   )
 
@@ -236,16 +404,36 @@
     "Civilizations",
     rgb("#7a5c2a"),
     (
-      ("Overview", "civilizations/Overview.pdf", "Shared traits, differentiation axes, and design rules."),
+      (
+        "Overview",
+        "civilizations/Overview.pdf",
+        "Shared traits, differentiation axes, and design rules.",
+      ),
       (
         "Sumer",
         "civilizations/Sumer.pdf",
         "Foundation Builder — construction efficiency, Ziggurat, Anunnaki pantheon.",
       ),
-      ("Greece", "civilizations/Greece.pdf", "Naval / Trade — Triremes, Hoplites, full Olympian pantheon."),
-      ("Egypt", "civilizations/Egypt.pdf", "Hybrid Builder + Divine — capital compounding, Pharaoh mechanics."),
-      ("Rome", "civilizations/Rome.pdf", "Administrative Builder — multi-city scaling, Provincial Administration."),
-      ("Maya", "civilizations/Maya.pdf", "Divine / Sacrifice — blood offering economy, Sacred Calendar."),
+      (
+        "Greece",
+        "civilizations/Greece.pdf",
+        "Naval / Trade — Triremes, Hoplites, full Olympian pantheon.",
+      ),
+      (
+        "Egypt",
+        "civilizations/Egypt.pdf",
+        "Hybrid Builder + Divine — capital compounding, Pharaoh mechanics.",
+      ),
+      (
+        "Rome",
+        "civilizations/Rome.pdf",
+        "Administrative Builder — multi-city scaling, Provincial Administration.",
+      ),
+      (
+        "Maya",
+        "civilizations/Maya.pdf",
+        "Divine / Sacrifice — blood offering economy, Sacred Calendar.",
+      ),
     ),
   )
 
@@ -254,12 +442,36 @@
     "Advanced Systems",
     rgb("#5a2a7a"),
     (
-      ("Cultural Events", "advanced/Cultural-Events.pdf", "Seasonal events, festivals, and timed bonuses."),
-      ("Event System", "advanced/Event-System.pdf", "Engine architecture for scripted and random events."),
-      ("Scripting Engine", "advanced/Scripting-Engine.pdf", "Lua/Rhai hooks for events and modding scripts."),
-      ("Heroes", "advanced/Heroes.pdf", "Hero units, traits, levelling, and narrative hooks."),
-      ("Espionage", "advanced/Espionage.pdf", "Spy networks, sabotage, counter-intelligence."),
-      ("Divine System", "advanced/Divine-System.pdf", "Deity favour, miracles, and religious conflict."),
+      (
+        "Cultural Events",
+        "advanced/Cultural-Events.pdf",
+        "Seasonal events, festivals, and timed bonuses.",
+      ),
+      (
+        "Event System",
+        "advanced/Event-System.pdf",
+        "Engine architecture for scripted and random events.",
+      ),
+      (
+        "Scripting Engine",
+        "advanced/Scripting-Engine.pdf",
+        "Lua/Rhai hooks for events and modding scripts.",
+      ),
+      (
+        "Heroes",
+        "advanced/Heroes.pdf",
+        "Hero units, traits, levelling, and narrative hooks.",
+      ),
+      (
+        "Espionage",
+        "advanced/Espionage.pdf",
+        "Spy networks, sabotage, counter-intelligence.",
+      ),
+      (
+        "Divine System",
+        "advanced/Divine-System.pdf",
+        "Deity favour, miracles, and religious conflict.",
+      ),
     ),
   )
 
@@ -268,13 +480,41 @@
     "Technical",
     rgb("#1a5f7a"),
     (
-      ("Architecture", "technical/Architecture.pdf", "Rust crate layout, Actix-web, async runtime design."),
-      ("Data Models", "technical/Data-Models.pdf", "PostgreSQL schemas, entity relationships, migrations."),
-      ("API", "technical/API.pdf", "REST endpoints, WebSocket protocol, auth flow."),
-      ("UI / UX", "technical/UI-UX.pdf", "Leaflet.js integration, Canvas/WebGL, design system."),
-      ("Performance", "technical/Performance.pdf", "SBC benchmarks, profiling targets, tick optimisation."),
-      ("Modding", "technical/Modding.pdf", "Mod format, data overrides, hook points, packaging."),
-      ("Contributing", "technical/Contributing.pdf", "PR workflow, code conventions, test requirements."),
+      (
+        "Architecture",
+        "technical/Architecture.pdf",
+        "Rust crate layout, Actix-web, async runtime design.",
+      ),
+      (
+        "Data Models",
+        "technical/Data-Models.pdf",
+        "PostgreSQL schemas, entity relationships, migrations.",
+      ),
+      (
+        "API",
+        "technical/API.pdf",
+        "REST endpoints, WebSocket protocol, auth flow.",
+      ),
+      (
+        "UI / UX",
+        "technical/UI-UX.pdf",
+        "Leaflet.js integration, Canvas/WebGL, design system.",
+      ),
+      (
+        "Performance",
+        "technical/Performance.pdf",
+        "SBC benchmarks, profiling targets, tick optimisation.",
+      ),
+      (
+        "Modding",
+        "technical/Modding.pdf",
+        "Mod format, data overrides, hook points, packaging.",
+      ),
+      (
+        "Contributing",
+        "technical/Contributing.pdf",
+        "PR workflow, code conventions, test requirements.",
+      ),
     ),
   )
 

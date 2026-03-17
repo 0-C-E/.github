@@ -10,7 +10,7 @@
 // decision recorded in docs/overview/Changelog.typ.
 // =============================================================================
 
-#import "/docs/templates/_preamble.typ": gdd-page, accent, dark, mid
+#import "/docs/templates/_preamble.typ": accent, dark, gdd-page, mid
 
 #gdd-page(title: "0 C.E. — Vision & Design Pillars")[
 
@@ -118,20 +118,25 @@
   #figure(
     table(
       columns: (1fr, 2.2fr, 2.2fr),
-      table.header([*Audience*], [*What they want*], [*How 0 C.E. serves them*]),
+      table.header(
+        [*Audience*], [*What they want*], [*How 0 C.E. serves them*]
+      ),
       [Spreadsheet Optimizer],
       [Exact formulas, min-maxable systems, deep build orders],
       [All formulas are documented and deterministic; production chains
         are designed to reward calculation],
+
       [Casual City-Builder],
       [Relaxed progression, no punishing catch-up mechanics, visual
         satisfaction],
       [Default UI hides complexity; cities grow meaningfully without
         micromanagement; no real-time pressure outside of combat],
+
       [Competitive PvP Player],
       [Meaningful conflict, fair rules, skill-based outcomes],
       [No pay-to-win; civilization balance is purely mechanical;
         world-speed settings control engagement intensity],
+
       [Modder / Contributor],
       [Extensibility, clear data formats, documented hooks],
       [Civilizations and buildings are data files; the scripting engine
@@ -156,14 +161,17 @@
       [Persistent browser-based world; city slot system; divine favor
         mechanics; the core tension between building and fighting in a
         shared live world],
+
       [*Civilization* (series)],
       [Civilization-specific asymmetric gameplay; technology trees;
         the idea that choosing a civilization is a meaningful strategic
         commitment],
+
       [*Forge of Empires*],
       [City era progression; accessible visual progression loop that
         rewards long-term investment without demanding constant
         attention],
+
       [*0 A.D.*],
       [Open-source ancient-world strategy as a viable project model;
         civilization differentiation as a core design pillar; city era
@@ -189,11 +197,13 @@
         server hosting support are the only acceptable monetization
         paths. Any mechanic that correlates spending with winning is
         rejected unconditionally.],
+
       [*No predatory mechanics*],
       [0 C.E. will not implement FOMO timers, aggressive push
         notifications, artificial energy systems, or any mechanic
         whose primary purpose is to extract money through psychological
         pressure rather than deliver fun.],
+
       [*Community-driven design*],
       [No significant design decision is made unilaterally and
         silently. Changes to core systems are proposed openly,
