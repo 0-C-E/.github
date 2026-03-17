@@ -3,7 +3,7 @@
 #
 # SETUP (do once in the main game repo):
 #   1. Copy this file to  .github/workflows/docs.yml  in the main repo.
-#   2. Keep all Typst docs under  docs/  using subfolders (chapters, buildings, nav).
+#   2. Keep all Typst docs under  docs/  using subfolders (chapters, buildings).
 #   3. Keep shared files in  docs/templates  and helper scripts in  docs/scripts .
 #   4. In GitHub → Settings → Pages → Source, choose "GitHub Actions".
 #   5. Push — the site builds automatically on every push that touches docs/.
